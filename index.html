@@ -14,24 +14,25 @@
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a href="catalog.html">Каталог товаров</a>
+            <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="main-nav__item">
-            <a href="form.html">Вязазние на заказ</a>
+            <a class="main-nav__link" href="form.html">Вязание на заказ</a>
           </li>
           <li class="main-nav__item  main-nav__item--search">
-            <a href="#">Поиск по сайту</a>
+            <a class="main-nav__link" href="#">Поиск по сайту</a>
           </li>
           <li class="main-nav__item  main-nav__item--basket">
-            <a href="#">Корзина: пока пуста</a>
+            <a class="main-nav__link" href="#">Корзина: пока пуста</a>
           </li>
         </ul>
       </nav>
     </header>
 
     <main class="page-main">
-      <h2 class="page-main__title">Милые штучки ручной работы для&nbsp;дома</h1>
+      <h1 class="page-main__title">Милые штучки ручной работы для&nbsp;дома</h1>
       <section class="goods">
+        <h2 class="goods__title  visually-hidden">Категории товаров</h2>
         <a class="goods__category  goods__category--interior" href="interior-items.html">
           Предметы интерьера
         </a>
@@ -63,7 +64,7 @@
           </table>
           <img class="hit__image" src="http://placehold.it/260x315" width="260" height="315" alt="Вязаные корзинки">
           <b class="hit__price">Цена: 990&nbsp;руб.</b>
-          <a href="#" class="hit__order button">Заказать</a>
+          <a href="#" class="hit__order  button">Заказать</a>
         </div>
       </section>
 
@@ -130,12 +131,12 @@
                 Третий никнейм
               </span>
             </blockquote>
-            <div class="reviews__toggles slider__toggles">
+            <div class="reviews__toggles  slider__toggles">
               <button class="slider__toggle  slider__toggle--prev" type="button">Предыдущий отзыв</button>
               <button class="slider__toggle  slider__toggle--next" type="button">Следующий отзыв</button>
             </div>
           </div>
-          <a class="reviews__write button" href="reviews.html">Написать</a>
+          <a class="reviews__write  button" href="reviews.html">Написать</a>
         </div>
       </section>
 
@@ -154,8 +155,10 @@
               г.&nbsp;Санкт-Петербург, ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8, офис&nbsp;101
             </p>
           </div>
-          <iframe class="contacts__map"></iframe>
-          <a class="contacts__write button" href="feedback-form.html">Напишите нам</a>
+          <div class="contacts__map">
+            <iframe class="contacts__interactive-map"></iframe>
+          </div>
+          <a class="contacts__write  button" href="feedback-form.html">Напишите нам</a>
         </div>
       </section>
     </main>
@@ -163,6 +166,7 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__social  social">
+          <h3 class="social__title  visually-hidden">&laquo;Мишка&raquo; в социальных сетях</h3>
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link  social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Интаграме</a>
@@ -194,7 +198,7 @@
           <label class="order-form__size" for="size-M">M</label>
           <label class="order-form__size" for="size-L">L</label>
         </div>
-        <button class="order-form__add button" type="submit">Добавить</button>
+        <button class="order-form__add  button" type="submit">Добавить</button>
       </form>
     </section>
   </body>
