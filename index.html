@@ -186,19 +186,19 @@
       </div>
     </footer>
 
-    <section class="modal-order">
-      <h2 class="modal-order__title">Добавить в корзину</h2>
-      <form class="modal-order__form  order-form" action="https://echo.htmlacademy.ru" method="post">
-        <span class="order-form__choose">Выберите размер:</span>
-        <input class="order-form__input" type="radio" name="size" id="size-S" value="S" checked>
-        <input class="order-form__input" type="radio" name="size" id="size-M" value="M">
-        <input class="order-form__input" type="radio" name="size" id="size-L" value="L">
-        <div class="order-form__size-chart">
-          <label class="order-form__size" for="size-S">S</label>
-          <label class="order-form__size" for="size-M">M</label>
-          <label class="order-form__size" for="size-L">L</label>
+    <section class="modal">
+      <h2 class="modal__title">Добавить в корзину</h2>
+      <form class="modal__form  size-form" action="https://echo.htmlacademy.ru" method="post">
+        <span class="size-form__choose">Выберите размер:</span>
+        <input class="size-form__input  visually-hidden" type="radio" name="size" id="size-S" value="S" checked>
+        <input class="size-form__input  visually-hidden" type="radio" name="size" id="size-M" value="M">
+        <input class="size-form__input  visually-hidden" type="radio" name="size" id="size-L" value="L">
+        <div class="size-form__size-chart">
+          <label class="size-form__label" for="size-S">S</label>
+          <label class="size-form__label" for="size-M">M</label>
+          <label class="size-form__label" for="size-L">L</label>
         </div>
-        <button class="order-form__add  button" type="submit">Добавить</button>
+        <button class="size-form__add  button" type="submit">Добавить</button>
       </form>
     </section>
   </body>
