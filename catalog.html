@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>&laquo;Мишка&raquo;&nbsp;&mdash; Каталог</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -27,12 +28,15 @@
         </li>
       </ul>
     </nav>
+    <section class="page-header__content">
+      <h1 class="page-header__title">Каталог товаров</h1>
+    </section>
   </header>
 
   <main class="page-inner">
     <section class="catalog">
-      <h1 class="catalog__title">Каталог товаров</h1>
       <div class="catalog__wrapper">
+        <h2 class="catalog__title  visually-hidden">Каталог магазина &laquo;Мишка&raquo;</h2>
         <article class="catalog__item  item">
           <a class="item__image-link" href="bunny.html">
             <img class="item__image" src="http://placehold.it/260x195" width="260" height="195" alt="Фотография товара &laquo;Зайчик-попрыгайчик&raquo;" title="Зайчик-попрыгайчик">
@@ -97,7 +101,7 @@
         <p class="production__description">
           По&nbsp;просьбам наших любимых фолловеров мы сняли для&nbsp;вас подробное видео о&nbsp;том, как появляются наши товары.
         </p>
-        <a class="production__order  button" href="form.html"></a>
+        <a class="production__order  button" href="form.html">Сделать заказ</a>
       </div>
     </section>
   </main>
@@ -108,19 +112,27 @@
         <h3 class="social__title  visually-hidden">&laquo;Мишка&raquo; в социальных сетях</h3>
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link  social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Интаграме</a>
+            <a class="social__link  social__link--instagram" href="https://www.instagram.com/htmlacademy" title="Мы в Интаграме">
+              <span class="visually-hidden">Мы в Интаграме</span>
+            </a>
           </li>
           <li class="social__item">
-            <a class="social__link  social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+            <a class="social__link  social__link--facebook" href="https://www.facebook.com/htmlacademy" title="Мы в Фейсбуке">
+              <span class="visually-hidden">Мы в Фейсбуке</span>
+            </a>
           </li>
           <li class="social__item">
-            <a class="social__link  social__link--twitter" href="https://twitter.com/htmlacademy_ru">Мы в Твиттере</a>
+            <a class="social__link  social__link--twitter" href="https://twitter.com/htmlacademy_ru" title="Мы в Твиттере">
+              <span class="visually-hidden">Мы в Твиттере</span>
+            </a>
           </li>
         </ul>
       </div>
       <div class="page-footer__copyright  copyright">
         <b class="copyright__text">Разработано</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" title="HTML Academy">HTML Academy</a>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" title="HTML Academy">
+          <span class="visually-hidden">HTML Academy</span>
+        </a>
       </div>
     </div>
   </footer>
@@ -128,7 +140,7 @@
   <section class="modal">
     <h2 class="modal__title">Добавить в корзину</h2>
     <form class="modal__form  size-form" action="https://echo.htmlacademy.ru" method="post">
-      <span class="size-form__choose">Выберите размер:</span>
+      <p class="size-form__choose">Выберите размер:</p>
       <input class="size-form__input  visually-hidden" type="radio" name="size" id="size-S" value="S" checked>
       <input class="size-form__input  visually-hidden" type="radio" name="size" id="size-M" value="M">
       <input class="size-form__input  visually-hidden" type="radio" name="size" id="size-L" value="L">
