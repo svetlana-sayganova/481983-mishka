@@ -1,6 +1,6 @@
 .button {
   display: inline-block;
-  padding: 15px 0px;
+  padding: 15px 0;
 
   font: inherit;
   font-size: 1.13rem;
@@ -16,7 +16,6 @@
   cursor: pointer;
 
   @include button-action($button-color--hover, $button-color--active, $button-bg-color--hover, $button-bg-color--active);
-
   @include accessibility();
 
   &--green {
