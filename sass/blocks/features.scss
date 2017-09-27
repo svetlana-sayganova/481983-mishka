@@ -1,0 +1,28 @@
+.features {
+  @include content();
+}
+
+.features__wrapper {
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.features__title {
+  margin-bottom: 10px;
+
+  font-size: 1.67rem;
+  line-height: 1.2;
+  color: $headings-color;
+  font-weight: 700;
+}
+
+.features__item {
+  display: block;
+  width: 260px;
+  margin-top: 82px;
+
+  font-size: 1.13rem;
+  line-height: 1.2;
+  color: $gray-dark;
+  font-weight: 700;
+}

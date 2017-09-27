@@ -1,0 +1,38 @@
+.modal {
+  @include content();
+}
+
+.modal__title {
+  margin-top: 35px;
+  margin-bottom: 20px;
+
+  font-size: 1.67rem;
+  line-height: 1.2;
+  color: $headings-color;
+  font-weight: 700;
+}
+
+.modal__form {
+  margin-bottom: 46px;
+}
+
+.modal-form__choose {
+  margin-bottom: 25px;
+
+  line-height: 2;
+}
+
+.modal-form__size-chart {
+  display: flex;
+
+  margin-bottom: 30px;
+}
+
+.modal-form__label {
+  font-size: 1.13rem;
+  line-height: 1;
+  color: $gray-dark;
+  font-weight: 700;
+
+  cursor: pointer;
+}

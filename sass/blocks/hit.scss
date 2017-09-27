@@ -1,0 +1,63 @@
+.hit {
+  @include content();
+}
+
+.hit__wrapper {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.hit__title {
+  margin-bottom: 10px;
+
+  font-size: 1.67rem;
+  line-height: 1.2;
+  color: $headings-color;
+  font-weight: 700;
+}
+
+.hit__type {
+  margin-bottom: 25px;
+
+  font-size: 1.13rem;
+  line-height: 1.2;
+  color: $green;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hit__description {
+  margin-bottom: 25px;
+
+  line-height: 1.6;
+}
+
+.hit__table {
+  margin-bottom: 28px;
+  width: 100%;
+
+  border-collapse: collapse;
+
+  & tr {
+    border-bottom: 1px solid $gray-light;
+  }
+}
+
+.hit__parameter {
+  width: 35%;
+
+  font-weight: 400;
+
+  text-align: left;
+}
+
+.hit__image {
+  background-color: $gray-light;
+}
+
+.hit__price {
+  font-size: 1.13rem;
+  line-height: 1.4;
+
+  font-weight: 700;
+}

@@ -1,0 +1,31 @@
+$gray-dark:       #444444; // основной текст, текст кнопок, никнейм рещензента, цена хита
+$gray-light:      #f1f1f1; // хэжер, футер
+$black:           #000000; // заголовки, ссылки, лэйблы
+$white:           #ffffff; // категории на главной
+$green:           #63d1bb; // основной: товар недели, иконки
+$green-secondary: #56c3b2; // вспомогательный
+$green-link:      #46c1ae; // зеленый в ссылках
+
+
+$text-color:              $gray-dark;
+$headings-color:          $black;
+
+$button-color:            $gray-dark;
+$button-color--hover:     $white;
+$button-color--active:    rgba($white, 0.3);
+
+$button-bg-color:         $white;
+$button-bg-color--hover:  $gray-dark;
+$button-bg-color--active: $gray-dark;
+$button-border:           $gray-dark;
+
+$link-color:              $black;
+$link-color--hover:       rgba($black, 0.6);
+$link-color--active:      rgba($black, 0.3);
+
+$logo-color:              $black;
+$logo-color--hover:       rgba($black, 0.6);
+$logo-color--active:      rgba($black, 0.3);
+
+$font-family:             "Open Sans", Arial, sans-serif;
+$font-size:               15px;
