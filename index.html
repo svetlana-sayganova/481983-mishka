@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>&laquo;Мишка&raquo;&nbsp;&mdash; милые штучки ручной работы для дома</title>
+    <title>&laquo;Мишка&raquo;&nbsp;&mdash; милые штуки ручной работы для дома</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
 
@@ -29,12 +29,12 @@
         </ul>
       </nav>
       <section class="page-header__content  page-header__content--main">
-        <h1 class="page-header__title  page-header__title--main">Милые штучки ручной работы для&nbsp;дома</h1>
+        <h1 class="page-header__title  page-header__title--main">Милые штуки ручной работы&nbsp;для&nbsp;дома</h1>
         <a class="page-header__category  page-header__category--interior" href="interior-items.html">
-          Предметы интерьера
+          <span>Предметы интерьера</span>
         </a>
         <a class="page-header__category  page-header__category--toys" href="toys.html">
-          Детские игрушки
+          <span>Детские игрушки</span>
         </a>
       </section>
     </header>
@@ -61,7 +61,7 @@
               <td class="hit__value">15&nbsp;см</td>
             </tr>
           </table>
-          <img class="hit__image" src="http://placehold.it/260x315" width="260" height="315" alt="Вязаные корзинки">
+          <img class="hit__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
           <b class="hit__price">Цена: 990&nbsp;руб.</b>
           <a href="#" class="hit__order  button">Заказать</a>
         </div>
@@ -131,8 +131,8 @@
               </a>
             </blockquote>
             <div class="reviews__toggles">
-              <a class="reviews__toggle  reviews__toggle--prev" href="#">Предыдущий отзыв</a>
-              <a class="reviews__toggle  reviews__toggle--next" href="#">Следующий отзыв</a>
+              <a class="reviews__toggle  reviews__toggle--prev" href="#" title="Предыдущий отзыв">Предыдущий отзыв</a>
+              <a class="reviews__toggle  reviews__toggle--next" href="#" title="Следующий отзыв">Следующий отзыв</a>
             </div>
           </div>
           <a class="reviews__write  button" href="reviews.html">Написать</a>
@@ -144,7 +144,7 @@
           <h2 class="contacts__title">Контакты</h2>
           <div class="contacts__item">
             <span class="contacts__parameter">e-mail:</span>
-            <a class="contacts__value" href="mailto:info@mimimishkashop.ru?subject=feedback">
+            <a class="contacts__value  contacts__value--link" href="mailto:info@mimimishkashop.ru?subject=feedback">
               info@mimimishkashop.ru
             </a>
           </div>
@@ -154,9 +154,11 @@
               г.&nbsp;Санкт-Петербург, ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8, офис&nbsp;101
             </p>
           </div>
-          <div class="contacts__map">
-            <iframe class="contacts__interactive-map"></iframe>
-          </div>
+        </div>
+        <div class="contacts__map">
+          <iframe class="contacts__interactive-map"></iframe>
+        </div>
+        <div class="contacts__wrapper">
           <a class="contacts__write  button" href="feedback-form.html">Напишите нам</a>
         </div>
       </section>
@@ -195,17 +197,17 @@
 
     <section class="modal">
       <h2 class="modal__title">Добавить в корзину</h2>
-      <form class="modal__form  size-form" action="https://echo.htmlacademy.ru" method="post">
-        <p class="size-form__choose">Выберите размер:</p>
-        <input class="size-form__input  visually-hidden" type="radio" name="size" id="size-S" value="S" checked>
-        <input class="size-form__input  visually-hidden" type="radio" name="size" id="size-M" value="M">
-        <input class="size-form__input  visually-hidden" type="radio" name="size" id="size-L" value="L">
-        <div class="size-form__size-chart">
-          <label class="size-form__label" for="size-S">S</label>
-          <label class="size-form__label" for="size-M">M</label>
-          <label class="size-form__label" for="size-L">L</label>
+      <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="modal-form__choose">Выберите размер:</p>
+        <input class="modal-form__input  visually-hidden" type="radio" name="size" id="size-S" value="S" checked>
+        <input class="modal-form__input  visually-hidden" type="radio" name="size" id="size-M" value="M">
+        <input class="modal-form__input  visually-hidden" type="radio" name="size" id="size-L" value="L">
+        <div class="modal-form__size-chart">
+          <label class="modal-form__label" for="size-S">S</label>
+          <label class="modal-form__label" for="size-M">M</label>
+          <label class="modal-form__label" for="size-L">L</label>
         </div>
-        <button class="size-form__add  button" type="submit">Добавить</button>
+        <button class="modal-form__add  button  button--green" type="submit">Добавить</button>
       </form>
     </section>
   </body>
