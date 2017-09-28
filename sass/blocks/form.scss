@@ -37,6 +37,28 @@
   @include font(17px, 17px);
 }
 
+.form__text {
+  border: none;
+  border-bottom: 2px solid $black;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-bottom: 2px solid $green;
+  }
+}
+
+.form__textarea {
+  border: none;
+  border: 2px solid $black;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border: 2px solid $green;
+  }
+}
+
 .form__note {
   @include font(14px, 16px);
 }
