@@ -1,0 +1,33 @@
+.production {
+  @include content();
+}
+
+.production__wrapper {
+  padding-left: 34px;
+  padding-right: 34px;
+}
+
+.production__title {
+  padding-left: 57px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  font-weight: 700;
+  color: $black;
+
+  @include font(17px, 24px);
+}
+
+.production__video-player {
+  margin-bottom: 30px;
+}
+
+.production__description {
+  margin-bottom: 25px;
+
+  @include font(13px, 24px);
+}
+
+.production__order {
+  margin-bottom: 30px;
+}

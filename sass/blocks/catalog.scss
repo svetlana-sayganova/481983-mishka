@@ -1,3 +1,11 @@
 .catalog {
   @include content();
 }
+
+.catalog__wrapper {
+  margin-top: 30px;
+}
+
+.catalog__item {
+  margin-bottom: 30px;
+}

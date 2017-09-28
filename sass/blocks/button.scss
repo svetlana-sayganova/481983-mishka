@@ -24,6 +24,6 @@
     background-color: $green;
     border: none;
 
-    @include button-action($white, rgba($white, 0.3), $green, $green);
+    @include button-action($white, rgba($white, 0.3), $green-secondary, $green-secondary);
   }
 }
