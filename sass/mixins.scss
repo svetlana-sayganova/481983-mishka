@@ -1,0 +1,38 @@
+@mixin action($color--hover, $color--active) {
+  &:hover,
+  &:focus {
+    color: $color--hover;
+  }
+
+  &:active {
+    color: $color--active;
+  }
+}
+
+@mixin button-action($color--hover, $color--active, $bg-color--hover, $bg-color--active) {
+  &:hover,
+  &:focus {
+    color: $color--hover;
+    background-color: $bg-color--hover;
+  }
+
+  &:active {
+    color: $color--active;
+    background-color: $bg-color--active;
+  }
+}
+
+@mixin accessibility() {
+  &:focus {
+    outline: thin dotted;
+  }
+}
+
+@mixin content() {
+  padding: 0 30px;
+}
+
+@mixin font($size, $height) {
+  font-size: $size;
+  line-height: $height / $size;
+}

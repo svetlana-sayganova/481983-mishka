@@ -1,0 +1,14 @@
+.order {
+  @include content();
+}
+
+.order__wrapper {
+  padding-top: 25px;
+  padding-bottom: 55px;
+}
+
+.order__description {
+  margin-bottom: 25px;
+
+  @include font(13px, 24px);
+}

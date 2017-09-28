@@ -1,0 +1,41 @@
+.reviews {
+  @include content();
+}
+
+.contacts__wrapper {
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  @include content();
+}
+
+.contacts__title {
+  margin-bottom: 32px;
+
+  font-size: 1.2rem;
+  line-height: 1.67;
+  color: $headings-color;
+  font-weight: 700;
+}
+
+.contacts__item {
+  line-height: 2;
+}
+
+.contacts__value--link {
+  color: $gray-dark;
+
+  @include action($green-link, rgba($green-link, 0.3));
+  @include accessibility();
+}
+
+.contacts__map {
+  width: 100%;
+  height: 457px;
+
+  background-color: #e9e2d7;
+  background-image: url("../img/map-mobile@1x.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

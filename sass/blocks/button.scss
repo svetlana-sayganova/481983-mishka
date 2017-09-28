@@ -1,0 +1,29 @@
+.button {
+  display: inline-block;
+  padding: 15px 0;
+
+  font: inherit;
+  font-size: 1.13rem;
+  line-height: 1.18;
+  text-align: center;
+  color: $button-color;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  background-color: $button-bg-color;
+  border: 2px solid $button-border;
+
+  cursor: pointer;
+
+  @include button-action($button-color--hover, $button-color--active, $button-bg-color--hover, $button-bg-color--active);
+  @include accessibility();
+
+  &--green {
+    color: $white;
+
+    background-color: $green;
+    border: none;
+
+    @include button-action($white, rgba($white, 0.3), $green-secondary, $green-secondary);
+  }
+}

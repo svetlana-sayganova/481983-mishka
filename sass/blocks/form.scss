@@ -1,0 +1,63 @@
+.form__fieldset {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 30px;
+}
+
+.form__title {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+
+  color: $green;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  @include font(17px, 17px);
+
+  &::after { // временное решние
+    content: "";
+    position: absolute;
+    left: 62px;
+    top: 50%;
+
+    height: 1px;
+    width: 100px;
+
+    background: $green;
+  }
+}
+
+.form__label {
+  color: $black;
+  font-weight: 700;
+
+  @include font(17px, 17px);
+}
+
+.form__text {
+  border: none;
+  border-bottom: 2px solid $black;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-bottom: 2px solid $green;
+  }
+}
+
+.form__textarea {
+  border: 2px solid $black;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border: 2px solid $green;
+  }
+}
+
+.form__note {
+  @include font(14px, 16px);
+}
