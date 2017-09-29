@@ -38,6 +38,7 @@
 }
 
 .form__text {
+  outline: none;
   border: none;
   border-bottom: 2px solid $black;
 
@@ -49,6 +50,7 @@
 }
 
 .form__textarea {
+  outline: none;
   border: 2px solid $black;
 
   &:hover,
