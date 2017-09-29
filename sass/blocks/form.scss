@@ -61,3 +61,7 @@
 .form__note {
   @include font(14px, 16px);
 }
+
+.form__send {
+  width: 100%;
+}

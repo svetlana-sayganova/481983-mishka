@@ -16,23 +16,27 @@
   margin-bottom: 46px;
 }
 
-.modal-form__choose {
+.modal__choose {
   margin-bottom: 25px;
 
   line-height: 2;
 }
 
-.modal-form__size-chart {
+.modal__size-chart {
   display: flex;
 
   margin-bottom: 30px;
 }
 
-.modal-form__label {
+.modal__label {
   font-size: 1.13rem;
   line-height: 1;
   color: $gray-dark;
   font-weight: 700;
 
   cursor: pointer;
+}
+
+.modal__add {
+  width: 100%;
 }
