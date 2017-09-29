@@ -1,0 +1,161 @@
+.main-nav {
+  width: auto;
+  min-height: 79px;
+
+  //@include outline(green);
+
+  @media (min-width: $tablet-width) {
+    min-height: 148px;
+  }
+}
+
+.main-nav__wrapper {
+  position: relative;
+  width: $mobile-width;
+  margin: 0 auto;
+
+  @include outline(rgb(155, 37, 179));
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+
+    width: 668px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1050px;
+    margin: 0 auto;
+  }
+}
+
+.main-nav__logo {
+  position: absolute;
+
+  left: 50%;
+  top: 22px;
+  margin-left: -43px;
+
+  @media (min-width: $tablet-width) {
+    top: 22px;
+    left: -2px;
+    margin-left: 0; // временно
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 10px;
+    left: 50%;
+    margin-left: -43px; // временно
+  }
+}
+
+.main-nav__toggle {
+  display: block;
+
+  margin-left: auto;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav__list {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 320px;
+
+    @include outline(#e79223);
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 450px;
+  }
+}
+
+.main-nav__user-list {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+    width: 348px;
+
+    @include outline(#e79223);
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 448px;
+  }
+}
+
+.main-nav__item {
+  &--new {
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
+
+    @media (max-width: $desktop-width) {
+      order: -2;
+      visibility: hidden;
+    }
+  }
+
+  &--sale {
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
+
+    @media (max-width: $desktop-width) {
+      order: -1;
+      visibility: hidden;
+    }
+  }
+
+  &--delivery {
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.main-nav__link {
+  display: block;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  padding-left: 76px;
+
+  font-size: 1.13rem;
+  line-height: 1.4;
+  color: $link-color;
+
+  background-color: $white;
+  border-bottom: 1px solid $gray-light;
+
+  transition: color 0.3s ease;
+
+  cursor: pointer;
+
+  @include action($link-color--hover, $link-color--active);
+  @include accessibility();
+
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
+
+    background-color: transparent;
+    border-bottom: none;
+  }
+
+  &--active {
+    cursor: default;
+    color: $link-color--active;
+
+    @include action($link-color--active, $link-color--active);
+  }
+}

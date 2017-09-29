@@ -36,3 +36,7 @@
   font-size: $size;
   line-height: $height / $size;
 }
+
+@mixin outline($color) {
+  outline: 2px solid $color;
+}
