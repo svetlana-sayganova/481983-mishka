@@ -101,29 +101,29 @@
 
 .main-nav__item {
   &--new {
-    @media (max-width: $tablet-width) {
+    @media (max-width: $tablet-width - 1px) {
       display: none;
     }
 
-    @media (max-width: $desktop-width) {
+    @media (max-width: $desktop-width - 1px) {
       order: -2;
       visibility: hidden;
     }
   }
 
   &--sale {
-    @media (max-width: $tablet-width) {
+    @media (max-width: $tablet-width - 1px) {
       display: none;
     }
 
-    @media (max-width: $desktop-width) {
+    @media (max-width: $desktop-width - 1px) {
       order: -1;
       visibility: hidden;
     }
   }
 
   &--delivery {
-    @media (max-width: $tablet-width) {
+    @media (max-width: $tablet-width - 1px) {
       display: none;
     }
   }
