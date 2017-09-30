@@ -26,6 +26,10 @@
   &:focus {
     outline: thin dotted;
   }
+
+  &:active {
+    outline: none;
+  }
 }
 
 @mixin content() {
