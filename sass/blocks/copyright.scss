@@ -1,10 +1,21 @@
 .copyright {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
 
-  min-height: 80px;
+  width: 182px;
 
   font-size: 1.27rem;
   line-height: 1;
   font-weight: 700;
+
+  @media (max-width: $tablet-width) {
+    min-height: 80px;
+    margin: 0 auto;
+  }
+}
+
+.copyright__image {
+  display: block;
 }

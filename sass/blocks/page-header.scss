@@ -39,7 +39,7 @@
 
 .page-header__wrapper {
   width: $mobile-width;
-  padding-top: 69px;
+  padding-top: 69px; // отступ для заголовка страницы
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
