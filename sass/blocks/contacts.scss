@@ -1,12 +1,34 @@
-.reviews {
-  @include content();
-}
-
-.contacts__wrapper {
+.contacts {
   margin-top: 40px;
   margin-bottom: 40px;
 
-  @include content();
+  @media (min-width: $tablet-width) {
+    margin-top: 70px;
+    margin-bottom: 57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width-inner;  // для корректного размещения карты
+    margin: 0 auto;
+    margin-top: 70px;
+    margin-bottom: 105px;
+  }
+}
+
+.contacts__wrapper {
+  width: $mobile-width-inner;
+  margin: 0 auto;
+
+  // временно для сетки
+  @include outline(#2a6ceb);
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width-inner;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width-inner;
+  }
 }
 
 .contacts__title {
@@ -16,10 +38,22 @@
   line-height: 1.67;
   color: $headings-color;
   font-weight: 700;
+
+  @media (min-width: $tablet-width) {
+    @include font(43px, 50px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font(53px, 57px);
+  }
 }
 
 .contacts__item {
   line-height: 2;
+
+  @media (min-width: $tablet-width) {
+    @include font(17px, 30px);
+  }
 }
 
 .contacts__value--link {
@@ -32,10 +66,22 @@
 .contacts__map {
   width: 100%;
   height: 457px;
+  margin-bottom: 40px;
+  margin-top: 40px;
 
   background-color: #e9e2d7;
   background-image: url("../img/map-mobile@1x.jpg");
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 55px;
+    margin-top: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 525px;
+    height: 457px;
+  }
 }

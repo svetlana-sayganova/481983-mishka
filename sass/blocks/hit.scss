@@ -1,10 +1,32 @@
 .hit {
-  @include content();
+  margin-top: 30px;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 50px;
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 70px;
+    margin-bottom: 96px;
+  }
 }
 
 .hit__wrapper {
-  margin-top: 30px;
-  margin-bottom: 40px;
+  width: $mobile-width-inner;
+  margin: 0 auto;
+
+  // временно для сетки
+  @include outline(#d5eb2a);
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width-inner;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width-inner;
+  }
 }
 
 .hit__title {
@@ -14,6 +36,14 @@
   line-height: 1.2;
   color: $headings-color;
   font-weight: 700;
+
+  @media (min-width: $tablet-width) {
+    @include font(43px, 50px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font(53px, 57px);
+  }
 }
 
 .hit__type {
@@ -30,6 +60,10 @@
   margin-bottom: 25px;
 
   line-height: 1.6;
+
+  @media (min-width: $tablet-width) {
+    @include font(17px, 30px);
+  }
 }
 
 .hit__table {
@@ -62,4 +96,8 @@
   line-height: 1.4;
 
   font-weight: 700;
+
+  @media (min-width: $tablet-width) {
+    @include font(20px, 24px);
+  }
 }

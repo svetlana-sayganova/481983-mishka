@@ -1,10 +1,32 @@
 .features {
-  @include content();
+  margin-top: 30px;
+  margin-bottom: 60px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 55px;
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 70px;
+    margin-bottom: 88px;
+  }
 }
 
 .features__wrapper {
-  margin-top: 30px;
-  margin-bottom: 60px;
+  width: $mobile-width-inner;
+  margin: 0 auto;
+
+  // временно для сетки
+  @include outline(#c845cf);
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width-inner;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width-inner;
+  }
 }
 
 .features__title {
@@ -14,15 +36,42 @@
   line-height: 1.2;
   color: $headings-color;
   font-weight: 700;
+
+  @media (min-width: $tablet-width) {
+    @include font(43px, 50px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font(53px, 57px);
+  }
+}
+
+.features__list {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 700px;
+  }
 }
 
 .features__item {
-  display: block;
-  width: 260px;
   padding-top: 82px;
 
   font-size: 1.13rem;
   line-height: 1.2;
   color: $gray-dark;
   font-weight: 700;
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+    padding-top: 115px;
+
+    @include font(20px, 22px);
+  }
 }
