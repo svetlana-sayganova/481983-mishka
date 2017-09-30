@@ -1,14 +1,35 @@
 .production {
-  @include content();
+  margin-bottom: 60px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 64px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 105px;
+  }
 }
 
 .production__wrapper {
-  padding-left: 34px;
-  padding-right: 34px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: $mobile-width-inner;
+  margin: 0 auto;
+
+  border: 1px solid #ececec;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width-inner;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width-inner;
+  }
 }
 
 .production__title {
-  padding-left: 57px;
+  padding-left: 91px; // для размещения иконки
   padding-top: 25px;
   padding-bottom: 25px;
 
@@ -16,18 +37,68 @@
   color: $black;
 
   @include font(17px, 24px);
+
+  @media (min-width: $tablet-width) {
+    padding-left: 108px;
+
+    @include font(20px, 24px);
+  }
+
+  @media (min-width: $desktop-width) {
+    align-self: flex-end;
+    width: 350px;
+    box-sizing: border-box;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
 }
 
 .production__video-player {
   margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    order: -1;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.production__content {
+  padding-left: 34px;
+  padding-right: 34px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-self: flex-end;
+    width: 350px;
+    box-sizing: border-box;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
 }
 
 .production__description {
   margin-bottom: 25px;
 
   @include font(13px, 24px);
+
+  @media (min-width: $tablet-width) {
+    @include font(15px, 30px);
+  }
 }
 
 .production__order {
   margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
 }
