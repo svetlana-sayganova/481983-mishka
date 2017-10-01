@@ -1,14 +1,47 @@
 .order {
-  @include content();
+  margin-top: 25px;
+  margin-bottom: 55px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 70px;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 125px;
+  }
 }
 
 .order__wrapper {
-  padding-top: 25px;
-  padding-bottom: 55px;
+  @media (max-width: $tablet-width - 1px) {
+    width: $mobile-width-inner;
+    margin: 0 auto;
+  }
+}
+
+.order__content {
+  @media (min-width: $tablet-width) {
+    width: $tablet-width-inner;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width-inner;
+    margin: 0 auto;
+  }
 }
 
 .order__description {
   margin-bottom: 25px;
 
   @include font(13px, 24px);
+
+  @media (min-width: $tablet-width) {
+    @include font(17px, 30px);
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 175px;
+    padding-right: 175px;
+  }
 }
