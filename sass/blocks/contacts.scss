@@ -3,11 +3,15 @@
   margin-bottom: 40px;
 
   @media (min-width: $tablet-width) {
+    @include outline(#b9eb2a);
     margin-top: 70px;
     margin-bottom: 57px;
   }
 
   @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+
     width: $desktop-width-inner;  // для корректного размещения карты
     margin: 0 auto;
     margin-top: 70px;
@@ -23,14 +27,28 @@
   @include outline(#2a6ceb);
 
   @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
     width: $tablet-width-inner;
   }
 
   @media (min-width: $desktop-width) {
-    width: $desktop-width-inner;
+    width: 50%;
+    flex-direction: column;
+    //align-content: flex-start;
+
     padding-right: 0;
     padding-left: 175px;
     box-sizing: border-box;
+  }
+
+  &--button {
+    @media (min-width: $desktop-width) {
+      margin-right: 0;
+      margin-left: 0;
+    }
   }
 }
 
@@ -43,20 +61,38 @@
   font-weight: 700;
 
   @media (min-width: $tablet-width) {
+    width: 100%;
+    margin-bottom: 50px;
+
     @include font(43px, 50px);
   }
 
   @media (min-width: $desktop-width) {
+    margin-top: 70px;
+
     @include font(53px, 57px);
   }
 }
 
 .contacts__item {
+  display: flex;
   line-height: 2;
 
   @media (min-width: $tablet-width) {
+    width: 50%;
+
     @include font(17px, 30px);
   }
+
+  @media (min-width: $desktop-width) {
+    width: 307px;
+    margin-bottom: 30px;
+  }
+}
+
+.contacts__parameter {
+  width: 78px;
+  flex-shrink: 0;
 }
 
 .contacts__value--link {
@@ -74,20 +110,35 @@
 
   background-color: #e9e2d7;
   background-image: url("../img/map-mobile@1x.jpg");
-  background-position: 0 0;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 55px;
-    margin-top: 60px;
+    margin-top: 57px;
 
     background-image: url("../img/map-tablet@1x.jpg");
   }
 
   @media (min-width: $desktop-width) {
     width: 525px;
+    margin-bottom: 0;
+    margin-top: 0;
 
     background-image: url("../img/map-desktop@1x.jpg");
+  }
+}
+
+.contacts__write {
+  @media (min-width: $tablet-width) {
+    width: 230px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -52px;
+    margin-right: 0;
+    margin-left: 0;
   }
 }
