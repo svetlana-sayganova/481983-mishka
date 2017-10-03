@@ -3,7 +3,7 @@
   margin-bottom: 40px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 50px;
+    margin-top: 45px;
     margin-bottom: 70px;
   }
 
@@ -17,17 +17,16 @@
   width: $mobile-width-inner;
   margin: 0 auto;
 
-  // временно для сетки
-  @include outline(#d5eb2a);
-
   @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-end;
     width: $tablet-width-inner;
   }
 
   @media (min-width: $desktop-width) {
     width: $desktop-width-inner;
-    padding-right: 0;
-    padding-left: 170px;
     box-sizing: border-box;
   }
 }
@@ -41,10 +40,18 @@
   font-weight: 700;
 
   @media (min-width: $tablet-width) {
+    flex-grow: 1;
+
+    margin-bottom: 57px;
+
     @include font(43px, 50px);
   }
 
   @media (min-width: $desktop-width) {
+    z-index: 5;
+
+    margin-top: 55px;
+
     @include font(53px, 57px);
   }
 }
@@ -57,6 +64,36 @@
   color: $green;
   font-weight: 700;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    flex-grow: 0;
+
+    width: 75px;
+    margin-top: 10px;
+    padding-right: 25px;
+
+    text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: -1;
+
+    margin-top: 70px;
+    padding-left: 47px;
+    padding-right: 0;
+    margin-right: 53px;
+  }
+}
+
+.hit__info {
+  @media (min-width: $tablet-width) {
+    width: 290px;
+    margin-bottom: 150px; // уравновешиваем отрицательный отступ в hit__buy
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 175px;
+  }
 }
 
 .hit__description {
@@ -65,7 +102,14 @@
   line-height: 1.6;
 
   @media (min-width: $tablet-width) {
+    margin-top: -7px;
+    margin-bottom: 37px;
+
     @include font(17px, 30px);
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 48px;
   }
 }
 
@@ -75,6 +119,16 @@
 
   border-collapse: collapse;
 
+  @include font(15px, 20px);
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 110px;
+  }
+
   & tr {
     border-bottom: 1px solid $gray-light;
   }
@@ -82,6 +136,8 @@
 
 .hit__parameter {
   width: 35%;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   font-weight: 400;
 
@@ -90,19 +146,39 @@
 
 .hit__image img {
   display: block;
+  margin-bottom: 30px;
 
   background-color: $gray-light;
 
   @media (min-width: $tablet-width) {
     width: 333px;
+    margin-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
     width: 525px;
+    margin-top: -165px;
+  }
+}
+
+.hit__buy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    width: 290px;
+    margin-top: -150px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 175px;
   }
 }
 
 .hit__price {
+  margin-bottom: 30px;
+
   font-size: 1.13rem;
   line-height: 1.4;
 
@@ -111,4 +187,8 @@
   @media (min-width: $tablet-width) {
     @include font(20px, 24px);
   }
+}
+
+.hit__order {
+  width: 100%;
 }
