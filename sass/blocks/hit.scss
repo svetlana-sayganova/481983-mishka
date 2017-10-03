@@ -88,10 +88,18 @@
   text-align: left;
 }
 
-.hit__image {
+.hit__image img {
   display: block;
 
   background-color: $gray-light;
+
+  @media (min-width: $tablet-width) {
+    width: 333px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 525px;
+  }
 }
 
 .hit__price {

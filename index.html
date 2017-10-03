@@ -79,7 +79,11 @@
               <td class="hit__value">15&nbsp;см</td>
             </tr>
           </table>
-          <img class="hit__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
+          <picture class="hit__image">
+            <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg">
+            <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg">
+            <img src="img/triple-set-mobile@1x.jpg" alt="Вязаные корзинки">
+          </picture>
           <b class="hit__price">Цена: 990&nbsp;руб.</b>
           <a href="#" class="hit__order  button">Заказать</a>
         </div>
