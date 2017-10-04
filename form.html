@@ -62,14 +62,18 @@
             <div class="form__wrapper">
               <fieldset class="form__fieldset">
                 <div class="form__inner">
-                  <legend class="form__title">Тип</legend>
+                  <legend>
+                    <span class="form__title">
+                      Тип
+                    </span>
+                  </legend>
                   <div class="form__fieldset-inner">
                     <input class="form__radio  visually-hidden" type="radio" name="category" id="interior" value="interior-item" checked>
-                    <label class="form__label" for="interior">
+                    <label class="form__radio-label" for="interior">
                       Аксессуар для&nbsp;интерьера
                     </label>
                     <input class="form__radio  visually-hidden" type="radio" name="category" id="toy" value="toy">
-                    <label class="form__label" for="toy">
+                    <label class="form__radio-label" for="toy">
                       Детская игрушка
                     </label>
                   </div>
@@ -80,30 +84,34 @@
             <div class="form__wrapper  form__wrapper--gray">
               <fieldset class="form__fieldset">
                 <div class="form__inner">
-                  <legend class="form__title">Цвет</legend>
+                  <legend>
+                    <span class="form__title">
+                      Цвет
+                    </span>
+                  </legend>
                   <div class="form__fieldset-inner  form__fieldset-inner--columns">
                     <input class="form__checkbox  visually-hidden" type="checkbox" name="white" id="white" checked>
-                    <label class="form__label" for="white">
+                    <label class="form__checkbox-label" for="white">
                       Белый
                     </label>
                     <input class="form__checkbox  visually-hidden" type="checkbox" name="gray" id="gray" checked>
-                    <label class="form__label" for="gray">
+                    <label class="form__checkbox-label" for="gray">
                       Серый
                     </label>
                     <input class="form__checkbox  visually-hidden" type="checkbox" name="tiffany" id="tiffany">
-                    <label class="form__label" for="tiffany">
+                    <label class="form__checkbox-label" for="tiffany">
                       &laquo;Тиффани&raquo;
                     </label>
                     <input class="form__checkbox  visually-hidden" type="checkbox" name="black" id="black">
-                    <label class="form__label" for="black">
+                    <label class="form__checkbox-label" for="black">
                       Черный
                     </label>
                     <input class="form__checkbox  visually-hidden" type="checkbox" name="pink" id="pink">
-                    <label class="form__label" for="pink">
+                    <label class="form__checkbox-label" for="pink">
                       Розовый
                     </label>
                     <input class="form__checkbox  visually-hidden" type="checkbox" name="orange" id="orange">
-                    <label class="form__label" for="orange">
+                    <label class="form__checkbox-label" for="orange">
                       Оранжевый
                     </label>
                   </div>
@@ -114,20 +122,33 @@
             <div class="form__wrapper">
               <fieldset class="form__fieldset">
                 <div class="form__inner">
-                  <legend class="form__title">ФИО</legend>
+                  <legend>
+                    <span class="form__title">
+                      ФИО
+                    </span>
+                  </legend>
                   <div class="form__fieldset-inner">
-                    <input class="form__text" type="text" name="customer-name" id="customer-name" placeholder="Введите Ваше имя*" required>
-                    <label class="form__label" for="customer-name">
-                      Имя:
-                    </label>
-                    <input class="form__text" type="text" name="customer-surname" id="customer-surname" placeholder="Укажите фамилию*" required>
-                    <label class="form__label" for="customer-surname">
-                      Фамилия:
-                    </label>
-                    <input class="form__text" type="text" name="customer-patronymic" id="customer-patronymic" placeholder="Отчество, если желаете">
-                    <label class="form__label" for="customer-patronymic">
-                      Отчество:
-                    </label>
+                    <div class="form__text-wpapper">
+                      <label class="form__label" for="customer-name">
+                        Имя:
+                      </label>
+                      <input class="form__text" type="text" name="customer-name" id="customer-name" placeholder="Введите Ваше имя*" required>
+                    </div>
+
+                    <div class="form__text-wpapper">
+                      <label class="form__label" for="customer-surname">
+                        Фамилия:
+                      </label>
+                      <input class="form__text" type="text" name="customer-surname" id="customer-surname" placeholder="Укажите фамилию*" required>
+                    </div>
+
+                    <div class="form__text-wpapper">
+                      <label class="form__label" for="customer-patronymic">
+                        Отчество:
+                      </label>
+                      <input class="form__text" type="text" name="customer-patronymic" id="customer-patronymic" placeholder="Отчество, если желаете">
+                    </div>
+
                   </div>
                 </div>
               </fieldset>
@@ -136,18 +157,15 @@
             <div class="form__wrapper  form__wrapper--gray">
               <fieldset class="form__fieldset">
                 <div class="form__inner">
-                  <label class="form__title" for="customer-phone">
+                  <label class="form__title  form__title--phone" for="customer-phone">
                       Тел
                   </label>
                   <input class="form__text  form__text--phone" type="tel" name="customer-phone" id="customer-phone" placeholder="+7 XXX XX XX*" required>
                 </div>
               </fieldset>
-            </div>
-
-            <div class="form__wrapper  form__wrapper--gray">
               <fieldset class="form__fieldset">
                 <div class="form__inner">
-                  <label class="form__title" for="customer-mail">
+                  <label class="form__title  form__title--mail" for="customer-mail">
                       E-mail
                   </label>
                   <input class="form__text  form__text--mail" type="email" name="customer-mail" id="customer-mail" placeholder="Ваш Email*" required>
@@ -161,7 +179,7 @@
                   <label class="form__title" for="customer-wishes">
                     Доп
                   </label>
-                  <textarea class="form__textarea" name="customer-wishes" id="customer-wishes" rows="8" cols="20" placeholder="Опишите все Ваши пожелания к заказу"></textarea>
+                  <textarea class="form__textarea" name="customer-wishes" id="customer-wishes" rows="7" cols="19" placeholder="Опишите все Ваши пожелания к заказу"></textarea>
                 </div>
               </fieldset>
             </div>

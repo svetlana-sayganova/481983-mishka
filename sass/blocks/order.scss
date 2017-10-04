@@ -37,6 +37,8 @@
   @include font(13px, 24px);
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+
     @include font(17px, 30px);
   }
 
