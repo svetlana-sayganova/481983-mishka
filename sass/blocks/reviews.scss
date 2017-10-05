@@ -14,9 +14,6 @@
   width: $mobile-width-inner;
   margin: 0 auto;
 
-  // временно для сетки
-  @include outline(#eb2a5e);
-
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;

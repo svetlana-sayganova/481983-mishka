@@ -17,9 +17,6 @@
   width: $mobile-width-inner;
   margin: 0 auto;
 
-  // временно для сетки
-  @include outline(#c845cf);
-
   @media (min-width: $tablet-width) {
     width: $tablet-width-inner;
   }

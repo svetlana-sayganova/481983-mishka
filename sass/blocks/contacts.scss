@@ -3,7 +3,6 @@
   margin-bottom: 40px;
 
   @media (min-width: $tablet-width) {
-    @include outline(#b9eb2a);
     margin-top: 70px;
     margin-bottom: 57px;
   }
@@ -22,9 +21,6 @@
 .contacts__wrapper {
   width: $mobile-width-inner;
   margin: 0 auto;
-
-  // временно для сетки
-  @include outline(#2a6ceb);
 
   @media (min-width: $tablet-width) {
     display: flex;

@@ -11,8 +11,6 @@
   width: $mobile-width;
   margin: 0 auto;
 
-  @include outline(rgb(155, 37, 179));
-
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
@@ -51,107 +49,9 @@
 .main-nav__toggle {
   position: absolute;
   right: 0;
-  top: 50%;
-  margin-top: -12px; //временно
+  top: 0; //временно
 
   @media (min-width: $tablet-width) {
     display: none;
-  }
-}
-
-.main-nav__list {
-  display: none;
-
-  @media (min-width: $tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
-    order: 3;
-
-    width: 310px;
-
-    @include outline(#e79223);
-  }
-
-  @media (min-width: $desktop-width) {
-    order: 1;
-    width: 430px;
-  }
-}
-
-.main-nav__user-list {
-  display: none;
-
-  @media (min-width: $tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    order: 2;
-
-    width: 350px;
-    height: 88px;
-
-    @include outline(#e79223);
-  }
-
-  @media (min-width: $desktop-width) {
-    order: 3;
-    width: 430px;
-  }
-}
-
-.main-nav__item {
-  &--new,
-  &--sale {
-    @media (max-width: $desktop-width - 1px) {
-      display: none;
-    }
-  }
-
-  &--delivery {
-    @media (max-width: $tablet-width - 1px) {
-      display: none;
-    }
-  }
-}
-
-.main-nav__link {
-  display: block;
-  padding-top: 28px;
-  padding-bottom: 26px;
-  padding-left: 76px;
-
-  font-size: 1.13rem;
-  line-height: 1.4;
-  color: $link-color;
-
-  background-color: $white;
-  border-bottom: 1px solid $gray-light;
-
-  transition: color 0.3s ease;
-
-  cursor: pointer;
-
-  @include action($link-color--hover, $link-color--active);
-  @include accessibility();
-
-  @media (min-width: $tablet-width) {
-    padding-bottom: 30px;
-    padding-left: 0;
-
-    background-color: transparent;
-    border-bottom: none;
-  }
-
-  &--delivery {
-    font-weight: 400;
-
-    @include font(15px, 24px);
-  }
-
-  &--active {
-    cursor: default;
-    color: $link-color--active;
-
-    @include action($link-color--active, $link-color--active);
   }
 }
