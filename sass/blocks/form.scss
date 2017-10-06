@@ -116,11 +116,46 @@ legend {
 
 .form__radio-label,
 .form__checkbox-label {
+  position: relative;
+
   height: 38px;
   padding-top: 10px;
   padding-left: 62px;
   margin-bottom: 23px;
   box-sizing: border-box;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 37px;
+    height: 37px;
+
+    border: 2px solid $gray-dark;
+
+    cursor: pointer;
+
+    @media (min-width: $tablet-width) {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      border-color: $green;
+    }
+  }
+
+  &:active {
+    &::before {
+      border-color: #c7c7c7;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     height: 52px;
@@ -128,6 +163,71 @@ legend {
     padding-left: 80px;
   }
 }
+
+.form__radio-label::before {
+  border-radius: 50%;
+}
+
+.form__radio:checked + .form__radio-label,
+.form__radio-label:active {
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 12px;
+    left: 12px;
+
+    width: 16px;
+    height: 16px;
+    background-color: $green;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    @media (min-width: $tablet-width) {
+      top: 16px;
+      left: 16px;
+
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
+
+.form__checkbox:checked + .form__checkbox-label,
+.form__checkbox-label:active {
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 12px;
+    left: 10px;
+
+    width: 18px;
+    height: 8px;
+
+    border: 2px solid $gray-dark;
+    border-radius: 1px;
+    border-top-style: none;
+    border-right-style: none;
+
+    transform: rotate(-45deg);
+
+    cursor: pointer;
+
+    @media (min-width: $tablet-width) {
+      top: 16px;
+      left: 13px;
+
+      width: 28px;
+      height: 13px;
+
+      border-width: 3px;
+    }
+  }
+}
+
 
 .form__checkbox-label {
   @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {

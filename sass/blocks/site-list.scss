@@ -29,11 +29,11 @@
       border-right: 1px solid $gray-light;
     }
 
-    &:nth-of-type(odd) a {
+    &:nth-of-type(odd) {
       width: 184px;
     }
 
-    &:nth-of-type(even) a {
+    &:nth-of-type(even) {
       padding-left: 35px;
     }
 
