@@ -1,6 +1,7 @@
 .button {
-  display: inline-block;
-  padding: 15px 0;
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 15px;
 
   font: inherit;
   font-size: 1.13rem;
@@ -12,6 +13,8 @@
 
   background-color: $button-bg-color;
   border: 2px solid $button-border;
+
+  transition: 0.3s ease;
 
   cursor: pointer;
 

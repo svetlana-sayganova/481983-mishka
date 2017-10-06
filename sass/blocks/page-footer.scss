@@ -3,12 +3,55 @@
   color: $black;
 
   background-color: $gray-light;
-
-  @include content();
 }
 
 .page-footer__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: $mobile-width-inner;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+
+    width: $tablet-width-inner;
+    min-height: 143px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width-inner;
+  }
+}
+
+.page-footer__logo {
+  @media (max-width: $tablet-width - 1px) {
+    display: none;
+  }
+}
+
+.page-footer__logo-image {
+  display: block;
+}
+
+.page-footer__social {
+  @media (max-width: $tablet-width - 1px) {
+    width: 100%;
+
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: 159px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 349px;
+  }
+}
+
+.page-footer__copyright {
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+  }
 }

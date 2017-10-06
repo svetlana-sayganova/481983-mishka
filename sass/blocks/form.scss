@@ -1,63 +1,378 @@
+.form__wrapper {
+  padding-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 54px;
+    padding-bottom: 27px;
+  }
+
+  &--gray {
+    @media (min-width: $tablet-width) {
+      background-color: $gray-light;
+    }
+  }
+}
+
 .form__fieldset {
+  //padding-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width-inner;
+    margin: 0 auto;
+    // padding-top: 50px;
+    // padding-bottom: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width-inner;
+  }
+}
+
+.form__inner {
   display: flex;
   flex-direction: column;
 
-  margin-top: 30px;
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
+}
+
+legend {
+  display: block;
 }
 
 .form__title {
-  position: relative;
-  display: block;
-  box-sizing: border-box;
-  margin-bottom: 25px;
-
   color: $green;
   font-weight: 700;
   text-transform: uppercase;
 
   @include font(17px, 17px);
 
-  &::after { // временное решние
-    content: "";
-    position: absolute;
-    left: 62px;
-    top: 50%;
+  @media (max-width: $tablet-width - 1) {
+    display: flex;
+    flex-grow: 0;
 
-    height: 1px;
-    width: 100px;
+    margin-bottom: 25px;
 
-    background: $green;
+    &::after { // декоративный элемент
+      content: "";
+      flex-grow: 2;
+      align-self: center;
+
+      width: 5px;
+      height: 1px;
+      margin-left: 22px;
+
+      background: $green;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    flex-shrink: 0;
+    display: block;
+
+    width: 167px;
+    padding-top: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 175px;
+    box-sizing: border-box;
+    padding-left: 60px;
+  }
+
+  &--phone,
+  &--mail,
+  &--name {
+    @media (max-width: $tablet-width - 1) {
+      margin-bottom: 10px;
+    }
   }
 }
 
-.form__label {
+.form__fieldset-inner {
+  display: flex;
+  flex-direction: column;
+
+  &--columns {
+    @media (min-width: $tablet-width) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.form__label,
+.form__radio-label,
+.form__checkbox-label {
   color: $black;
   font-weight: 700;
 
   @include font(17px, 17px);
+
+  @media (min-width: $tablet-width) {
+    @include font(19px, 19px);
+  }
+}
+
+.form__radio-label,
+.form__checkbox-label {
+  position: relative;
+
+  height: 38px;
+  padding-top: 10px;
+  padding-left: 62px;
+  margin-bottom: 23px;
+  box-sizing: border-box;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 37px;
+    height: 37px;
+
+    border: 2px solid $gray-dark;
+
+    cursor: pointer;
+
+    @media (min-width: $tablet-width) {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      border-color: $green;
+    }
+  }
+
+  &:active {
+    &::before {
+      border-color: #c7c7c7;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 52px;
+    padding-top: 15px;
+    padding-left: 80px;
+  }
+}
+
+.form__radio-label::before {
+  border-radius: 50%;
+}
+
+.form__radio:checked + .form__radio-label,
+.form__radio-label:active {
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 12px;
+    left: 12px;
+
+    width: 16px;
+    height: 16px;
+    background-color: $green;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    @media (min-width: $tablet-width) {
+      top: 16px;
+      left: 16px;
+
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
+
+.form__checkbox:checked + .form__checkbox-label,
+.form__checkbox-label:active {
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 12px;
+    left: 10px;
+
+    width: 18px;
+    height: 8px;
+
+    border: 2px solid $gray-dark;
+    border-radius: 1px;
+    border-top-style: none;
+    border-right-style: none;
+
+    transform: rotate(-45deg);
+
+    cursor: pointer;
+
+    @media (min-width: $tablet-width) {
+      top: 16px;
+      left: 13px;
+
+      width: 28px;
+      height: 13px;
+
+      border-width: 3px;
+    }
+  }
+}
+
+
+.form__checkbox-label {
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    width: 237px;
+
+    &:nth-of-type(odd) {
+      margin-right: 25px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 262px;
+  }
+}
+
+.form__text-wpapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 500px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 700px;
+  }
+}
+
+.form__label {
+  @media (min-width: $tablet-width) {
+    margin-right: 23px;
+    padding-top: 13px;
+  }
 }
 
 .form__text {
+  height: 50px;
+  box-sizing: border-box;
+  padding-bottom: 7px;
+  margin-bottom: 24px;
+
+  font-family: $font-family;
+
+  outline: none;
   border: none;
+  background-color: transparent;
   border-bottom: 2px solid $black;
+
+  @include font(17px, 18px);
 
   &:hover,
   &:focus,
   &:active {
     border-bottom: 2px solid $green;
   }
+
+  &:active {
+    color: $gray-dark;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    padding-left: 16px;
+
+    @include font(19px, 19px);
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 700px;
+  }
+
+  &--phone {
+    @media (max-width: $tablet-width - 1) {
+      margin-bottom: 30px;
+    }
+  }
 }
 
 .form__textarea {
+  height: 140px;
+  box-sizing: border-box;
+
+  padding: 10px 16px;
+
+  outline: none;
   border: 2px solid $black;
+
+  font-family: $font-family;
+
+  @include font(17px, 18px);
 
   &:hover,
   &:focus,
   &:active {
     border: 2px solid $green;
   }
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+
+    @include font(19px, 19px);
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 700px;
+  }
+}
+
+.form__footer {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: $tablet-width-inner;
+    margin: 0 auto;
+    margin-top: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 700px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
 }
 
 .form__note {
   @include font(14px, 16px);
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+
+    @include font(17px, 30px);
+  }
+}
+
+.form__send {
+  width: 100%;
+  margin-top: 30px;
+
+  @media (min-width: $tablet-width) {
+    order: -1;
+    margin-top: 0;
+    width: 230px;
+  }
 }

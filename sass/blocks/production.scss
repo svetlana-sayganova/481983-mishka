@@ -1,14 +1,43 @@
 .production {
-  @include content();
+  margin-bottom: 60px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 64px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 105px;
+  }
 }
 
 .production__wrapper {
-  padding-left: 34px;
-  padding-right: 34px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: $mobile-width-inner;
+  margin: 0 auto;
+
+  border: 1px solid #ececec;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width-inner;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: $desktop-width-inner;
+  }
+
+  &:hover {
+    box-shadow: 0 6px 10px 0 rgba($black, 0.1);
+  }
 }
 
 .production__title {
-  padding-left: 57px;
+  padding-left: 91px; // для размещения иконки
   padding-top: 25px;
   padding-bottom: 25px;
 
@@ -16,18 +45,77 @@
   color: $black;
 
   @include font(17px, 24px);
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 7px;
+    padding-left: 108px;
+
+    @include font(20px, 24px);
+  }
+
+  @media (min-width: $desktop-width) {
+    order: -1;
+    width: 350px;
+    margin-left: 700px;
+    box-sizing: border-box;
+    padding-top: 96px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
 }
 
 .production__video-player {
   margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    order: -1;
+
+    margin-bottom: 13px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -177px;
+    margin-bottom: 0;
+  }
+}
+
+.production__content {
+  padding-left: 34px;
+  padding-right: 34px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 350px;
+    box-sizing: border-box;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
 }
 
 .production__description {
   margin-bottom: 25px;
 
   @include font(13px, 24px);
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 35px;
+
+    @include font(15px, 30px);
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 45px;
+  }
 }
 
 .production__order {
   margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
 }
