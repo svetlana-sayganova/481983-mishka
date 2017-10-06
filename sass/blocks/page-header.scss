@@ -112,8 +112,10 @@
   display: flex;
   flex-direction: column;
 
+
   @media (min-width: $tablet-width) {
     width: auto;
+    height: 119px; // для корректной работы при наведении на категории
     margin-left: 50px;
     margin-right: 50px;
     flex-direction: row;
@@ -131,15 +133,23 @@
 
   background-color: $green;
 
-  transition: 0.3s ease;
+  transition: color 0.3s ease;
 
   cursor: pointer;
 
   @include action($white, rgba($white, 0.3));
-  @include accessibility();
 
   @media (min-width: $tablet-width) {
     flex-grow: 1;
+
+    padding-top: 30px;
+    transition: margin-top 0.3s ease;
+
+    &:hover {
+      margin-top: -5px;
+    }
+
+    @include font(20px, 30px);
   }
 
   & span {
