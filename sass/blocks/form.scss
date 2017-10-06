@@ -82,9 +82,10 @@ legend {
   }
 
   &--phone,
-  &--mail {
+  &--mail,
+  &--name {
     @media (max-width: $tablet-width - 1) {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
   }
 }
@@ -268,13 +269,17 @@ legend {
 .form__text {
   height: 50px;
   box-sizing: border-box;
-  padding-bottom: 8px;
-  margin-bottom: 25px;
+  padding-bottom: 7px;
+  margin-bottom: 24px;
+
+  font-family: $font-family;
 
   outline: none;
   border: none;
   background-color: transparent;
   border-bottom: 2px solid $black;
+
+  @include font(17px, 18px);
 
   &:hover,
   &:focus,
@@ -282,9 +287,15 @@ legend {
     border-bottom: 2px solid $green;
   }
 
+  &:active {
+    color: $gray-dark;
+  }
+
   @media (min-width: $tablet-width) {
     width: 100%;
     padding-left: 16px;
+
+    @include font(19px, 19px);
   }
 
   @media (min-width: $desktop-width) {
@@ -299,10 +310,17 @@ legend {
 }
 
 .form__textarea {
+  height: 140px;
+  box-sizing: border-box;
+
   padding: 10px 16px;
 
   outline: none;
   border: 2px solid $black;
+
+  font-family: $font-family;
+
+  @include font(17px, 18px);
 
   &:hover,
   &:focus,
@@ -312,10 +330,11 @@ legend {
 
   @media (min-width: $tablet-width) {
     width: 100%;
+
+    @include font(19px, 19px);
   }
 
   @media (min-width: $desktop-width) {
-    box-sizing: border-box;
     width: 700px;
   }
 }
