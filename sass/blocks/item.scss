@@ -27,10 +27,14 @@
 }
 
 .item__wrapper {
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
+  flex-grow: 1;
 
   padding-left: 27px;
   padding-right: 27px;
+  padding-bottom: 5px;
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
     width: 50%;
@@ -53,8 +57,8 @@
 
 .item__title-link {
   display: block;
-  padding-top: 30px;
-  padding-bottom: 10px;
+  padding-top: 27px;
+  padding-bottom: 8px;
 
   color: $link-color;
 
@@ -62,17 +66,23 @@
 
   @include action($link-color--hover, $link-color--active);
   @include accessibility();
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 4px;
+  }
 }
 
 .item__parameters {
   margin-bottom: 20px;
 
-  border-bottom: 1px solid $gray-light;
-
   @include font(13px, 30px);
 
   @media (min-width: $tablet-width) {
     @include font(15px, 30px);
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 15px;
   }
 }
 
@@ -80,6 +90,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  min-height: 65px;
+  margin-top: auto; // для расположения снизу
+
+  border-top: 1px solid $gray-light;
 }
 
 .item__price {
