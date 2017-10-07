@@ -4,13 +4,11 @@
 }
 
 .page-header__content {
-  //@include outline(red);
   min-height: 176px;
   box-sizing: border-box;
 
   background-color: $gray-light;
   border-top: 1px solid #e7e7e7;
-
 
   @media (min-width: $tablet-width) {
     min-height: 225px;
@@ -20,11 +18,12 @@
   @media (min-width: $desktop-width) {
     min-height: 255px;
     margin-top: -60px;
-
-    border-top: none;
   }
 
   &--main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     min-height: 486px;
 
     background-image: url("../img/hero-mobile@1x.jpg");
@@ -41,32 +40,6 @@
     @media (min-width: $desktop-width) {
       background-image: url("../img/hero-desktop@1x.jpg");
       background-position: center 0;
-    }
-  }
-}
-
-.page-header__wrapper {
-  width: $mobile-width;
-  margin: 0 auto;
-
-  @media (min-width: $tablet-width) {
-    width: $tablet-width;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: $desktop-width;
-
-    border-top: 1px solid #e7e7e7;
-  }
-
-  &--main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 486px;
-
-    @media (min-width: $tablet-width) {
-      min-height: 745px;
     }
   }
 }
@@ -107,18 +80,21 @@
 }
 
 .page-header__categories {
-  width: $mobile-width;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
 
+  width: $mobile-width;
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
-    width: auto;
-    height: 119px; // для корректной работы при наведении на категории
-    margin-left: 50px;
-    margin-right: 50px;
     flex-direction: row;
+
+    width: $tablet-width - 100px;
+    height: 119px; // для корректной работы при наведении на категории
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width - 100px;
   }
 }
 
