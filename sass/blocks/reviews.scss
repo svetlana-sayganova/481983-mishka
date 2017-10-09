@@ -31,6 +31,11 @@
     background-color: $white;
     background-position: -50px 0;
     background-repeat: no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("img/review@2x.jpg");
+      background-size: 350px 457px;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -111,20 +116,58 @@
 .reviews__toggles {
   display: flex;
 
+  height: 50px;
   margin-bottom: 38px;
 
   @media (min-width: $tablet-width) {
     align-self: flex-end;
     order: 4;
+
+    width: 175px;
   }
 }
 
 .reviews__toggle {
-  height: 50px;
+  position: relative;
+  width: 50%;
+
+  font-size: 0;
+
   border: 1px solid $gray-light;
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../img/icon-left-arrow.svg");
+  }
 
   &--next {
     border-left: none;
+
+    &::after {
+      background-image: url("../img/icon-right-arrow.svg");
+    }
+  }
+
+  &:hover::after,
+  &:focus::after {
+    opacity: 0.6;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    border: none;
   }
 }
 
