@@ -66,21 +66,24 @@
       position: absolute;
 
       left: 0;
-      bottom: -12px;
+      right: 0;
+      margin: 0 auto;
+      bottom: -14px;
 
-      width: 100%;
+      width: 768px;
       height: 24px;
 
       background-image: url("../img/bg-zigzag-fill.svg");
-      background-repeat: repeat-x;
+      //background-repeat: repeat-x;
       background-size: 768px 24px;
     }
 
     @media (min-width: $desktop-width) {
+      width: 1050px;
       height: 34px;
-      bottom: -17px;
+      bottom: -20px;
 
-      background-size: 1150px 34px;
+      background-size: 1050px 34px;
     }
   }
 }
