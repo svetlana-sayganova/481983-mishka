@@ -93,7 +93,7 @@
           </picture>
           <div class="hit__buy">
             <b class="hit__price">Цена: 990&nbsp;руб.</b>
-            <a href="#" class="hit__order  button">Заказать</a>
+            <a href="#" class="hit__order  button  button--buy">Заказать</a>
           </div>
         </div>
       </section>
@@ -229,21 +229,23 @@
       </div>
     </footer>
 
-    <section class="modal">
-      <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
-        <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
-        <p class="modal__choose">Выберите размер:</p>
-        <div class="modal__size-chart">
-          <input class="modal__input  visually-hidden" type="radio" name="size" id="size-S" value="S" checked>
-          <label class="modal__label" for="size-S">S</label>
-          <input class="modal__input  visually-hidden" type="radio" name="size" id="size-M" value="M">
-          <label class="modal__label" for="size-M">M</label>
-          <input class="modal__input  visually-hidden" type="radio" name="size" id="size-L" value="L">
-          <label class="modal__label" for="size-L">L</label>
-        </div>
-        <button class="modal__add  button  button--green" type="submit">Добавить</button>
-      </form>
-    </section>
+    <div class="overlay">
+      <section class="modal">
+        <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
+          <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
+          <p class="modal__choose">Выберите размер:</p>
+          <div class="modal__size-chart">
+            <input class="modal__input  visually-hidden" type="radio" name="size" id="size-S" value="S" checked>
+            <label class="modal__label" for="size-S">S</label>
+            <input class="modal__input  visually-hidden" type="radio" name="size" id="size-M" value="M">
+            <label class="modal__label" for="size-M">M</label>
+            <input class="modal__input  visually-hidden" type="radio" name="size" id="size-L" value="L">
+            <label class="modal__label" for="size-L">L</label>
+          </div>
+          <button class="modal__add  button  button--green" type="submit">Добавить</button>
+        </form>
+      </section>
+    </div>
     <script src="js/script.js"></script>
   </body>
 </html>
