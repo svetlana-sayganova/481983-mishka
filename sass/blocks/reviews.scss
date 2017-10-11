@@ -93,7 +93,13 @@
 }
 
 .reviews__item {
+  display: none;
   margin-bottom: 30px;
+
+  &--show {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .reviews__text {
