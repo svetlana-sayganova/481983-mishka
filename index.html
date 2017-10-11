@@ -10,7 +10,7 @@
 
   <body>
     <header class="page-header">
-      <nav class="main-nav">
+      <nav class="main-nav  main-nav--nojs">
         <div class="main-nav__wrapper">
           <a class="main-nav__logo">
             <picture>
@@ -19,7 +19,9 @@
               <img class="main-nav__logo-image" src="img/logo-mobile.svg" width="" height="" alt="Логотип магазина &laquo;Мишка&raquo;" title="Логотип магазина &laquo;Мишка&raquo;">
             </picture>
           </a>
-          <button class="main-nav__toggle" type="button">Открыть меню</button>
+          <button class="main-nav__toggle" type="button" title="Открыть/закрыть меню">
+            <span class="visually-hidden">Открыть/закрыть меню</span>
+          </button>
           <ul class="main-nav__list  site-list">
             <li class="site-list__item">
               <a class="site-list__link" href="catalog.html">Каталог товаров</a>
@@ -242,5 +244,6 @@
         <button class="modal__add  button  button--green" type="submit">Добавить</button>
       </form>
     </section>
+    <script src="js/script.js"></script>
   </body>
 </html>
