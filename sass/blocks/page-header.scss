@@ -65,7 +65,6 @@
       content: "";
       position: absolute;
 
-      left: 0;
       bottom: -12px;
 
       width: 100%;
@@ -74,6 +73,7 @@
       background-image: url("../img/bg-zigzag-fill.svg");
       background-repeat: repeat-x;
       background-size: 768px 24px;
+      background-position: center;
     }
 
     @media (min-width: $desktop-width) {
