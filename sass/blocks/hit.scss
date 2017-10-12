@@ -1,33 +1,46 @@
 .hit {
+  position: relative;
   margin-top: 30px;
-  margin-bottom: 40px;
+  //margin-bottom: 40px;
 
   @media (min-width: $tablet-width) {
     margin-top: 45px;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
   }
 
   @media (min-width: $desktop-width) {
     margin-top: 70px;
-    margin-bottom: 96px;
   }
 }
 
 .hit__wrapper {
   width: $mobile-width-inner;
   margin: 0 auto;
+  padding: 0 30px;
+
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-repeat: repeat-x;
+  background-size: 320px 7px;
+  background-position: left bottom;
 
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: flex-end;
+
     width: $tablet-width-inner;
+    padding: 0 50px;
+
+    background-size: 768px 17px;
   }
 
   @media (min-width: $desktop-width) {
     width: $desktop-width-inner;
     box-sizing: border-box;
+    padding: 0;
+
+    background-size: 1050px 23px;
   }
 }
 
@@ -191,4 +204,13 @@
 
 .hit__order {
   width: 100%;
+  margin-bottom: 42px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 69px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 96px;
+  }
 }

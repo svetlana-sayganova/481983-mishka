@@ -1,6 +1,4 @@
 .user-list {
-  display: none;
-
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
@@ -68,7 +66,7 @@
     padding-left: 76px;
 
     background-color: $white;
-    border-bottom: 1px solid $gray-light;
+    border-top: 1px solid $gray-light;
   }
 
   @media (min-width: $tablet-width) {
@@ -76,7 +74,7 @@
     padding-bottom: 35px;
 
     background-color: transparent;
-    border-bottom: none;
+    border-top: none;
   }
 
   &--delivery {

@@ -5,16 +5,23 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>&laquo;Мишка&raquo;&nbsp;&mdash; милые штуки ручной работы для дома</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/picturefill.js" async></script>
   </head>
 
   <body>
     <header class="page-header">
-      <nav class="main-nav">
+      <nav class="main-nav  main-nav--nojs">
         <div class="main-nav__wrapper">
           <a class="main-nav__logo">
-            <img class="main-nav__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина &laquo;Мишка&raquo;" title="Логотип магазина &laquo;Мишка&raquo;">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img class="main-nav__logo-image" src="img/logo-mobile.svg" alt="Логотип магазина &laquo;Мишка&raquo;" title="Логотип магазина &laquo;Мишка&raquo;">
+            </picture>
           </a>
-          <button class="main-nav__toggle" type="button">Открыть меню</button>
+          <button class="main-nav__toggle" type="button" title="Открыть/закрыть меню">
+            <span class="visually-hidden">Открыть/закрыть меню</span>
+          </button>
           <ul class="main-nav__list  site-list">
             <li class="site-list__item">
               <a class="site-list__link" href="catalog.html">Каталог товаров</a>
@@ -80,13 +87,17 @@
             </table>
           </div>
           <picture class="hit__image">
-            <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg">
-            <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg">
-            <img src="img/triple-set-mobile@1x.jpg" alt="Вязаные корзинки">
+            <source media="(min-width: 1150px)" srcset="img/img-webp/triple-set-desktop@1x.webp 1x, img/img-webp/triple-set-desktop@2x.webp 2x">
+            <source media="(min-width: 768px)" srcset="img/img-webp/triple-set-tablet@1x.webp 1x, img/img-webp/triple-set-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/img-webp/triple-set-mobile@1x.webp 1x, img/img-webp/triple-set-mobile@2x.webp 2x">
+
+            <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+            <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Фотография товара &laquo;Вязаные корзинки&raquo;" title="Вязаные корзинки">
           </picture>
           <div class="hit__buy">
             <b class="hit__price">Цена: 990&nbsp;руб.</b>
-            <a href="#" class="hit__order  button">Заказать</a>
+            <a href="#" class="hit__order  button  button--buy">Заказать</a>
           </div>
         </div>
       </section>
@@ -121,7 +132,7 @@
         <div class="reviews__wrapper">
           <h2 class="reviews__title">Отзывы</h2>
           <div class="reviews__list">
-            <blockquote class="reviews__item">
+            <blockquote class="reviews__item  reviews__item--show">
               <p class="reviews__text">
                 Я молодая мама, но всё равно фотографии не&nbsp;набирали и&nbsp;близко такого количества лайков, как у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я накупила аксессуаров и&nbsp;игрушек в&nbsp;Мишке, и&nbsp;мои фотографии сразу стали более стильными, а&nbsp;также набирают больше лайков!
               </p>
@@ -132,26 +143,26 @@
                 @misssssiskras
               </a>
             </blockquote>
-            <blockquote class="reviews__item  visually-hidden">
+            <blockquote class="reviews__item">
               <p class="reviews__text">
-                Второй отзыв. Второй отзыв. Второй отзыв. Второй отзыв. Второй отзыв. Второй отзыв. Второй отзыв. Второй отзыв. Второй отзыв. Второй отзыв. Второй отзыв. Второй отзыв. Второй отзыв. Второй отзыв. Второй отзыв. Второй отзыв.
+                Второй отзыв. Второй отзыв. Второй отзыв. Второй отзыв. Второй отзыв. Второй отзыв. Второй отзыв. Второй отзыв. Второй отзыв. Второй отзыв. Второй отзыв. Второй отзыв. Второй отзыв. Второй отзыв. Второй отзыв. Второй отзыв. Второй отзыв. Второй отзыв. Второй отзыв.
               </p>
               <cite class="reviews__author-name">
-                Второй автор
+                Имя второго автора
               </cite>
               <a class="reviews__author-nickname" href="#">
-                Второй никнейм
+                @второй_никнейм
               </a>
             </blockquote>
-            <blockquote class="reviews__item  visually-hidden">
+            <blockquote class="reviews__item">
               <p class="reviews__text">
-                Третий отзыв. Третий отзыв. Третий отзыв. Третий отзыв. Третий отзыв. Третий отзыв. Третий отзыв. Третий отзыв. Третий отзыв. Третий отзыв. Третий отзыв. Третий отзыв. Третий отзыв. Третий отзыв. Третий отзыв. Третий отзыв.
+                Третий отзыв. Третий отзыв. Третий отзыв. Третий отзыв. Третий отзыв. Третий отзыв. Третий отзыв. Третий отзыв. Третий отзыв. Третий отзыв. Третий отзыв. Третий отзыв. Третий отзыв. Третий отзыв. Третий отзыв. Третий отзыв. Третий отзыв. Третий отзыв. Третий отзыв.
               </p>
               <cite class="reviews__author-name">
-                Третий автор
+                Имя третьего автора
               </cite>
               <a class="reviews__author-nickname" href="#">
-                Третий никнейм
+                @третий_никнейм
               </a>
             </blockquote>
           </div>
@@ -222,20 +233,24 @@
       </div>
     </footer>
 
-    <section class="modal">
-      <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
-        <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
-        <p class="modal__choose">Выберите размер:</p>
-        <div class="modal__size-chart">
-          <input class="modal__input  visually-hidden" type="radio" name="size" id="size-S" value="S" checked>
-          <label class="modal__label" for="size-S">S</label>
-          <input class="modal__input  visually-hidden" type="radio" name="size" id="size-M" value="M">
-          <label class="modal__label" for="size-M">M</label>
-          <input class="modal__input  visually-hidden" type="radio" name="size" id="size-L" value="L">
-          <label class="modal__label" for="size-L">L</label>
-        </div>
-        <button class="modal__add  button  button--green" type="submit">Добавить</button>
-      </form>
-    </section>
+    <div class="overlay">
+      <section class="modal">
+        <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
+          <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
+          <p class="modal__choose">Выберите размер:</p>
+          <div class="modal__size-chart">
+            <input class="modal__input  visually-hidden" type="radio" name="size" id="size-S" value="S" checked>
+            <label class="modal__label" for="size-S">S</label>
+            <input class="modal__input  visually-hidden" type="radio" name="size" id="size-M" value="M">
+            <label class="modal__label" for="size-M">M</label>
+            <input class="modal__input  visually-hidden" type="radio" name="size" id="size-L" value="L">
+            <label class="modal__label" for="size-L">L</label>
+          </div>
+          <button class="modal__add  button  button--green" type="submit">Добавить</button>
+        </form>
+      </section>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/slider.js"></script>
   </body>
 </html>

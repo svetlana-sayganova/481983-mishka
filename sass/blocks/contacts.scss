@@ -21,11 +21,15 @@
 .contacts__wrapper {
   width: $mobile-width-inner;
   margin: 0 auto;
+  margin-bottom: 40px;
 
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: flex-start;
+
+    margin-bottom: 25px;
 
     width: $tablet-width-inner;
   }
@@ -35,6 +39,7 @@
     flex-direction: column;
     //align-content: flex-start;
 
+    margin-bottom: 52px; // резерв для кнопки
     padding-right: 0;
     padding-left: 175px;
     box-sizing: border-box;
@@ -44,6 +49,7 @@
     @media (min-width: $desktop-width) {
       margin-right: 0;
       margin-left: 0;
+      margin-bottom: 0;
     }
   }
 }
@@ -74,6 +80,8 @@
   display: flex;
   line-height: 2;
 
+  margin-bottom: 30px;
+
   @media (min-width: $tablet-width) {
     width: 50%;
 
@@ -82,7 +90,6 @@
 
   @media (min-width: $desktop-width) {
     width: 307px;
-    margin-bottom: 30px;
   }
 }
 
@@ -92,37 +99,72 @@
 }
 
 .contacts__value--link {
+  position: relative;
+
   color: $gray-dark;
 
+  transition: color 0.3s ease;
+
   @include action($green-link, rgba($green-link, 0.3));
-  @include accessibility();
+  //@include accessibility(); ссылка мееяет цвет -- нужна ли обводка?
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: $green;
+
+    transition: background-color 0.3s ease;
+  }
+
+  &:active::after {
+    background-color: rgba($green, 0.2);
+  }
 }
 
 .contacts__map {
   width: 100%;
   height: 457px;
   margin-bottom: 40px;
-  margin-top: 40px;
 
   background-color: #e9e2d7;
   background-image: url("../img/map-mobile@1x.jpg");
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/map-mobile@2x.jpg");
+    //background-size: 322px 457px;
+  }
+
   @media (min-width: $tablet-width) {
     margin-bottom: 55px;
-    margin-top: 57px;
 
     background-image: url("../img/map-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/map-tablet@2x.jpg");
+      //background-size: 768px 457px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     width: 525px;
     margin-bottom: 0;
-    margin-top: 0;
 
     background-image: url("../img/map-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/map-desktop@2x.jpg");
+      background-size: 525px 457px;
+    }
   }
 }
 
