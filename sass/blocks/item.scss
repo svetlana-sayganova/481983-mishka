@@ -1,6 +1,7 @@
 .item {
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 
   border: 1px solid #ececec;
 
@@ -38,6 +39,10 @@
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
     width: 50%;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-right: 30px;
   }
 
   &:hover {
@@ -109,4 +114,19 @@
 
 .item__basket {
   @include accessibility();
+}
+
+.item__icon {
+  fill: rgba($black, 0.2);
+
+  transition: fill 0.3s ease;
+
+  &:hover,
+  &:focus {
+    fill: $green;
+  }
+
+  &:active {
+    fill: rgba($green, 0.3);
+  }
 }

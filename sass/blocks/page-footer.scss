@@ -33,8 +33,22 @@
   }
 }
 
+.page-footer__logo[href]:hover .page-footer__logo-image,
+.page-footer__logo[href]:focus .page-footer__logo-image {
+  fill: $green-link;
+}
+
+.page-footer__logo[href]:active .page-footer__logo-image {
+  fill: rgba($green-link, 0.3);
+}
+
 .page-footer__logo-image {
-  display: block;
+  width: 102px;
+  height: 35px;
+
+  fill: $black;
+
+  transition: all 0.3s ease;
 }
 
 .page-footer__social {

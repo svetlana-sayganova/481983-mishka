@@ -143,6 +143,8 @@
 }
 
 .page-header__category {
+  position: relative;
+
   padding-top: 25px;
   padding-bottom: 29px;
   padding-left: 30px;
@@ -162,6 +164,8 @@
   @media (min-width: $tablet-width) {
     flex-grow: 1;
 
+    padding-left: 35px;
+
     padding-top: 30px;
     transition: margin-top 0.3s ease;
 
@@ -180,4 +184,37 @@
   &--interior {
     background-color: $green-secondary;
   }
+}
+
+.page-header__icon {
+  position: absolute;
+
+  top: 20px;
+  right: 26px;
+
+  width: 61px;
+  height: 61px;
+
+  fill: $green-icon;
+  opacity: 0.5;
+
+  transition: opacity 0.3s ease;
+
+  @media (min-width: $tablet-width) {
+    top: 30px;
+    right: 33px;
+
+    &--interior {
+      right: 25px;
+    }
+  }
+}
+
+.page-header__category:hover .page-header__icon,
+.page-header__category:focus .page-header__icon {
+  opacity: 0.7;
+}
+
+.page-header__category:active .page-header__icon {
+  opacity: 0.3;
 }
