@@ -33,6 +33,8 @@
   margin-top: 22px;
   margin-bottom: 22px;
 
+  transition: opacity 0.3s ease-in;
+
   @media (min-width: $tablet-width) {
     align-self: flex-start;
   }
@@ -40,6 +42,15 @@
   @media (min-width: $desktop-width) {
     margin-top: 9px;
     order: 2;
+  }
+
+  &[href]:hover,
+  &[href]:focus {
+    opacity: 0.6;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
   }
 }
 

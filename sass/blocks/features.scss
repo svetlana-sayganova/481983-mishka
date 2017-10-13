@@ -88,93 +88,75 @@
     background-position: 0 0;
   }
 
-  &--eco-friendly {
-    @media (min-width: $tablet-width) {
-      order: 1;
-    }
+  .features__icon {
+    position: absolute;
 
-    &::before {
+    fill: $green;
+
+    &--eco-friendly {
       top: 29px;
       left: 7px;
       width: 32px;
       height: 38px;
 
-      background-image: url("../img/icon-feature-flower.svg");
-    }
-  }
-
-  &--scandinavian-style {
-    @media (min-width: $tablet-width) {
-      order: 3;
+      @media (min-width: $tablet-width) {
+        order: 1;
+      }
     }
 
-    &::before {
+    &--scandinavian-style {
       top: 31px;
       left: 0;
       width: 47px;
       height: 27px;
 
-      background-image: url("../img/icon-feature-money.svg");
-    }
-  }
-
-  &--popularity-increase {
-    @media (min-width: $tablet-width) {
-      order: 5;
+      @media (min-width: $tablet-width) {
+        order: 3;
+      }
     }
 
-    &::before {
+    &--popularity-increase {
       top: 36px;
       left: 6px;
       width: 34px;
       height: 27px;
 
-      background-image: url("../img/icon-feature-heart.svg");
-    }
-  }
-
-  &--hand-made {
-    @media (min-width: $tablet-width) {
-      order: 2;
+      @media (min-width: $tablet-width) {
+        order: 5;
+      }
     }
 
-    &::before {
+    &--hand-made {
       top: 32px;
       left: 4px;
       width: 35px;
       height: 35px;
 
-      background-image: url("../img/icon-feature-ball.svg");
-    }
-  }
-
-  &--domestic-production {
-    @media (min-width: $tablet-width) {
-      order: 4;
+      @media (min-width: $tablet-width) {
+        order: 2;
+      }
     }
 
-    &::before {
+    &--domestic-production {
       top: 32px;
       left: -4px;
       width: 55px;
       height: 23px;
 
-      background-image: url("../img/icon-feature-rocket.svg");
-    }
-  }
-
-  &--gift-wrap {
-    @media (min-width: $tablet-width) {
-      order: 6;
+      @media (min-width: $tablet-width) {
+        order: 4;
+      }
     }
 
-    &::before {
+    &--gift-wrap {
       top: 32px;
       left: 4px;
       width: 33px;
       height: 32px;
 
-      background-image: url("../img/icon-feature-gift.svg");
+      @media (min-width: $tablet-width) {
+        order: 6;
+      }
     }
   }
 }

@@ -1,4 +1,7 @@
 .page-footer {
+  display: flex; // для корректного отображения в IE11, Источник: https://codepen.io/philipwalton/pen/JdvdJE
+  flex-direction: column;
+
   font-weight: 700;
   color: $black;
 
@@ -30,12 +33,29 @@
   }
 }
 
+.page-footer__logo[href]:hover .page-footer__logo-image,
+.page-footer__logo[href]:focus .page-footer__logo-image {
+  fill: $green-link;
+}
+
+.page-footer__logo[href]:active .page-footer__logo-image {
+  fill: rgba($green-link, 0.3);
+}
+
 .page-footer__logo-image {
-  display: block;
+  width: 102px;
+  height: 35px;
+
+  fill: $black;
+
+  transition: all 0.3s ease;
 }
 
 .page-footer__social {
   @media (max-width: $tablet-width - 1px) {
+    display: flex; // для корректного отображения в IE11
+    flex-direction: column;
+
     width: 100%;
 
     border-bottom: 1px solid #e5e5e5;
@@ -51,6 +71,11 @@
 }
 
 .page-footer__copyright {
+  @media (max-width: $tablet-width - 1px) {
+    display: flex; // для корректного отображения в IE11
+    flex-direction: column;
+  }
+
   @media (min-width: $tablet-width) {
     margin-left: auto;
   }

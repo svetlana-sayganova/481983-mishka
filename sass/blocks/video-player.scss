@@ -8,6 +8,32 @@
 
 .video-player__toggle {
   position: absolute;
-  top: 0; // временные значения
-  left: 0;
+
+  left: 50%;
+  top: 50%;
+  width: 102px;
+  height: 78px;
+  transform: translate(-50%, -50%);
+
+  background-image: url("../img/icon-play.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: 0;
+  transition: transform 0.2s ease;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+
+  &:active {
+    opacity: 0.7; // в макете -- 0,3, но смотрится плохо
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
 }

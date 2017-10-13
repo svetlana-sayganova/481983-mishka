@@ -1,4 +1,4 @@
-.copyright {
+.copyright__wrapper {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -16,6 +16,24 @@
   }
 }
 
-.copyright__image {
-  display: block;
+.copyright__link {
+  order: 1;
+}
+
+.copyright__text {
+  transition: all 0.3s ease;
+}
+
+.copyright__icon {
+  fill: $green;
+
+  transition: all 0.3s ease;
+}
+
+.copyright__link:active .copyright__icon {
+  fill: rgba($green, 0.3);
+}
+
+.copyright__link:active + .copyright__text {
+  color: rgba($black, 0.3);
 }
