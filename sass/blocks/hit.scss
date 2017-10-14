@@ -1,5 +1,6 @@
 .hit {
   position: relative;
+
   margin-top: 30px;
   //margin-bottom: 40px;
 
@@ -15,19 +16,19 @@
 
 .hit__wrapper {
   width: $mobile-width-inner;
-  margin: 0 auto;
   padding: 0 30px;
+  margin: 0 auto;
 
   background-image: url("../img/bg-zigzag-line.svg");
+  background-position: left bottom;
   background-repeat: repeat-x;
   background-size: 320px 7px;
-  background-position: left bottom;
 
   @media (min-width: $tablet-width) {
     display: flex;
+    align-content: flex-end;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-content: flex-end;
 
     width: $tablet-width-inner;
     padding: 0 50px;
@@ -36,8 +37,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: $desktop-width-inner;
     box-sizing: border-box;
+    width: $desktop-width-inner;
     padding: 0;
 
     background-size: 1050px 23px;
@@ -48,24 +49,23 @@
   margin-bottom: 10px;
 
   font-size: 1.67rem;
+  font-weight: 700;
   line-height: 1.2;
   color: $headings-color;
-  font-weight: 700;
 
   @media (min-width: $tablet-width) {
+    @include font(43px, 50px);
+
     flex-grow: 1;
 
     margin-bottom: 57px;
-
-    @include font(43px, 50px);
   }
 
   @media (min-width: $desktop-width) {
+    @include font(53px, 57px);
     z-index: 5;
 
     margin-top: 55px;
-
-    @include font(53px, 57px);
   }
 }
 
@@ -73,17 +73,17 @@
   margin-bottom: 25px;
 
   font-size: 1.13rem;
+  font-weight: 700;
   line-height: 1.2;
   color: $green;
-  font-weight: 700;
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
     flex-grow: 0;
 
     width: 75px;
-    margin-top: 10px;
     padding-right: 25px;
+    margin-top: 10px;
 
     text-align: center;
   }
@@ -91,9 +91,9 @@
   @media (min-width: $desktop-width) {
     order: -1;
 
-    margin-top: 70px;
-    padding-left: 47px;
     padding-right: 0;
+    padding-left: 47px;
+    margin-top: 70px;
     margin-right: 53px;
   }
 }
@@ -115,10 +115,10 @@
   line-height: 1.6;
 
   @media (min-width: $tablet-width) {
+    @include font(17px, 30px);
+
     margin-top: -7px;
     margin-bottom: 37px;
-
-    @include font(17px, 30px);
   }
 
   @media (min-width: $desktop-width) {
@@ -127,12 +127,12 @@
 }
 
 .hit__table {
-  margin-bottom: 28px;
+  @include font(15px, 20px);
+
   width: 100%;
+  margin-bottom: 28px;
 
   border-collapse: collapse;
-
-  @include font(15px, 20px);
 
   @media (min-width: $tablet-width) {
     margin-bottom: 60px;
@@ -153,12 +153,12 @@
   padding-bottom: 10px;
 
   font-weight: 400;
-
   text-align: left;
 }
 
 .hit__image img {
   display: block;
+
   margin-bottom: 30px;
 
   background-color: $gray-light;
@@ -176,8 +176,8 @@
 
 .hit__buy {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
 
   @media (min-width: $tablet-width) {
     width: 290px;
@@ -193,9 +193,8 @@
   margin-bottom: 30px;
 
   font-size: 1.13rem;
-  line-height: 1.4;
-
   font-weight: 700;
+  line-height: 1.4;
 
   @media (min-width: $tablet-width) {
     @include font(20px, 24px);

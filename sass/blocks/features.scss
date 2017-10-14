@@ -19,10 +19,10 @@
   }
 
   @media (min-width: $desktop-width) {
+    box-sizing: border-box;
     width: $desktop-width-inner;
     padding-right: 0;
     padding-left: 175px;
-    box-sizing: border-box;
   }
 }
 
@@ -31,21 +31,21 @@
   margin-bottom: 2px;
 
   font-size: 1.67rem;
+  font-weight: 700;
   line-height: 1.2;
   color: $headings-color;
-  font-weight: 700;
 
   @media (min-width: $tablet-width) {
+    @include font(43px, 50px);
+
     padding-top: 5px;
     margin-bottom: 18px;
-
-    @include font(43px, 50px);
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 20px;
-
     @include font(53px, 57px);
+
+    padding-top: 20px;
   }
 }
 
@@ -69,23 +69,23 @@
   padding-top: 84px;
 
   font-size: 1.13rem;
+  font-weight: 700;
   line-height: 1.2;
   color: $gray-dark;
-  font-weight: 700;
 
   @media (min-width: $tablet-width) {
+    @include font(20px, 22px);
+
     width: 50%;
     margin-bottom: 26px;
-
-    @include font(20px, 22px);
   }
 
   &::before {
     content: "";
     position: absolute;
 
-    background-repeat: no-repeat;
     background-position: 0 0;
+    background-repeat: no-repeat;
   }
 
   .features__icon {
@@ -96,6 +96,7 @@
     &--eco-friendly {
       top: 29px;
       left: 7px;
+
       width: 32px;
       height: 38px;
 
@@ -107,6 +108,7 @@
     &--scandinavian-style {
       top: 31px;
       left: 0;
+
       width: 47px;
       height: 27px;
 
@@ -118,6 +120,7 @@
     &--popularity-increase {
       top: 36px;
       left: 6px;
+
       width: 34px;
       height: 27px;
 
@@ -129,6 +132,7 @@
     &--hand-made {
       top: 32px;
       left: 4px;
+
       width: 35px;
       height: 35px;
 
@@ -140,6 +144,7 @@
     &--domestic-production {
       top: 32px;
       left: -4px;
+
       width: 55px;
       height: 23px;
 
@@ -151,6 +156,7 @@
     &--gift-wrap {
       top: 32px;
       left: 4px;
+
       width: 33px;
       height: 32px;
 

@@ -20,44 +20,44 @@
 
 .contacts__wrapper {
   position: relative;
+
   width: $mobile-width-inner;
   margin: 0 auto;
   margin-bottom: 40px;
 
   @media (min-width: $tablet-width) {
     display: flex;
+    align-items: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-start;
-
-    margin-bottom: 25px;
 
     width: $tablet-width-inner;
+    margin-bottom: 25px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 50%;
     flex-direction: column;
-    //align-content: flex-start;
 
-    margin-bottom: 52px; // резерв для кнопки
+    box-sizing: border-box;
+    width: 50%;
     padding-right: 0;
     padding-left: 175px;
-    box-sizing: border-box;
+    //align-content: flex-start;
+    margin-bottom: 52px; // резерв для кнопки
   }
 
   &::after {
     @media (min-width: $tablet-width) {
       content: "";
       position: absolute;
-
       top: -15px;
       right: 0;
+
       width: 47px;
       height: 81px;
 
-      background-repeat: no-repeat;
       background-image: url("../img/icon-flag.svg");
+      background-repeat: no-repeat;
     }
 
     @media (min-width: $desktop-width) {
@@ -71,34 +71,35 @@
   margin-bottom: 32px;
 
   font-size: 1.2rem;
+  font-weight: 700;
   line-height: 1.67;
   color: $headings-color;
-  font-weight: 700;
 
   @media (min-width: $tablet-width) {
+    @include font(43px, 50px);
+
     width: 100%;
     margin-bottom: 50px;
-
-    @include font(43px, 50px);
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 70px;
-
     @include font(53px, 57px);
+
+    margin-top: 70px;
   }
 }
 
 .contacts__item {
   display: flex;
-  line-height: 2;
 
   margin-bottom: 30px;
 
-  @media (min-width: $tablet-width) {
-    width: 50%;
+  line-height: 2;
 
+  @media (min-width: $tablet-width) {
     @include font(17px, 30px);
+
+    width: 50%;
   }
 
   @media (min-width: $desktop-width) {
@@ -107,24 +108,23 @@
 }
 
 .contacts__parameter {
-  width: 78px;
   flex-shrink: 0;
+
+  width: 78px;
 }
 
 .contacts__value--link {
+  @include action($green-link, rgba($green-link, 0.3));
   position: relative;
 
   color: $gray-dark;
 
   transition: color 0.3s ease;
-
-  @include action($green-link, rgba($green-link, 0.3));
   //@include accessibility(); ссылка мееяет цвет -- нужна ли обводка?
 
   &::after {
     content: "";
     position: absolute;
-
     bottom: 0;
     left: 0;
 

@@ -32,18 +32,18 @@
 }
 
 .order__description {
-  margin-bottom: 25px;
-
   @include font(13px, 24px);
 
-  @media (min-width: $tablet-width) {
-    margin-bottom: 0;
+  margin-bottom: 25px;
 
+  @media (min-width: $tablet-width) {
     @include font(17px, 30px);
+
+    margin-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 175px;
     padding-right: 175px;
+    padding-left: 175px;
   }
 }

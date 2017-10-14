@@ -42,11 +42,11 @@ legend {
 }
 
 .form__title {
-  color: $green;
-  font-weight: 700;
-  text-transform: uppercase;
-
   @include font(17px, 17px);
+
+  font-weight: 700;
+  color: $green;
+  text-transform: uppercase;
 
   @media (max-width: $tablet-width - 1) {
     display: flex;
@@ -56,8 +56,9 @@ legend {
 
     &::after { // декоративный элемент
       content: "";
-      flex-grow: 2;
+
       align-self: center;
+      flex-grow: 2;
 
       width: 5px;
       height: 1px;
@@ -68,16 +69,16 @@ legend {
   }
 
   @media (min-width: $tablet-width) {
-    flex-shrink: 0;
     display: block;
+    flex-shrink: 0;
 
     width: 167px;
     padding-top: 17px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 175px;
     box-sizing: border-box;
+    width: 175px;
     padding-left: 60px;
   }
 
@@ -111,12 +112,12 @@ legend {
 .form__label,
 .form__radio-label,
 .form__checkbox-label {
-  color: $black;
+  @include font(17px, 17px);
+
   font-weight: 700;
+  color: $black;
 
   cursor: pointer;
-
-  @include font(17px, 17px);
 
   @media (min-width: $tablet-width) {
     @include font(19px, 19px);
@@ -127,15 +128,14 @@ legend {
 .form__checkbox-label {
   position: relative;
 
+  box-sizing: border-box;
   height: 38px;
   padding-top: 10px;
   padding-left: 62px;
   margin-bottom: 23px;
-  box-sizing: border-box;
 
   &::before {
     content: "";
-
     position: absolute;
     top: 0;
     left: 0;
@@ -143,11 +143,11 @@ legend {
     width: 37px;
     height: 37px;
 
+    cursor: pointer;
+
     border: 2px solid $gray-dark;
 
     transition: border-color 0.2s ease;
-
-    cursor: pointer;
 
     @media (min-width: $tablet-width) {
       width: 50px;
@@ -170,14 +170,13 @@ legend {
 
   &::after {
     content: "";
-
     position: absolute;
+
+    cursor: pointer;
 
     opacity: 0;
 
     transition: opacity 0.2s ease-in;
-
-    cursor: pointer;
   }
 
   @media (min-width: $tablet-width) {
@@ -218,9 +217,9 @@ legend {
   height: 8px;
 
   border: 2px solid $gray-dark;
-  border-radius: 1px;
   border-top-style: none;
   border-right-style: none;
+  border-radius: 1px;
 
   transform: rotate(-45deg);
 
@@ -277,6 +276,7 @@ legend {
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
+
     width: 500px;
   }
 
@@ -287,28 +287,29 @@ legend {
 
 .form__label {
   @media (min-width: $tablet-width) {
-    margin-right: 23px;
     padding-top: 13px;
+    margin-right: 23px;
   }
 }
 
 .form__text {
-  height: 50px;
+  @include font(17px, 18px);
+
   box-sizing: border-box;
-  padding-bottom: 7px;
+  height: 50px;
   padding-right: 46px;
+  padding-bottom: 7px;
   margin-bottom: 24px;
 
   font-family: $font-family;
 
-  outline: none;
-  border: none;
   background-color: transparent;
+  border: none;
   border-bottom: 2px solid $black;
 
-  transition: border-color 0.3s ease;
+  outline: none;
 
-  @include font(17px, 18px);
+  transition: border-color 0.3s ease;
 
   &:hover,
   &:focus,
@@ -321,11 +322,11 @@ legend {
   }
 
   @media (min-width: $tablet-width) {
-    width: 100%;
-    padding-left: 16px;
-    padding-right: 60px;
-
     @include font(19px, 19px);
+
+    width: 100%;
+    padding-right: 60px;
+    padding-left: 16px;
   }
 
   @media (min-width: $desktop-width) {
@@ -362,9 +363,9 @@ legend {
 
 .form__icon {
   position: absolute;
-
   top: 8px;
   right: 5px;
+
   fill: #c1c1c1;
 
   transition: fill 0.3s ease;
@@ -396,19 +397,19 @@ legend {
 
 // --- оформление поля ДОП ---
 .form__textarea {
-  height: 140px;
+  @include font(17px, 18px);
+
   box-sizing: border-box;
-
+  height: 140px;
   padding: 10px 16px;
-
-  outline: none;
-  border: 2px solid $black;
 
   font-family: $font-family;
 
-  transition: border-color 0.3s ease;
+  border: 2px solid $black;
 
-  @include font(17px, 18px);
+  outline: none;
+
+  transition: border-color 0.3s ease;
 
   &:hover,
   &:focus,
@@ -417,9 +418,9 @@ legend {
   }
 
   @media (min-width: $tablet-width) {
-    width: 100%;
-
     @include font(19px, 19px);
+
+    width: 100%;
   }
 
   @media (min-width: $desktop-width) {
@@ -430,8 +431,9 @@ legend {
 .form__footer {
   @media (min-width: $tablet-width) {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+
     width: $tablet-width-inner;
     margin: 0 auto;
     margin-top: 25px;
@@ -448,9 +450,9 @@ legend {
   @include font(14px, 16px);
 
   @media (min-width: $tablet-width) {
-    margin: 0;
-
     @include font(17px, 30px);
+
+    margin: 0;
   }
 }
 
@@ -460,7 +462,8 @@ legend {
 
   @media (min-width: $tablet-width) {
     order: -1;
-    margin-top: 0;
+
     width: 230px;
+    margin-top: 0;
   }
 }

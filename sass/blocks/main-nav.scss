@@ -8,15 +8,16 @@
 
 .main-nav__wrapper {
   position: relative;
+
   width: $mobile-width;
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
+    z-index: 10;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-    z-index: 10;
 
     width: 668px;
     margin: 0 auto;
@@ -30,6 +31,7 @@
 
 .main-nav__logo {
   display: block;
+
   margin-top: 22px;
   margin-bottom: 22px;
 
@@ -40,8 +42,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 9px;
     order: 2;
+
+    margin-top: 9px;
   }
 
   &[href]:hover,
@@ -56,26 +59,27 @@
 
 .main-nav__logo-image {
   display: block;
+
   margin: 0 auto;
 }
 
 .main-nav__toggle {
   content: "";
-
   position: absolute;
-  right: 28px;
   top: 6px;
+  right: 28px;
   z-index: 10;
 
   display: block;
+
   width: 24px;
   height: 24px;
 
   cursor: pointer;
 
-  border: 0;
   background-color: transparent;
   background-repeat: no-repeat;
+  border: 0;
 
   &:hover,
   &:focus,

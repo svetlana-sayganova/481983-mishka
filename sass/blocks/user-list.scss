@@ -11,6 +11,7 @@
 
   @media (min-width: $desktop-width) {
     order: 3;
+
     width: 430px;
   }
 }
@@ -20,8 +21,8 @@
     &:first-of-type {
       width: 84px;
 
-      border-left: 1px solid $gray-light;
       border-right: 1px solid $gray-light;
+      border-left: 1px solid $gray-light;
     }
 
     &:first-of-type a {
@@ -33,10 +34,10 @@
     }
 
     &:nth-of-type(n + 3) a {
+      @include font(15px, 24px);
+
       padding-top: 18px;
       padding-bottom: 0;
-
-      @include font(15px, 24px);
     }
   }
 
@@ -48,17 +49,17 @@
 }
 
 .user-list__link {
+  @include font(17px, 24px);
+  @include action($link-color--hover, $link-color--active);
+  @include accessibility();
+
   display: block;
 
   color: $link-color;
 
-  transition: color 0.3s ease;
-
   cursor: pointer;
 
-  @include font(17px, 24px);
-  @include action($link-color--hover, $link-color--active);
-  @include accessibility();
+  transition: color 0.3s ease;
 
   @media (max-width: $tablet-width - 1) {
     padding-top: 28px;
@@ -78,16 +79,17 @@
   }
 
   &--delivery {
-    font-weight: 400;
-
     @include font(15px, 24px);
+
+    font-weight: 400;
   }
 
   &--active {
-    cursor: default;
+    @include action($link-color--active, $link-color--active);
+
     color: $link-color--active;
 
-    @include action($link-color--active, $link-color--active);
+    cursor: default;
   }
 }
 
@@ -112,7 +114,6 @@
 .user-list__icon-search,
 .user-list__icon-cart {
   position: absolute;
-
   top: 30px;
   left: 30px;
 

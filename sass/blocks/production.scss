@@ -12,8 +12,10 @@
 
 .production__wrapper {
   position: relative;
+
   display: flex;
   flex-direction: column;
+
   width: $mobile-width-inner;
   margin: 0 auto;
 
@@ -37,39 +39,39 @@
 }
 
 .production__title {
+  @include font(17px, 24px);
   position: relative;
-  padding-left: 91px; // для размещения иконки
+
   padding-top: 25px;
   padding-bottom: 25px;
+  padding-left: 91px; // для размещения иконки
 
   font-weight: 700;
   color: $black;
 
-  @include font(17px, 24px);
-
   @media (min-width: $tablet-width) {
-    margin-bottom: 7px;
-    padding-left: 108px;
-
     @include font(20px, 24px);
+
+    padding-left: 108px;
+    margin-bottom: 7px;
   }
 
   @media (min-width: $desktop-width) {
     order: -1;
-    width: 350px;
-    margin-left: 700px;
+
     box-sizing: border-box;
+    width: 350px;
     padding-top: 96px;
-    padding-left: 60px;
     padding-right: 60px;
+    padding-left: 60px;
+    margin-left: 700px;
   }
 }
 
 .production__icon {
   position: absolute;
-
-  left: 34px;
   top: 30px;
+  left: 34px;
 
   width: 32px;
   height: 32px;
@@ -77,13 +79,13 @@
   fill: $green;
 
   @media (min-width: $tablet-width) {
-    left: 42px;
     top: 20px;
+    left: 42px;
   }
 
   @media (min-width: $desktop-width) {
-    left: 60px;
     top: 43px;
+    left: 60px;
   }
 }
 
@@ -103,31 +105,31 @@
 }
 
 .production__content {
-  padding-left: 34px;
   padding-right: 34px;
+  padding-left: 34px;
 
   @media (min-width: $tablet-width) {
-    padding-left: 40px;
     padding-right: 40px;
+    padding-left: 40px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 350px;
     box-sizing: border-box;
-    padding-left: 60px;
+    width: 350px;
     padding-right: 60px;
+    padding-left: 60px;
   }
 }
 
 .production__description {
-  margin-bottom: 25px;
-
   @include font(13px, 24px);
 
-  @media (min-width: $tablet-width) {
-    margin-bottom: 35px;
+  margin-bottom: 25px;
 
+  @media (min-width: $tablet-width) {
     @include font(15px, 30px);
+
+    margin-bottom: 35px;
   }
 
   @media (min-width: $desktop-width) {

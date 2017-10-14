@@ -10,8 +10,9 @@
 
 .page-footer__wrapper {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
+
   width: $mobile-width-inner;
   margin: 0 auto;
 

@@ -1,6 +1,7 @@
 .item {
   display: flex;
   flex-direction: column;
+
   box-sizing: border-box;
 
   border: 1px solid #ececec;
@@ -11,6 +12,7 @@
 
   @media (min-width: $desktop-width) {
     flex-direction: column;
+
     width: 315px;
   }
 }
@@ -30,12 +32,12 @@
 .item__wrapper {
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
   flex-grow: 1;
 
-  padding-left: 27px;
+  box-sizing: border-box;
   padding-right: 27px;
   padding-bottom: 5px;
+  padding-left: 27px;
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
     width: 50%;
@@ -51,9 +53,9 @@
 }
 
 .item__title {
-  font-weight: 700;
-
   @include font(17px, 24px);
+
+  font-weight: 700;
 
   @media (min-width: $tablet-width) {
     @include font(20px, 24px);
@@ -61,7 +63,11 @@
 }
 
 .item__title-link {
+  @include action($link-color--hover, $link-color--active);
+  @include accessibility();
+
   display: block;
+
   padding-top: 27px;
   padding-bottom: 8px;
 
@@ -69,18 +75,15 @@
 
   cursor: pointer;
 
-  @include action($link-color--hover, $link-color--active);
-  @include accessibility();
-
   @media (min-width: $tablet-width) {
     padding-bottom: 4px;
   }
 }
 
 .item__parameters {
-  margin-bottom: 20px;
-
   @include font(13px, 30px);
+
+  margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     @include font(15px, 30px);
@@ -93,8 +96,8 @@
 
 .item__buy {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 
   min-height: 65px;
   margin-top: auto; // для расположения снизу
@@ -103,9 +106,9 @@
 }
 
 .item__price {
-  font-weight: 700;
-
   @include font(15px, 24px);
+
+  font-weight: 700;
 
   @media (min-width: $tablet-width) {
     @include font(17px, 24px);
