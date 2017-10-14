@@ -8,6 +8,7 @@
     "autoprefixer": "7.1.x",
     "browser-sync": "2.18.x",
     "gulp": "3.9.x",
+    "gulp-csscomb": "^3.0.8",
     "gulp-plumber": "1.1.x",
     "gulp-postcss": "7.0.x",
     "gulp-rename": "^1.2.2",

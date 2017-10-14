@@ -9,6 +9,7 @@ var server = require("browser-sync").create();
 var rename = require("gulp-rename");
 var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
+var csscomb = require("gulp-csscomb");
 
 gulp.task("style", function() {
   gulp.src("sass/style.scss")
@@ -47,4 +48,10 @@ gulp.task("sprite", function () {
         }))
         .pipe(rename("sprite.svg"))
         .pipe(gulp.dest("img"));
+});
+
+gulp.task("csscomb", function() {
+    return gulp.src("sass/blocks/*.scss")
+      .pipe(csscomb())
+      .pipe(gulp.dest("sass/blocks/"));
 });
