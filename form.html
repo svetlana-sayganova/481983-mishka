@@ -297,21 +297,21 @@
                     </span>
                   </h3>
                   <div class="form__fieldset-inner">
-                    <div class="form__text-wpapper">
+                    <div class="form__text-wrapper">
                       <label class="form__label" for="customer-name">
                         Имя:
                       </label>
                       <input class="form__text" type="text" name="customer-name" id="customer-name" placeholder="Введите Ваше имя*" required>
                     </div>
 
-                    <div class="form__text-wpapper">
+                    <div class="form__text-wrapper">
                       <label class="form__label" for="customer-surname">
                         Фамилия:
                       </label>
                       <input class="form__text" type="text" name="customer-surname" id="customer-surname" placeholder="Укажите фамилию*" required>
                     </div>
 
-                    <div class="form__text-wpapper">
+                    <div class="form__text-wrapper">
                       <label class="form__label" for="customer-patronymic">
                         Отчество:
                       </label>
@@ -329,7 +329,10 @@
                   <label class="form__title  form__title--phone" for="customer-phone">
                       Тел
                   </label>
-                  <input class="form__text  form__text--phone" type="tel" name="customer-phone" id="customer-phone" placeholder="+7 XXX XX XX*" required>
+                  <div class="form__input-wrapper">
+                    <input class="form__text  form__text--phone" type="tel" name="customer-phone" id="customer-phone" placeholder="+7 XXX XX XX*" required>
+                    <svg class="form__icon  form__icon--phone" width="35" height="35"><use xlink:href="#icon-phone"></use></svg>
+                  </div>
                 </div>
               </fieldset>
               <fieldset class="form__fieldset">
@@ -337,7 +340,10 @@
                   <label class="form__title  form__title--mail" for="customer-mail">
                       E-mail
                   </label>
-                  <input class="form__text  form__text--mail" type="email" name="customer-mail" id="customer-mail" placeholder="Ваш Email*" required>
+                  <div class="form__input-wrapper">
+                    <input class="form__text  form__text--mail" type="email" name="customer-mail" id="customer-mail" placeholder="Ваш Email*" required>
+                    <svg class="form__icon  form__icon--mail" width="35" height="35"><use xlink:href="#icon-mail"></use></svg>
+                  </div>
                 </div>
               </fieldset>
             </div>
@@ -345,7 +351,7 @@
             <div class="form__wrapper">
               <fieldset class="form__fieldset">
                 <div class="form__inner">
-                  <label class="form__title" for="customer-wishes">
+                  <label class="form__title  form__title--textarea" for="customer-wishes">
                     Доп
                   </label>
                   <textarea class="form__textarea" name="customer-wishes" id="customer-wishes" rows="6" cols="19" placeholder="Опишите все Ваши пожелания к заказу"></textarea>

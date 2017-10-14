@@ -88,6 +88,12 @@ legend {
       margin-bottom: 10px;
     }
   }
+
+  &--phone,
+  &--mail,
+  &--textarea {
+    cursor: pointer;
+  }
 }
 
 .form__fieldset-inner {
@@ -107,6 +113,8 @@ legend {
 .form__checkbox-label {
   color: $black;
   font-weight: 700;
+
+  cursor: pointer;
 
   @include font(17px, 17px);
 
@@ -137,7 +145,7 @@ legend {
 
     border: 2px solid $gray-dark;
 
-    transition: border-color 0.3s ease;
+    transition: border-color 0.2s ease;
 
     cursor: pointer;
 
@@ -241,6 +249,12 @@ legend {
   }
 }
 
+.form__checkbox:checked + .form__checkbox-label:active {
+  &::after {
+    opacity: 0;
+  }
+}
+
 .form__checkbox-label {
   @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
     width: 237px;
@@ -255,7 +269,8 @@ legend {
   }
 }
 
-.form__text-wpapper {
+// --- оформление полей ФИО, ТЕЛ, E-MAIL ---
+.form__text-wrapper {
   display: flex;
   flex-direction: column;
 
@@ -281,6 +296,7 @@ legend {
   height: 50px;
   box-sizing: border-box;
   padding-bottom: 7px;
+  padding-right: 46px;
   margin-bottom: 24px;
 
   font-family: $font-family;
@@ -307,21 +323,78 @@ legend {
   @media (min-width: $tablet-width) {
     width: 100%;
     padding-left: 16px;
+    padding-right: 60px;
 
     @include font(19px, 19px);
   }
 
   @media (min-width: $desktop-width) {
     width: 700px;
+    padding-right: 46px;
   }
 
   &--phone {
     @media (max-width: $tablet-width - 1) {
+      width: 100%;
       margin-bottom: 30px;
+    }
+  }
+
+  &--mail {
+    @media (max-width: $tablet-width - 1) {
+      width: 100%;
     }
   }
 }
 
+// --- оформление иконок ---
+.form__input-wrapper {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: 500px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 700px;
+  }
+}
+
+.form__icon {
+  position: absolute;
+
+  top: 8px;
+  right: 5px;
+  fill: #c1c1c1;
+
+  transition: fill 0.3s ease;
+
+  @media (min-width: $tablet-width) {
+    right: 23px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 3px;
+  }
+
+  &--phone {
+    width: 25px;
+    height: 25px;
+  }
+
+  &--mail {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.form__text:hover + .form__icon,
+.form__text:focus + .form__icon,
+.form__text:active + .form__icon {
+  fill: $green;
+}
+
+// --- оформление поля ДОП ---
 .form__textarea {
   height: 140px;
   box-sizing: border-box;
