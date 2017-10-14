@@ -1,6 +1,9 @@
 {
-  "sort-order": [
+  "tab-size": 0,
+  "leading-zero": true,
+  "block-indent": 2,
 
+  "sort-order": [
     [
       "content",
       "position",
@@ -27,7 +30,7 @@
       "align-content",
       "align-items",
       "align-self",
-      "order",
+      "order"
     ],
     [
       "box-sizing",
@@ -95,7 +98,7 @@
       "text-overflow-ellipsis",
       "text-overflow-mode",
       "word-wrap",
-      "word-break",
+      "word-break"
     ],
     [
       "quotes",
@@ -118,7 +121,7 @@
       "animation-iteration-count",
       "animation-direction",
       "tab-size",
-      "hyphens",
+      "hyphens"
     ],
     [
       "opacity",
