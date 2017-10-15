@@ -41,3 +41,17 @@ window.addEventListener("keydown", function(evt) {
     }
   }
 });
+
+function initMap() {
+  var location = {lat: 59.938705, lng: 30.322992};
+  var map = new google.maps.Map(document.querySelector(".contacts__map"), {
+    zoom: 17,
+    center: location
+  });
+  var marker = new google.maps.Marker({
+    position: location,
+    map: map,
+    title: "Мишка",
+    icon: "img/icon-map-pin.svg"
+  });
+}
