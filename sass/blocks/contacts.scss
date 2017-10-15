@@ -68,6 +68,7 @@
 }
 
 .contacts__title {
+  margin: 0;
   margin-bottom: 32px;
 
   font-size: 1.2rem;
@@ -85,7 +86,7 @@
   @media (min-width: $desktop-width) {
     @include font(53px, 57px);
 
-    margin-top: 70px;
+    padding-top: 70px;
   }
 }
 
@@ -111,6 +112,10 @@
   flex-shrink: 0;
 
   width: 78px;
+}
+
+.contacts__value {
+  margin: 0;
 }
 
 .contacts__value--link {

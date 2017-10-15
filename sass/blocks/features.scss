@@ -28,6 +28,7 @@
 
 .features__title {
   padding-top: 30px;
+  margin: 0;
   margin-bottom: 2px;
 
   font-size: 1.67rem;
@@ -50,6 +51,8 @@
 }
 
 .features__list {
+  @include list-reset-style();
+
   display: flex;
   flex-direction: column;
 

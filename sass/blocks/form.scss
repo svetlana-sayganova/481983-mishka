@@ -14,13 +14,14 @@
 }
 
 .form__fieldset {
-  //padding-bottom: 30px;
+  padding: 0;
+  margin: 0;
+
+  border: none;
 
   @media (min-width: $tablet-width) {
     width: $tablet-width-inner;
     margin: 0 auto;
-    // padding-top: 50px;
-    // padding-bottom: 50px;
   }
 
   @media (min-width: $desktop-width) {
@@ -37,12 +38,10 @@
   }
 }
 
-legend {
-  display: block;
-}
-
 .form__title {
   @include font(17px, 17px);
+
+  margin: 0;
 
   font-weight: 700;
   color: $green;
@@ -83,8 +82,7 @@ legend {
   }
 
   &--phone,
-  &--mail,
-  &--name {
+  &--mail {
     @media (max-width: $tablet-width - 1) {
       margin-bottom: 10px;
     }

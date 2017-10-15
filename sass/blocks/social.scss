@@ -1,4 +1,6 @@
 .social__list {
+  @include list-reset-style();
+
   display: flex;
   align-items: center;
   flex-wrap: wrap;

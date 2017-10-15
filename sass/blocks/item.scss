@@ -55,6 +55,8 @@
 .item__title {
   @include font(17px, 24px);
 
+  margin: 0;
+
   font-weight: 700;
 
   @media (min-width: $tablet-width) {

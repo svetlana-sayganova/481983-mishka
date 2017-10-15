@@ -44,3 +44,10 @@
 @mixin outline($color) {
   outline: 2px solid $color;
 }
+
+@mixin list-reset-style() {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}

@@ -68,6 +68,7 @@
 }
 
 .reviews__title {
+  margin: 0;
   margin-bottom: 20px;
 
   font-size: 1.67rem;
@@ -100,6 +101,7 @@
 .reviews__item {
   display: none;
 
+  margin: 0;
   margin-bottom: 30px;
 
   @media (min-width: $tablet-width) {
@@ -113,6 +115,7 @@
 }
 
 .reviews__text {
+  margin: 0;
   margin-bottom: 30px;
 
   line-height: 2;
