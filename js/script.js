@@ -48,10 +48,17 @@ function initMap() {
     zoom: 17,
     center: location
   });
+
+  var image = {  // для отображения кастомного маркера в IE. Источник: https://stackoverflow.com/a/40770331
+    url: "img/icon-map-pin.svg",
+    scaledSize: new google.maps.Size(66, 101),
+  }
+
   var marker = new google.maps.Marker({
     position: location,
     map: map,
     title: "Мишка",
-    icon: "img/icon-map-pin.svg"
+    optimized: false,
+    icon: image
   });
 }
