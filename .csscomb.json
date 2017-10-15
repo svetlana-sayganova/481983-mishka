@@ -1,7 +1,9 @@
 {
   "sort-order":[
     [
-    "$include",
+    "$include"
+    ],
+    [
     "content",
     "position",
     "top",

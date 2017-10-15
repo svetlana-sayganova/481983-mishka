@@ -64,6 +64,7 @@
 
   @media #{$desktop} {
     @include font(53px, 57px);
+
     z-index: 5;
 
     margin-top: 55px;

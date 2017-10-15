@@ -19,7 +19,7 @@
 .site-list__item {
   @media #{$mobile-only} {
     &:first-of-type a {
-      border-top: 1px solid $gray-light;
+      border-top: 1px solid $gray-border;
     }
   }
 
@@ -57,8 +57,7 @@
 
 .site-list__link {
   @include font(17px, 24px);
-  @include action($link-color--hover, $link-color--active);
-  @include accessibility();
+  @include link-dynamics($link-color--hover, $link-color--active);
 
   display: block;
 
@@ -74,7 +73,7 @@
     padding-left: 76px;
 
     background-color: $white;
-    border-top: 1px solid $gray-light;
+    border-top: 1px solid $gray-border;
   }
 
   @media #{$tablet} {
@@ -95,7 +94,7 @@
   }
 
   &--active {
-    @include action($link-color--active, $link-color--active);
+    @include link-dynamics($link-color--active, $link-color--active);
 
     color: $link-color--active;
 

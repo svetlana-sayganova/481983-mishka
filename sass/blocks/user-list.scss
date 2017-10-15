@@ -52,8 +52,7 @@
 
 .user-list__link {
   @include font(17px, 24px);
-  @include action($link-color--hover, $link-color--active);
-  @include accessibility();
+  @include link-dynamics($link-color--hover, $link-color--active);
 
   display: block;
 
@@ -87,7 +86,7 @@
   }
 
   &--active {
-    @include action($link-color--active, $link-color--active);
+    @include link-dynamics($link-color--active, $link-color--active);
 
     color: $link-color--active;
 

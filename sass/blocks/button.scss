@@ -1,6 +1,5 @@
 .button {
-  @include button-action($button-color--hover, $button-color--active, $button-bg-color--hover, $button-bg-color--active);
-  @include accessibility();
+  @include button-dynamics($button-color--hover, $button-color--active, $button-bg-color--hover, $button-bg-color--active);
 
   display: block;
 
@@ -23,7 +22,7 @@
   transition: 0.3s ease;
 
   &--green {
-    @include button-action($white, rgba($white, 0.3), $green-secondary, $green-secondary);
+    @include button-dynamics($white, rgba($white, 0.3), $green-secondary, $green-secondary);
 
     color: $white;
 

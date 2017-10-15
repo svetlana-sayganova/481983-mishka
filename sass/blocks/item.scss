@@ -4,7 +4,7 @@
 
   box-sizing: border-box;
 
-  border: 1px solid #ececec;
+  border: 1px solid $gray-border;
 
   @media #{$tablet} {
     flex-direction: row;
@@ -18,7 +18,7 @@
 }
 
 .item__image-link {
-  background-color: #ededed;
+  background-color: $gray-light;
 
   @media #{$tablet-only} {
     width: 334px;
@@ -65,8 +65,7 @@
 }
 
 .item__title-link {
-  @include action($link-color--hover, $link-color--active);
-  @include accessibility();
+  @include link-dynamics($link-color--hover, $link-color--active);
 
   display: block;
 
@@ -115,10 +114,6 @@
   @media #{$tablet} {
     @include font(17px, 24px);
   }
-}
-
-.item__basket {
-  @include accessibility();
 }
 
 .item__icon {

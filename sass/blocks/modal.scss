@@ -17,7 +17,7 @@
   margin: 0 auto;
 
   background-color: $white;
-  border: 1px solid #c7c7c7;
+  border: 1px solid $gray-border-dark;
 
   transform: translate(-50%, -550%);
   box-shadow: 0 5px 10px 0 rgba($black, 0.25);
@@ -91,14 +91,14 @@
 
   cursor: pointer;
 
-  border: 2px solid #ececec;
+  border: 2px solid $gray-border;
 
   @media #{$tablet} {
     width: 108px;
   }
 
   &:hover {
-    border: 2px solid #c7c7c7;
+    border: 2px solid $gray-border-dark;
   }
 }
 

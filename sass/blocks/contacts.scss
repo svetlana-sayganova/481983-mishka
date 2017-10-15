@@ -119,13 +119,13 @@
 }
 
 .contacts__value--link {
-  @include action($green-link, rgba($green-link, 0.3));
+  @include link-dynamics($green-link, rgba($green-link, 0.3));
+
   position: relative;
 
   color: $gray-dark;
 
   transition: color 0.3s ease;
-  //@include accessibility(); ссылка мееяет цвет -- нужна ли обводка?
 
   &::after {
     content: "";

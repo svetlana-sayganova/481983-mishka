@@ -145,8 +145,7 @@
 }
 
 .reviews__author-nickname {
-  @include action($green-link, rgba($green-link, 0.3));
-  @include accessibility();
+  @include link-dynamics($green-link, rgba($green-link, 0.3));
 
   font-size: 1.13rem;
   line-height: 1.75;
@@ -181,7 +180,7 @@
 
   font-size: 0;
 
-  border: 1px solid $gray-light;
+  border: 1px solid $gray-border;
 
   &::after {
     content: "";

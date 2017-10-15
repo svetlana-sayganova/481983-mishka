@@ -37,7 +37,7 @@
   min-height: 176px;
 
   background-color: $gray-light;
-  border-top: 1px solid #e7e7e7;
+  border-top: 1px solid $gray-border;
 
   @media #{$tablet} {
     //position: relative;
@@ -146,7 +146,8 @@
 }
 
 .page-header__category {
-  @include action($white, rgba($white, 0.3));
+  @include link-dynamics($white, rgba($white, 0.3));
+
   position: relative;
 
   padding-top: 25px;

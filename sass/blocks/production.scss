@@ -19,7 +19,7 @@
   width: $mobile-width-inner;
   margin: 0 auto;
 
-  border: 1px solid #ececec;
+  border: 1px solid $gray-border;
 
   @media #{$tablet} {
     width: $tablet-width-inner;
@@ -40,6 +40,7 @@
 
 .production__title {
   @include font(17px, 24px);
+
   position: relative;
 
   padding-top: 25px;

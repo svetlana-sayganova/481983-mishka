@@ -1,4 +1,4 @@
-@mixin action($color--hover, $color--active) {
+@mixin link-dynamics($color--hover, $color--active) {
   &:hover,
   &:focus {
     color: $color--hover;
@@ -9,7 +9,7 @@
   }
 }
 
-@mixin button-action($color--hover, $color--active, $bg-color--hover, $bg-color--active) {
+@mixin button-dynamics($color--hover, $color--active, $bg-color--hover, $bg-color--active) {
   &:hover,
   &:focus {
     color: $color--hover;
@@ -20,20 +20,6 @@
     color: $color--active;
     background-color: $bg-color--active;
   }
-}
-
-@mixin accessibility() {
-  &:focus {
-    outline: thin dotted;
-  }
-
-  &:active {
-    outline: none;
-  }
-}
-
-@mixin content() {
-  padding: 0 30px;
 }
 
 @mixin font($size, $height) {
