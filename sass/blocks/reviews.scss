@@ -213,9 +213,17 @@
     opacity: 0.3;
   }
 
+  &--disabled {
+    cursor: not-allowed;
+  }
+
   @media #{$tablet} {
     border: none;
   }
+}
+
+.reviews__toggle.reviews__toggle--disabled::after {
+  opacity: 0.2;
 }
 
 .reviews__write {
