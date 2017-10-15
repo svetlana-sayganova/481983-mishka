@@ -1,7 +1,7 @@
 .site-list {
   @include list-reset-style();
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     display: flex;
     flex-wrap: wrap;
     order: 3;
@@ -9,7 +9,7 @@
     width: 310px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     order: 1;
 
     width: 430px;
@@ -17,13 +17,13 @@
 }
 
 .site-list__item {
-  @media (max-width: $tablet-width - 1px) {
+  @media #{$mobile-only} {
     &:first-of-type a {
       border-top: 1px solid $gray-light;
     }
   }
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
+  @media #{$tablet-only} {
     width: 143px;
 
     &:nth-of-type(odd) {
@@ -31,7 +31,7 @@
     }
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     &:nth-of-type(odd) {
       width: 184px;
     }
@@ -49,7 +49,7 @@
   }
 
   &:nth-of-type(n + 3) {
-    @media (max-width: $desktop-width - 1px) {
+    @media #{$desktop-except} {
       display: none;
     }
   }
@@ -68,7 +68,7 @@
 
   transition: color 0.3s ease;
 
-  @media (max-width: $tablet-width - 1) {
+  @media #{$mobile-only} {
     padding-top: 28px;
     padding-bottom: 26px;
     padding-left: 76px;
@@ -77,7 +77,7 @@
     border-top: 1px solid $gray-light;
   }
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     @include font(15px, 24px);
 
     padding-top: 18px;
@@ -87,7 +87,7 @@
     border-top: none;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     @include font(17px, 24px);
 
     padding-top: 30px;

@@ -1,13 +1,13 @@
 .form__wrapper {
   padding-bottom: 10px;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     padding-top: 54px;
     padding-bottom: 27px;
   }
 
   &--gray {
-    @media (min-width: $tablet-width) {
+    @media #{$tablet} {
       background-color: $gray-light;
     }
   }
@@ -19,12 +19,12 @@
 
   border: none;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     width: $tablet-width-inner;
     margin: 0 auto;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     width: $desktop-width-inner;
   }
 }
@@ -33,7 +33,7 @@
   display: flex;
   flex-direction: column;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     flex-direction: row;
   }
 }
@@ -47,7 +47,7 @@
   color: $green;
   text-transform: uppercase;
 
-  @media (max-width: $tablet-width - 1) {
+  @media #{$mobile-only} {
     display: flex;
     flex-grow: 0;
 
@@ -67,7 +67,7 @@
     }
   }
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     display: block;
     flex-shrink: 0;
 
@@ -75,7 +75,7 @@
     padding-top: 17px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     box-sizing: border-box;
     width: 175px;
     padding-left: 60px;
@@ -83,7 +83,7 @@
 
   &--phone,
   &--mail {
-    @media (max-width: $tablet-width - 1) {
+    @media #{$mobile-only} {
       margin-bottom: 10px;
     }
   }
@@ -100,7 +100,7 @@
   flex-direction: column;
 
   &--columns {
-    @media (min-width: $tablet-width) {
+    @media #{$tablet} {
       flex-direction: row;
       flex-wrap: wrap;
     }
@@ -117,7 +117,7 @@
 
   cursor: pointer;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     @include font(19px, 19px);
   }
 }
@@ -147,7 +147,7 @@
 
     transition: border-color 0.2s ease;
 
-    @media (min-width: $tablet-width) {
+    @media #{$tablet} {
       width: 50px;
       height: 50px;
     }
@@ -177,7 +177,7 @@
     transition: opacity 0.2s ease-in;
   }
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     height: 52px;
     padding-top: 15px;
     padding-left: 80px;
@@ -198,7 +198,7 @@
   background-color: $green;
   border-radius: 50%;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     top: 16px;
     left: 16px;
 
@@ -221,7 +221,7 @@
 
   transform: rotate(-45deg);
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     top: 16px;
     left: 13px;
 
@@ -253,7 +253,7 @@
 }
 
 .form__checkbox-label {
-  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+  @media #{$tablet-only} {
     width: 237px;
 
     &:nth-of-type(odd) {
@@ -261,7 +261,7 @@
     }
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     width: 262px;
   }
 }
@@ -271,20 +271,20 @@
   display: flex;
   flex-direction: column;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     flex-direction: row;
     justify-content: space-between;
 
     width: 500px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     width: 700px;
   }
 }
 
 .form__label {
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     padding-top: 13px;
     margin-right: 23px;
   }
@@ -319,7 +319,7 @@
     color: $gray-dark;
   }
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     @include font(19px, 19px);
 
     width: 100%;
@@ -327,20 +327,20 @@
     padding-left: 16px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     width: 700px;
     padding-right: 46px;
   }
 
   &--phone {
-    @media (max-width: $tablet-width - 1) {
+    @media #{$mobile-only} {
       width: 100%;
       margin-bottom: 30px;
     }
   }
 
   &--mail {
-    @media (max-width: $tablet-width - 1) {
+    @media #{$mobile-only} {
       width: 100%;
     }
   }
@@ -350,11 +350,11 @@
 .form__input-wrapper {
   position: relative;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     width: 500px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     width: 700px;
   }
 }
@@ -368,11 +368,11 @@
 
   transition: fill 0.3s ease;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     right: 23px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     right: 3px;
   }
 
@@ -415,19 +415,19 @@
     border: 2px solid $green;
   }
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     @include font(19px, 19px);
 
     width: 100%;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     width: 700px;
   }
 }
 
 .form__footer {
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -437,7 +437,7 @@
     margin-top: 25px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     width: 700px;
     margin: 0 auto;
     margin-top: 20px;
@@ -447,7 +447,7 @@
 .form__note {
   @include font(14px, 16px);
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     @include font(17px, 30px);
 
     margin: 0;
@@ -458,7 +458,7 @@
   width: 100%;
   margin-top: 30px;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     order: -1;
 
     width: 230px;

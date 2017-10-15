@@ -24,16 +24,18 @@ $link-color:              $black;
 $link-color--hover:       rgba($black, 0.6);
 $link-color--active:      rgba($black, 0.3);
 
-$logo-color:              $black;
-$logo-color--hover:       rgba($black, 0.6);
-$logo-color--active:      rgba($black, 0.3);
-
 $font-family:             "Open Sans", "arial", sans-serif;
 $font-size:               15px;
 
 $mobile-width:            320px;
 $tablet-width:            768px;
 $desktop-width:           1150px;
+
+$mobile-only:             "only screen and (max-width: 767px)";
+$tablet-only:             "only screen and (min-width: $tablet-width) and (max-width: $desktop-width - 1px)";
+$tablet:                  "only screen and (min-width: $tablet-width)";
+$desktop-except:          "only screen and (max-width: $desktop-width - 1px)";
+$desktop:                 "only screen and (min-width: $desktop-width)";
 
 $mobile-width-inner:      260px;
 $tablet-width-inner:      668px;

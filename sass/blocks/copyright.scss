@@ -10,7 +10,7 @@
   font-weight: 700;
   line-height: 1;
 
-  @media (max-width: $tablet-width) {
+  @media #{$mobile-only} {
     min-height: 80px;
     margin: 0 auto;
   }

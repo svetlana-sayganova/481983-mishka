@@ -2,12 +2,12 @@
   margin-top: 40px;
   margin-bottom: 40px;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     margin-top: 70px;
     margin-bottom: 57px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     display: flex;
     flex-wrap: wrap;
 
@@ -25,7 +25,7 @@
   margin: 0 auto;
   margin-bottom: 40px;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     display: flex;
     align-items: flex-start;
     flex-direction: row;
@@ -35,7 +35,7 @@
     margin-bottom: 25px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     flex-direction: column;
 
     box-sizing: border-box;
@@ -47,7 +47,7 @@
   }
 
   &::after {
-    @media (min-width: $tablet-width) {
+    @media #{$tablet} {
       content: "";
       position: absolute;
       top: -15px;
@@ -60,7 +60,7 @@
       background-repeat: no-repeat;
     }
 
-    @media (min-width: $desktop-width) {
+    @media #{$desktop} {
       top: 63px;
       left: 63px;
     }
@@ -76,14 +76,14 @@
   line-height: 1.67;
   color: $headings-color;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     @include font(43px, 50px);
 
     width: 100%;
     margin-bottom: 50px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     @include font(53px, 57px);
 
     padding-top: 70px;
@@ -97,13 +97,13 @@
 
   line-height: 2;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     @include font(17px, 30px);
 
     width: 50%;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     width: 307px;
   }
 }
@@ -162,7 +162,7 @@
     //background-size: 322px 457px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     margin-bottom: 55px;
 
     background-image: url("../img/map-tablet@1x.jpg");
@@ -173,7 +173,7 @@
     }
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     width: 525px;
     margin-bottom: 0;
 
@@ -190,11 +190,11 @@
   width: $mobile-width-inner;
   margin: 0 auto;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     width: 230px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     margin-top: -52px;
     margin-right: 0;
     margin-left: 175px;

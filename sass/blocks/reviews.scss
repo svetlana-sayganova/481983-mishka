@@ -8,7 +8,7 @@
   background-repeat: repeat-x;
   background-size: 320px 7px;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     width: $tablet-width;
     padding-bottom: 85px;
     margin: 0 auto;
@@ -16,7 +16,7 @@
     background-size: 768px 17px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     width: $desktop-width-inner;
     padding-bottom: 90px;
     margin: 0 auto;
@@ -29,7 +29,7 @@
   width: $mobile-width-inner;
   margin: 0 auto;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     position: relative;
 
     display: flex;
@@ -57,7 +57,7 @@
     }
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     width: $desktop-width-inner;
     padding-top: 70px;
     padding-right: 0;
@@ -76,14 +76,14 @@
   line-height: 1.2;
   color: $headings-color;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     @include font(43px, 50px);
 
     width: 335px;
     margin-bottom: 50px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     @include font(53px, 57px);
 
     width: 525px;
@@ -91,7 +91,7 @@
 }
 
 .reviews__list {
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     order: 3;
 
     width: 300px;
@@ -104,7 +104,7 @@
   margin: 0;
   margin-bottom: 30px;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     margin-bottom: 50px;
   }
 
@@ -120,14 +120,14 @@
 
   line-height: 2;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     @include font(17px, 30px);
 
     width: 668px;
     margin-bottom: 57px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     width: 800px;
     margin-bottom: 40px;
   }
@@ -139,7 +139,7 @@
   font-weight: 700;
   line-height: 1.4;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     margin-bottom: 5px;
   }
 }
@@ -159,7 +159,7 @@
   height: 50px;
   margin-bottom: 38px;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     position: absolute;
     right: 50px;
     bottom: 55px;
@@ -168,7 +168,7 @@
     margin-bottom: 0;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     right: 0;
     bottom: 100px;
   }
@@ -214,19 +214,19 @@
     opacity: 0.3;
   }
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     border: none;
   }
 }
 
 .reviews__write {
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     order: 2;
 
     width: 173px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     margin-top: 5px;
   }
 }

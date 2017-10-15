@@ -8,7 +8,7 @@
   color: $black;
 
   &::after {
-    @media (min-width: $tablet-width) {
+    @media #{$tablet} {
       content: "";
       position: absolute;
       bottom: -12px;
@@ -22,7 +22,7 @@
       background-size: 768px 24px;
     }
 
-    @media (min-width: $desktop-width) {
+    @media #{$desktop} {
       bottom: -17px;
 
       height: 34px;
@@ -39,13 +39,13 @@
   background-color: $gray-light;
   border-top: 1px solid #e7e7e7;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     //position: relative;
     min-height: 225px;
     margin-top: -60px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     min-height: 255px;
     margin-top: -60px;
   }
@@ -67,7 +67,7 @@
       background-size: 575px 373px;
     }
 
-    @media (min-width: $tablet-width) {
+    @media #{$tablet} {
       min-height: 746px;
 
       background-image: url("../img/hero-tablet@1x.jpg");
@@ -79,7 +79,7 @@
       }
     }
 
-    @media (min-width: $desktop-width) {
+    @media #{$desktop} {
       background-image: url("../img/hero-desktop@1x.jpg");
       background-position: center -55px;
       background-size: 1250px 810px; // высота подсчитана с помощью пропорции для избежания искажения изображения
@@ -100,14 +100,14 @@
   line-height: 1.1;
   text-align: center;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     @include font(43px, 50px);
 
     width: $tablet-width-inner;
     margin-top: 96px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     @include font(53px, 57px);
 
     width: 700px;
@@ -116,11 +116,11 @@
   &--main {
     margin-top: 69px;
 
-    @media (min-width: $tablet-width) {
+    @media #{$tablet} {
       margin-top: 153px;
     }
 
-    @media (min-width: $desktop-width) {
+    @media #{$desktop} {
       margin-top: 155px;
     }
   }
@@ -133,14 +133,14 @@
   width: $mobile-width;
   margin: 0 auto;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     flex-direction: row;
 
     width: $tablet-width - 100px;
     height: 119px; // для корректной работы при наведении на категории
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     width: $desktop-width - 100px;
   }
 }
@@ -163,7 +163,7 @@
 
   transition: color 0.3s ease;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     @include font(20px, 30px);
 
     flex-grow: 1;
@@ -203,7 +203,7 @@
 
   transition: opacity 0.3s ease;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     top: 30px;
     right: 33px;
 

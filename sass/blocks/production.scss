@@ -1,11 +1,11 @@
 .production {
   margin-bottom: 60px;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     margin-bottom: 64px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     margin-bottom: 105px;
   }
 }
@@ -21,11 +21,11 @@
 
   border: 1px solid #ececec;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     width: $tablet-width-inner;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -50,14 +50,14 @@
   font-weight: 700;
   color: $black;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     @include font(20px, 24px);
 
     padding-left: 108px;
     margin-bottom: 7px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     order: -1;
 
     box-sizing: border-box;
@@ -79,12 +79,12 @@
 
   fill: $green;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     top: 20px;
     left: 42px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     top: 43px;
     left: 60px;
   }
@@ -93,13 +93,13 @@
 .production__video-player {
   margin-bottom: 30px;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     order: -1;
 
     margin-bottom: 13px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     margin-top: -177px;
     margin-bottom: 0;
   }
@@ -109,12 +109,12 @@
   padding-right: 34px;
   padding-left: 34px;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     padding-right: 40px;
     padding-left: 40px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     box-sizing: border-box;
     width: 350px;
     padding-right: 60px;
@@ -128,13 +128,13 @@
   margin: 0;
   margin-bottom: 25px;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     @include font(15px, 30px);
 
     margin-bottom: 35px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     margin-bottom: 45px;
   }
 }
@@ -142,7 +142,7 @@
 .production__order {
   margin-bottom: 30px;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     margin-bottom: 45px;
   }
 }

@@ -1,11 +1,11 @@
 .catalog {
   margin-top: 30px;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     margin-top: 80px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     margin-top: 128px;
   }
 }
@@ -17,11 +17,11 @@
   width: $mobile-width-inner;
   margin: 0 auto;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     width: $tablet-width-inner;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -33,11 +33,11 @@
 .catalog__item {
   margin-bottom: 30px;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     margin-bottom: 53px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     margin-bottom: 57px;
   }
 }

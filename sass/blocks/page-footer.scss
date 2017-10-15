@@ -16,20 +16,20 @@
   width: $mobile-width-inner;
   margin: 0 auto;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     flex-direction: row;
 
     width: $tablet-width-inner;
     min-height: 143px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     width: $desktop-width-inner;
   }
 }
 
 .page-footer__logo {
-  @media (max-width: $tablet-width - 1px) {
+  @media #{$mobile-only} {
     display: none;
   }
 }
@@ -53,7 +53,7 @@
 }
 
 .page-footer__social {
-  @media (max-width: $tablet-width - 1px) {
+  @media #{$mobile-only} {
     display: flex; // для корректного отображения в IE11
     flex-direction: column;
 
@@ -62,22 +62,22 @@
     border-bottom: 1px solid #e5e5e5;
   }
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     margin-left: 159px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     margin-left: 349px;
   }
 }
 
 .page-footer__copyright {
-  @media (max-width: $tablet-width - 1px) {
+  @media #{$mobile-only} {
     display: flex; // для корректного отображения в IE11
     flex-direction: column;
   }
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     margin-left: auto;
   }
 }

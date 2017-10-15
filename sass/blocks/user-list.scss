@@ -1,7 +1,7 @@
 .user-list {
   @include list-reset-style();
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
@@ -11,7 +11,7 @@
     height: 88px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     order: 3;
 
     width: 430px;
@@ -19,7 +19,7 @@
 }
 
 .user-list__item {
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     &:first-of-type {
       width: 84px;
 
@@ -44,7 +44,7 @@
   }
 
   &:nth-of-type(n + 3) {
-    @media (max-width: $tablet-width - 1px) {
+    @media #{$mobile-only} {
       display: none;
     }
   }
@@ -63,7 +63,7 @@
 
   transition: color 0.3s ease;
 
-  @media (max-width: $tablet-width - 1) {
+  @media #{$mobile-only} {
     padding-top: 28px;
     padding-bottom: 26px;
     padding-left: 76px;
@@ -72,7 +72,7 @@
     border-top: 1px solid $gray-light;
   }
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     padding-top: 30px;
     padding-bottom: 35px;
 
@@ -123,7 +123,7 @@
 
   transition: fill 0.3s ease;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     top: 34px;
     left: 32px;
   }

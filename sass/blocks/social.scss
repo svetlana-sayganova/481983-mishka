@@ -8,7 +8,7 @@
 
   width: 141px;
 
-  @media (max-width: $tablet-width) {
+  @media #{$mobile-only} {
     min-height: 80px;
     margin: 0 auto;
   }
