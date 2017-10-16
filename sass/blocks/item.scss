@@ -13,7 +13,14 @@
   @media #{$desktop} {
     flex-direction: column;
 
-    width: 315px;
+    width: 316px;
+    margin-right: 51px;
+  }
+
+  &:nth-of-type(3n) {
+    @media #{$desktop} {
+      margin-right: 0;
+    }
   }
 }
 

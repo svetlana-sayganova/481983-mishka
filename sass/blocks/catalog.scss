@@ -11,9 +11,6 @@
 }
 
 .catalog__wrapper {
-  display: flex;
-  flex-direction: column;
-
   width: $mobile-width-inner;
   margin: 0 auto;
 
@@ -22,9 +19,9 @@
   }
 
   @media #{$desktop} {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
 
     width: $desktop-width-inner;
   }
