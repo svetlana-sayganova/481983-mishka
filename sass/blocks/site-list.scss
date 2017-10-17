@@ -32,6 +32,10 @@
   }
 
   @media #{$desktop} {
+    &:first-of-type {
+      border-right: 1px solid $gray-border;
+    }
+
     &:nth-of-type(odd) {
       width: 184px;
     }

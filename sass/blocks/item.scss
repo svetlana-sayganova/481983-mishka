@@ -84,7 +84,12 @@
   cursor: pointer;
 
   @media #{$tablet} {
-    padding-bottom: 4px;
+    padding-top: 24px;
+    padding-bottom: 7px;
+  }
+
+  @media #{$desktop} {
+    padding-top: 24px;
   }
 }
 
@@ -111,6 +116,10 @@
   margin-top: auto; // для расположения снизу
 
   border-top: 1px solid $gray-light;
+
+  @media #{$tablet} {
+    min-height: 67px;
+  }
 }
 
 .item__price {
@@ -120,6 +129,10 @@
 
   @media #{$tablet} {
     @include font(17px, 24px);
+  }
+
+  @media #{$tablet-only} {
+    padding-left: 3px;
   }
 }
 

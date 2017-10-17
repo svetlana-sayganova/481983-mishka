@@ -43,8 +43,8 @@
 
   position: relative;
 
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 24px;
+  padding-bottom: 26px;
   padding-left: 91px; // для размещения иконки
   margin: 0;
 
@@ -63,7 +63,7 @@
 
     box-sizing: border-box;
     width: 350px;
-    padding-top: 96px;
+    padding-top: 94px;
     padding-right: 60px;
     padding-left: 60px;
     margin-left: 700px;
@@ -87,12 +87,12 @@
 
   @media #{$desktop} {
     top: 43px;
-    left: 60px;
+    left: 63px;
   }
 }
 
 .production__video-player {
-  margin-bottom: 30px;
+  margin-bottom: 27px;
 
   @media #{$tablet} {
     order: -1;
@@ -101,7 +101,7 @@
   }
 
   @media #{$desktop} {
-    margin-top: -177px;
+    margin-top: -175px;
     margin-bottom: 0;
   }
 }
@@ -136,7 +136,7 @@
   }
 
   @media #{$desktop} {
-    margin-bottom: 45px;
+    margin-bottom: 48px;
   }
 }
 
