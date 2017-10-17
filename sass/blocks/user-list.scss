@@ -7,7 +7,7 @@
     justify-content: flex-end;
     order: 2;
 
-    width: 350px;
+    width: 352px;
     height: 88px;
   }
 
@@ -111,7 +111,6 @@
   fill: rgba($green, 0.3);
 }
 
-
 .user-list__icon-search,
 .user-list__icon-cart {
   position: absolute;
@@ -124,7 +123,7 @@
 
   @media #{$tablet} {
     top: 34px;
-    left: 32px;
+    left: 33px;
   }
 }
 
@@ -136,4 +135,8 @@
 .user-list__icon-cart {
   width: 21px;
   height: 18px;
+
+  @media #{$tablet} {
+    left: 30px;
+  }
 }

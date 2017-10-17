@@ -66,8 +66,8 @@
 .main-nav__toggle {
   content: "";
   position: absolute;
-  top: 6px;
-  right: 28px;
+  top: 7px;
+  right: 29px;
   z-index: 10;
 
   display: block;
@@ -81,14 +81,14 @@
   background-repeat: no-repeat;
   border: 0;
 
+  @media #{$tablet} {
+    display: none;
+  }
+
   &:hover,
   &:focus,
   &:active {
     opacity: 0.6;
-  }
-
-  @media #{$tablet} {
-    display: none;
   }
 }
 
@@ -105,9 +105,7 @@
 
   .main-nav--closed .site-list,
   .main-nav--closed .user-list {
-    @media #{$mobile-only} {
-      display: none;
-    }
+    display: none;
   }
 
   .main-nav--nojs .main-nav__toggle {

@@ -40,7 +40,6 @@
   border-top: 1px solid $gray-border;
 
   @media #{$tablet} {
-    //position: relative;
     min-height: 225px;
     margin-top: -60px;
   }
@@ -55,7 +54,7 @@
     flex-direction: column;
     justify-content: space-between;
 
-    min-height: 486px;
+    min-height: 488px;
 
     background-color: #fafafa;
     background-image: url("../img/hero-mobile@1x.jpg");
@@ -104,7 +103,7 @@
     @include font(43px, 50px);
 
     width: $tablet-width-inner;
-    margin-top: 96px;
+    margin-top: 93px;
   }
 
   @media #{$desktop} {
@@ -114,7 +113,7 @@
   }
 
   &--main {
-    margin-top: 69px;
+    margin-top: 71px;
 
     @media #{$tablet} {
       margin-top: 153px;
@@ -136,12 +135,12 @@
   @media #{$tablet} {
     flex-direction: row;
 
-    width: $tablet-width - 100px;
+    width: $tablet-width-inner;
     height: 119px; // для корректной работы при наведении на категории
   }
 
   @media #{$desktop} {
-    width: $desktop-width - 100px;
+    width: $desktop-width-inner;
   }
 }
 
@@ -169,8 +168,8 @@
 
     flex-grow: 1;
 
-    padding-top: 30px;
-    padding-left: 35px;
+    padding-top: 28px;
+    padding-left: 34px;
 
     transition: margin-top 0.3s ease;
 
@@ -207,8 +206,13 @@
   @media #{$tablet} {
     top: 30px;
     right: 33px;
+  }
 
-    &--interior {
+  &--interior {
+    top: 23px;
+
+    @media #{$tablet} {
+      top: 30px;
       right: 25px;
     }
   }
