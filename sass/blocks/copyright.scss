@@ -14,6 +14,10 @@
     min-height: 80px;
     margin: 0 auto;
   }
+
+  @media #{$tablet} {
+    padding-top: 5px;
+  }
 }
 
 .copyright__link {
@@ -21,6 +25,10 @@
 }
 
 .copyright__text {
+  display: block;
+
+  padding-bottom: 7px;
+
   transition: all 0.3s ease;
 }
 
