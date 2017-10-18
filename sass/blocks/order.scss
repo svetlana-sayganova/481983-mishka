@@ -1,14 +1,14 @@
 .order {
-  margin-top: 25px;
-  margin-bottom: 55px;
+  margin-top: 23px;
+  margin-bottom: 54px;
 
   @media #{$tablet} {
-    margin-top: 70px;
+    margin-top: 73px;
     margin-bottom: 50px;
   }
 
   @media #{$desktop} {
-    margin-top: 125px;
+    margin-top: 122px;
   }
 }
 
@@ -40,11 +40,12 @@
   @media #{$tablet} {
     @include font(17px, 30px);
 
-    margin-bottom: 0;
+    margin-bottom: 8px;
   }
 
   @media #{$desktop} {
     padding-right: 175px;
     padding-left: 175px;
+    margin-bottom: 7px;
   }
 }
