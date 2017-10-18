@@ -141,15 +141,16 @@
   position: relative;
 
   box-sizing: border-box;
-  height: 38px;
+  min-height: 38px;
   padding-top: 12px;
   padding-left: 62px;
-  margin-bottom: 22px;
+  margin-bottom: 13px;
 
   @media #{$tablet} {
-    height: 52px;
+    min-height: 52px;
     padding-top: 15px;
     padding-left: 80px;
+    margin-bottom: 22px;
   }
 
   // стилизуем кастомные радиобаттоны и чекбоксы
@@ -195,6 +196,25 @@
   }
 }
 
+.form__checkbox-label {
+  margin-bottom: 23px;
+
+  @media #{$tablet-only} {
+    width: 237px;
+
+    &:nth-of-type(odd) {
+      margin-right: 25px;
+    }
+  }
+
+  @media #{$desktop} {
+    width: 262px;
+  }
+}
+
+.form__radio-label:last-of-type {
+  margin-bottom: 22px;
+}
 // для доступности
 .form__radio:focus + label::before,
 .form__checkbox:focus + label::before {
@@ -267,22 +287,6 @@
 .form__checkbox:checked + .form__checkbox-label:active {
   &::after {
     opacity: 0;
-  }
-}
-
-.form__checkbox-label {
-  margin-bottom: 23px;
-
-  @media #{$tablet-only} {
-    width: 237px;
-
-    &:nth-of-type(odd) {
-      margin-right: 25px;
-    }
-  }
-
-  @media #{$desktop} {
-    width: 262px;
   }
 }
 
@@ -480,6 +484,7 @@
 
     padding-bottom: 5px;
     margin: 0;
+    margin-left: 40px;
   }
 }
 
@@ -488,6 +493,7 @@
   margin-top: 31px;
 
   @media #{$tablet} {
+    flex-shrink: 0;
     order: -1;
 
     width: 230px;
