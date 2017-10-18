@@ -19,23 +19,29 @@
 }
 
 .user-list__item {
-  @media #{$tablet} {
-    &:first-of-type {
+  &:first-of-type {
+    @media #{$tablet} {
       width: 84px;
 
       border-right: 1px solid $gray-light;
       border-left: 1px solid $gray-light;
     }
+  }
 
-    &:first-of-type a {
+  &:first-of-type a {
+    @media #{$tablet} {
       font-size: 0;
     }
+  }
 
-    &--basket a {
-      padding-left: 82px;
+  &:nth-of-type(n + 3) {
+    @media #{$mobile-only} {
+      display: none;
     }
+  }
 
-    &:nth-of-type(n + 3) a {
+  &:nth-of-type(n + 3) a {
+    @media #{$tablet} {
       @include font(15px, 24px);
 
       padding-top: 18px;
@@ -43,9 +49,9 @@
     }
   }
 
-  &:nth-of-type(n + 3) {
-    @media #{$mobile-only} {
-      display: none;
+  &--basket a {
+    @media #{$tablet} {
+      padding-left: 82px;
     }
   }
 }

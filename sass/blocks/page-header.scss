@@ -172,21 +172,23 @@
     padding-left: 34px;
 
     transition: margin-top 0.3s ease;
-
-    &:hover {
-      margin-top: -5px;
-    }
   }
 
-  & span {
-    display: block;
-
-    width: 130px;
+  &:hover {
+    @media #{$tablet} {
+      margin-top: -5px;
+    }
   }
 
   &--interior {
     background-color: $green-secondary;
   }
+}
+
+.page-header__category span {
+  display: block;
+
+  width: 130px;
 }
 
 .page-header__icon {

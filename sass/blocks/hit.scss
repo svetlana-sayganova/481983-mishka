@@ -2,7 +2,6 @@
   position: relative;
 
   margin-top: 28px;
-  //margin-bottom: 40px;
 
   @media #{$tablet} {
     margin-top: 45px;
@@ -146,10 +145,10 @@
   @media #{$desktop} {
     margin-bottom: 110px;
   }
+}
 
-  & tr {
-    border-bottom: 1px solid $gray-light;
-  }
+.hit__table tr {
+  border-bottom: 1px solid $gray-light;
 }
 
 .hit__parameter {

@@ -58,19 +58,6 @@
     flex-grow: 0;
 
     margin-bottom: 24px;
-
-    &::after { // декоративный элемент
-      content: "";
-
-      align-self: center;
-      flex-grow: 2;
-
-      width: 5px;
-      height: 1px;
-      margin-left: 21px;
-
-      background: $green;
-    }
   }
 
   @media #{$tablet} {
@@ -85,6 +72,21 @@
     box-sizing: border-box;
     width: 175px;
     padding-left: 60px;
+  }
+
+  &::after { // декоративный элемент
+    @media #{$mobile-only} {
+      content: "";
+
+      align-self: center;
+      flex-grow: 2;
+
+      width: 5px;
+      height: 1px;
+      margin-left: 21px;
+
+      background-color: $green;
+    }
   }
 
   &--name {
@@ -144,6 +146,12 @@
   padding-left: 62px;
   margin-bottom: 22px;
 
+  @media #{$tablet} {
+    height: 52px;
+    padding-top: 15px;
+    padding-left: 80px;
+  }
+
   // стилизуем кастомные радиобаттоны и чекбоксы
   &::before {
     content: "";
@@ -184,12 +192,6 @@
     opacity: 0;
 
     transition: opacity 0.2s ease-in;
-  }
-
-  @media #{$tablet} {
-    height: 52px;
-    padding-top: 15px;
-    padding-left: 80px;
   }
 }
 
@@ -333,16 +335,6 @@
 
   transition: border-color 0.3s ease;
 
-  &:hover,
-  &:focus,
-  &:active {
-    border-bottom: 2px solid $green;
-  }
-
-  &:active {
-    color: $gray-dark;
-  }
-
   @media #{$tablet} {
     @include font(19px, 19px);
 
@@ -354,6 +346,16 @@
   @media #{$desktop} {
     width: 700px;
     padding-right: 46px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-bottom: 2px solid $green;
+  }
+
+  &:active {
+    color: $gray-dark;
   }
 
   &--phone {
@@ -433,12 +435,6 @@
 
   transition: border-color 0.3s ease;
 
-  &:hover,
-  &:focus,
-  &:active {
-    border: 2px solid $green;
-  }
-
   @media #{$tablet} {
     @include font(19px, 19px);
 
@@ -447,6 +443,12 @@
 
   @media #{$desktop} {
     width: 700px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    border: 2px solid $green;
   }
 }
 

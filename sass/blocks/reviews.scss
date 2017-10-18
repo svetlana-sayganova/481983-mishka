@@ -184,6 +184,10 @@
 
   border: 1px solid $gray-border;
 
+  @media #{$tablet} {
+    border: none;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -217,10 +221,6 @@
 
   &--disabled {
     cursor: not-allowed;
-  }
-
-  @media #{$tablet} {
-    border: none;
   }
 }
 
