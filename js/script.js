@@ -2,7 +2,7 @@ var navMain = document.querySelector(".main-nav");
 var navToggle = document.querySelector(".main-nav__toggle");
 var modal = document.querySelector(".modal");
 var overlay = document.querySelector(".overlay");
-var btnBuy = document.querySelectorAll(".button--buy");
+var btnModal = document.querySelectorAll(".btn-modal");
 
 
 navMain.classList.remove("main-nav--nojs");
@@ -13,8 +13,8 @@ navToggle.addEventListener("click", function() {
   navMain.classList.toggle("main-nav--opened");
 });
 
-for (var i = 0; i < btnBuy.length; i++) {
-  btnBuy[i].addEventListener("click", function(evt) {
+for (var i = 0; i < btnModal.length; i++) {
+  btnModal[i].addEventListener("click", function(evt) {
     evt.preventDefault();
     modal.classList.add("modal--show");
     overlay.classList.add("overlay--show");
