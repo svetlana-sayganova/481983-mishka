@@ -9,6 +9,7 @@ var server = require("browser-sync").create();
 var minify = require("gulp-csso");
 var uglify = require("gulp-uglify");
 var rename = require("gulp-rename");
+var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
 var csscomb = require("gulp-csscomb");
@@ -68,4 +69,14 @@ gulp.task("uglify", function() {
       suffix: ".min"
     }))
     .pipe(gulp.dest("js"));
+});
+
+gulp.task("imagemin", function() {
+  return gulp.src("img/*.{png,jpg,svg}") // подпапку с webp не трогаем
+    .pipe(imagemin([
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.jpegtran({progressive: true}),
+      imagemin.svgo()
+    ]))
+    .pipe(gulp.dest("img"));
 });
