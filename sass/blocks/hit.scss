@@ -56,6 +56,8 @@
   @media #{$tablet} {
     @include font(43px, 50px);
 
+    flex-grow: 1;
+
     width: 560px;
     margin-bottom: 57px;
   }
