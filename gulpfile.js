@@ -42,9 +42,9 @@ gulp.task("serve", ["style"], function() {
 });
 
 gulp.task("webp", function () {
-  return gulp.src("img/*.jpg")
-    .pipe(webp())
-    .pipe(gulp.dest("img/img-webp"));
+  return gulp.src("img/**/*.{png,jpg}")
+    .pipe(webp({quality: 90}))
+    .pipe(gulp.dest("img"));
 });
 
 gulp.task("sprite", function () {
@@ -72,7 +72,7 @@ gulp.task("uglify", function() {
 });
 
 gulp.task("imagemin", function() {
-  return gulp.src("img/*.{png,jpg,svg}") // подпапку с webp не трогаем
+  return gulp.src("img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true}),
