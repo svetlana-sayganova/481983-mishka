@@ -104,9 +104,9 @@
   }
 
   &--active {
-    @include link-dynamics($link-color--active, $link-color--active);
+    @include link-dynamics($link-color, $link-color);
 
-    color: $link-color--active;
+    color: $link-color;
 
     cursor: default;
   }
