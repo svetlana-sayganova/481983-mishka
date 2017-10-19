@@ -12,6 +12,8 @@ var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
+var posthtml = require("gulp-posthtml");
+var include = require("posthtml-include");
 var csscomb = require("gulp-csscomb");
 
 gulp.task("style", function() {
@@ -79,4 +81,12 @@ gulp.task("imagemin", function() {
       imagemin.svgo()
     ]))
     .pipe(gulp.dest("img"));
+});
+
+gulp.task("html", function () {
+  return gulp.src("*.html")
+    .pipe(posthtml([
+      include()
+    ]))
+    .pipe(gulp.dest("."));
 });
