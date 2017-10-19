@@ -7,6 +7,7 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
 var minify = require("gulp-csso");
+var uglify = require("gulp-uglify");
 var rename = require("gulp-rename");
 var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
@@ -40,22 +41,31 @@ gulp.task("serve", ["style"], function() {
 });
 
 gulp.task("webp", function () {
-    return gulp.src("img/*.jpg")
-        .pipe(webp())
-        .pipe(gulp.dest("img/img-webp"));
+  return gulp.src("img/*.jpg")
+    .pipe(webp())
+    .pipe(gulp.dest("img/img-webp"));
 });
 
 gulp.task("sprite", function () {
-    return gulp.src("img/icon-*.svg")
-        .pipe(svgstore({
-          inlineSvg: true
-        }))
-        .pipe(rename("sprite.svg"))
-        .pipe(gulp.dest("img"));
+  return gulp.src("img/icon-*.svg")
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("img"));
 });
 
 gulp.task("csscomb", function() {
-    return gulp.src("sass/blocks/*.scss")
-      .pipe(csscomb())
-      .pipe(gulp.dest("sass/blocks/"));
+  return gulp.src("sass/blocks/*.scss")
+    .pipe(csscomb())
+    .pipe(gulp.dest("sass/blocks/"));
+});
+
+gulp.task("uglify", function() {
+  return gulp.src("js/*.js")
+    .pipe(uglify())
+    .pipe(rename({
+      suffix: ".min"
+    }))
+    .pipe(gulp.dest("js"));
 });
