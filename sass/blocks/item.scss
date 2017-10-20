@@ -1,24 +1,33 @@
 .item {
   display: flex;
   flex-direction: column;
+
   box-sizing: border-box;
 
-  border: 1px solid #ececec;
+  border: 1px solid $gray-border;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     flex-direction: row;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     flex-direction: column;
-    width: 315px;
+
+    width: 316px;
+    margin-right: 51px;
+  }
+
+  &:nth-of-type(3n) {
+    @media #{$desktop} {
+      margin-right: 0;
+    }
   }
 }
 
 .item__image-link {
-  background-color: #ededed;
+  background-color: $gray-light;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+  @media #{$tablet-only} {
     width: 334px;
   }
 }
@@ -30,18 +39,18 @@
 .item__wrapper {
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
   flex-grow: 1;
 
-  padding-left: 27px;
+  box-sizing: border-box;
   padding-right: 27px;
   padding-bottom: 5px;
+  padding-left: 27px;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+  @media #{$tablet-only} {
     width: 50%;
   }
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     padding-right: 30px;
   }
 
@@ -51,17 +60,22 @@
 }
 
 .item__title {
-  font-weight: 700;
-
   @include font(17px, 24px);
 
-  @media (min-width: $tablet-width) {
+  margin: 0;
+
+  font-weight: 700;
+
+  @media #{$tablet} {
     @include font(20px, 24px);
   }
 }
 
 .item__title-link {
+  @include link-dynamics($link-color--hover, $link-color--active);
+
   display: block;
+
   padding-top: 27px;
   padding-bottom: 8px;
 
@@ -69,51 +83,57 @@
 
   cursor: pointer;
 
-  @include action($link-color--hover, $link-color--active);
-  @include accessibility();
+  @media #{$tablet} {
+    padding-top: 24px;
+    padding-bottom: 7px;
+  }
 
-  @media (min-width: $tablet-width) {
-    padding-bottom: 4px;
+  @media #{$desktop} {
+    padding-top: 24px;
   }
 }
 
 .item__parameters {
-  margin-bottom: 20px;
-
   @include font(13px, 30px);
 
-  @media (min-width: $tablet-width) {
+  margin-bottom: 20px;
+
+  @media #{$tablet} {
     @include font(15px, 30px);
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     margin-bottom: 15px;
   }
 }
 
 .item__buy {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 
   min-height: 65px;
   margin-top: auto; // для расположения снизу
 
   border-top: 1px solid $gray-light;
-}
 
-.item__price {
-  font-weight: 700;
-
-  @include font(15px, 24px);
-
-  @media (min-width: $tablet-width) {
-    @include font(17px, 24px);
+  @media #{$tablet} {
+    min-height: 67px;
   }
 }
 
-.item__basket {
-  @include accessibility();
+.item__price {
+  @include font(15px, 24px);
+
+  font-weight: 700;
+
+  @media #{$tablet} {
+    @include font(17px, 24px);
+  }
+
+  @media #{$tablet-only} {
+    padding-left: 3px;
+  }
 }
 
 .item__icon {

@@ -1,13 +1,13 @@
 .contacts {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 36px;
+  margin-bottom: 38px;
 
-  @media (min-width: $tablet-width) {
-    margin-top: 70px;
+  @media #{$tablet} {
+    margin-top: 60px;
     margin-bottom: 57px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     display: flex;
     flex-wrap: wrap;
 
@@ -20,47 +20,46 @@
 
 .contacts__wrapper {
   position: relative;
+
   width: $mobile-width-inner;
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-bottom: 37px;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     display: flex;
+    align-items: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-start;
-
-    margin-bottom: 25px;
 
     width: $tablet-width-inner;
+    margin-bottom: 28px;
   }
 
-  @media (min-width: $desktop-width) {
-    width: 50%;
+  @media #{$desktop} {
     flex-direction: column;
-    //align-content: flex-start;
 
-    margin-bottom: 52px; // резерв для кнопки
+    box-sizing: border-box;
+    width: 50%;
     padding-right: 0;
     padding-left: 175px;
-    box-sizing: border-box;
+    margin-bottom: 52px; // резерв для кнопки
   }
 
   &::after {
-    @media (min-width: $tablet-width) {
+    @media #{$tablet} {
       content: "";
       position: absolute;
-
       top: -15px;
-      right: 0;
+      right: 2px;
+
       width: 47px;
       height: 81px;
 
-      background-repeat: no-repeat;
       background-image: url("../img/icon-flag.svg");
+      background-repeat: no-repeat;
     }
 
-    @media (min-width: $desktop-width) {
+    @media #{$desktop} {
       top: 63px;
       left: 63px;
     }
@@ -68,63 +67,69 @@
 }
 
 .contacts__title {
-  margin-bottom: 32px;
+  margin: 0;
+  margin-bottom: 27px;
 
   font-size: 1.2rem;
+  font-weight: 700;
   line-height: 1.67;
   color: $headings-color;
-  font-weight: 700;
 
-  @media (min-width: $tablet-width) {
-    width: 100%;
-    margin-bottom: 50px;
-
+  @media #{$tablet} {
     @include font(43px, 50px);
+
+    width: 100%;
+    padding-right: 60px;
+    margin-bottom: 50px;
   }
 
-  @media (min-width: $desktop-width) {
-    margin-top: 70px;
-
+  @media #{$desktop} {
     @include font(53px, 57px);
+
+    padding-top: 70px;
   }
 }
 
 .contacts__item {
   display: flex;
-  line-height: 2;
 
   margin-bottom: 30px;
 
-  @media (min-width: $tablet-width) {
-    width: 50%;
+  line-height: 2;
 
+  @media #{$tablet} {
     @include font(17px, 30px);
+
+    width: 50%;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     width: 307px;
   }
 }
 
 .contacts__parameter {
-  width: 78px;
   flex-shrink: 0;
+
+  width: 78px;
+}
+
+.contacts__value {
+  margin: 0;
 }
 
 .contacts__value--link {
+  @include link-dynamics($green-link, rgba($green-link, 0.3));
+
   position: relative;
 
   color: $gray-dark;
 
   transition: color 0.3s ease;
 
-  @include action($green-link, rgba($green-link, 0.3));
-  //@include accessibility(); ссылка мееяет цвет -- нужна ли обводка?
-
   &::after {
     content: "";
     position: absolute;
-
     bottom: 0;
     left: 0;
 
@@ -144,39 +149,44 @@
 .contacts__map {
   width: 100%;
   height: 457px;
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 
   background-color: #e9e2d7;
-  background-image: url("../img/map-mobile@1x.jpg");
-  background-position: center;
+  background-image: url("../img/icon-map-pin.svg"),
+    url("../img/map-mobile@1x.jpg");
+  background-position: 52% 40%, center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto, cover;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/map-mobile@2x.jpg");
-    //background-size: 322px 457px;
+    background-image: url("../img/icon-map-pin.svg"),
+      url("../img/map-mobile@2x.jpg");
+    background-size: auto, 50% / cover;
   }
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     margin-bottom: 55px;
 
-    background-image: url("../img/map-tablet@1x.jpg");
+    background-image: url("../img/icon-map-pin.svg"),
+      url("../img/map-tablet@1x.jpg");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/map-tablet@2x.jpg");
-      //background-size: 768px 457px;
+      background-image: url("../img/icon-map-pin.svg"),
+        url("../img/map-tablet@2x.jpg");
     }
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     width: 525px;
     margin-bottom: 0;
 
-    background-image: url("../img/map-desktop@1x.jpg");
+    background-image: url("../img/icon-map-pin.svg"),
+      url("../img/map-desktop@1x.jpg");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/map-desktop@2x.jpg");
-      background-size: 525px 457px;
+      background-image: url("../img/icon-map-pin.svg"),
+        url("../img/map-desktop@2x.jpg");
+      background-size: auto, 525px 457px;
     }
   }
 }
@@ -185,11 +195,11 @@
   width: $mobile-width-inner;
   margin: 0 auto;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     width: 230px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     margin-top: -52px;
     margin-right: 0;
     margin-left: 175px;

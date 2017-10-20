@@ -1,30 +1,27 @@
 .catalog {
   margin-top: 30px;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     margin-top: 80px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     margin-top: 128px;
   }
 }
 
 .catalog__wrapper {
-  display: flex;
-  flex-direction: column;
-
   width: $mobile-width-inner;
   margin: 0 auto;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     width: $tablet-width-inner;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
 
     width: $desktop-width-inner;
   }
@@ -33,11 +30,11 @@
 .catalog__item {
   margin-bottom: 30px;
 
-  @media (min-width: $tablet-width) {
-    margin-bottom: 53px;
+  @media #{$tablet} {
+    margin-bottom: 52px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     margin-bottom: 57px;
   }
 }

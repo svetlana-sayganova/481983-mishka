@@ -1,49 +1,51 @@
 .order {
-  margin-top: 25px;
-  margin-bottom: 55px;
+  margin-top: 23px;
+  margin-bottom: 54px;
 
-  @media (min-width: $tablet-width) {
-    margin-top: 70px;
+  @media #{$tablet} {
+    margin-top: 73px;
     margin-bottom: 50px;
   }
 
-  @media (min-width: $desktop-width) {
-    margin-top: 125px;
+  @media #{$desktop} {
+    margin-top: 122px;
   }
 }
 
 .order__wrapper {
-  @media (max-width: $tablet-width - 1px) {
+  @media #{$mobile-only} {
     width: $mobile-width-inner;
     margin: 0 auto;
   }
 }
 
 .order__content {
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     width: $tablet-width-inner;
     margin: 0 auto;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     width: $desktop-width-inner;
     margin: 0 auto;
   }
 }
 
 .order__description {
-  margin-bottom: 25px;
-
   @include font(13px, 24px);
 
-  @media (min-width: $tablet-width) {
-    margin-bottom: 0;
+  margin: 0;
+  margin-bottom: 25px;
 
+  @media #{$tablet} {
     @include font(17px, 30px);
+
+    margin-bottom: 8px;
   }
 
-  @media (min-width: $desktop-width) {
-    padding-left: 175px;
+  @media #{$desktop} {
     padding-right: 175px;
+    padding-left: 175px;
+    margin-bottom: 7px;
   }
 }

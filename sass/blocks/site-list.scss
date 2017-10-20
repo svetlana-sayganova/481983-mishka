@@ -1,5 +1,7 @@
 .site-list {
-  @media (min-width: $tablet-width) {
+  @include list-reset-style();
+
+  @media #{$tablet} {
     display: flex;
     flex-wrap: wrap;
     order: 3;
@@ -7,94 +9,105 @@
     width: 310px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     order: 1;
+
     width: 430px;
   }
 }
 
 .site-list__item {
-  @media (max-width: $tablet-width - 1px) {
-    &:first-of-type a {
-      border-top: 1px solid $gray-light;
+  @media #{$tablet-only} {
+    width: 143px;
+  }
+
+  &:first-of-type {
+    @media #{$desktop} {
+      border-right: 1px solid $gray-border;
     }
   }
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
-    width: 143px;
+  &:first-of-type a {
+    @media #{$mobile-only} {
+      border-top: 1px solid $gray-border;
+    }
+  }
 
-    &:nth-of-type(odd) {
+  &:nth-of-type(odd) {
+    @media #{$tablet-only} {
       margin-right: 24px;
     }
-  }
 
-  @media (min-width: $desktop-width) {
-    &:nth-of-type(odd) {
+    @media #{$desktop} {
       width: 184px;
     }
+  }
 
-    &:nth-of-type(even) {
+  &:nth-of-type(even) {
+    @media #{$desktop} {
       padding-left: 35px;
-    }
-
-    &:nth-of-type(n + 3) a {
-      padding-top: 18px;
-      padding-bottom: 0;
-
-      @include font(15px, 24px);
     }
   }
 
   &:nth-of-type(n + 3) {
-    @media (max-width: $desktop-width - 1px) {
+    @media #{$desktop-except} {
       display: none;
+    }
+  }
+
+  &:nth-of-type(n + 3) a {
+    @media #{$desktop} {
+      @include font(15px, 24px);
+
+      padding-top: 18px;
+      padding-bottom: 0;
     }
   }
 }
 
 .site-list__link {
+  @include font(17px, 24px);
+  @include link-dynamics($link-color--hover, $link-color--active);
+
   display: block;
 
   color: $link-color;
 
-  transition: color 0.3s ease;
-
   cursor: pointer;
 
-  @include font(17px, 24px);
-  @include action($link-color--hover, $link-color--active);
-  @include accessibility();
+  transition: color 0.3s ease;
 
-  @media (max-width: $tablet-width - 1) {
+  @media #{$mobile-only} {
     padding-top: 28px;
     padding-bottom: 26px;
     padding-left: 76px;
 
     background-color: $white;
-    border-top: 1px solid $gray-light;
+    border-top: 1px solid $gray-border;
   }
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
+    @include font(15px, 24px);
+
     padding-top: 18px;
     padding-left: 0;
 
     background-color: transparent;
     border-top: none;
-
-    @include font(15px, 24px);
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
+    @include font(17px, 24px);
+
     padding-top: 30px;
     padding-bottom: 35px;
-
-    @include font(17px, 24px);
   }
 
   &--active {
-    cursor: default;
-    color: $link-color--active;
+    @include link-dynamics($link-color, $link-color);
 
-    @include action($link-color--active, $link-color--active);
+    color: $link-color;
+
+    cursor: default;
   }
 }

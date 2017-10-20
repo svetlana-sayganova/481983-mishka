@@ -1,11 +1,11 @@
 .features {
   margin-bottom: 56px;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     margin-bottom: 61px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     margin-bottom: 68px;
   }
 }
@@ -14,51 +14,54 @@
   width: $mobile-width-inner;
   margin: 0 auto;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     width: $tablet-width-inner;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
+    box-sizing: border-box;
     width: $desktop-width-inner;
     padding-right: 0;
     padding-left: 175px;
-    box-sizing: border-box;
   }
 }
 
 .features__title {
-  padding-top: 30px;
+  padding-top: 28px;
+  margin: 0;
   margin-bottom: 2px;
 
   font-size: 1.67rem;
+  font-weight: 700;
   line-height: 1.2;
   color: $headings-color;
-  font-weight: 700;
 
-  @media (min-width: $tablet-width) {
-    padding-top: 5px;
-    margin-bottom: 18px;
-
+  @media #{$tablet} {
     @include font(43px, 50px);
+
+    padding-top: 11px;
+    margin-bottom: 18px;
   }
 
-  @media (min-width: $desktop-width) {
-    padding-top: 20px;
-
+  @media #{$desktop} {
     @include font(53px, 57px);
+
+    padding-top: 20px;
   }
 }
 
 .features__list {
+  @include list-reset-style();
+
   display: flex;
   flex-direction: column;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     flex-direction: row;
     flex-wrap: wrap;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     width: 700px;
   }
 }
@@ -66,97 +69,108 @@
 .features__item {
   position: relative;
 
-  padding-top: 84px;
+  padding-top: 83px;
 
   font-size: 1.13rem;
+  font-weight: 700;
   line-height: 1.2;
   color: $gray-dark;
-  font-weight: 700;
 
-  @media (min-width: $tablet-width) {
-    width: 50%;
-    margin-bottom: 26px;
-
+  @media #{$tablet} {
     @include font(20px, 22px);
+
+    width: 50%;
+    padding-top: 85px;
+    margin-bottom: 26px;
   }
 
-  &::before {
-    content: "";
-    position: absolute;
-
-    background-repeat: no-repeat;
-    background-position: 0 0;
+  &--eco-friendly {
+    @media #{$tablet} {
+      order: 1;
+    }
   }
 
-  .features__icon {
-    position: absolute;
-
-    fill: $green;
-
-    &--eco-friendly {
-      top: 29px;
-      left: 7px;
-      width: 32px;
-      height: 38px;
-
-      @media (min-width: $tablet-width) {
-        order: 1;
-      }
+  &--scandinavian-style {
+    @media #{$tablet} {
+      order: 3;
     }
+  }
 
-    &--scandinavian-style {
-      top: 31px;
-      left: 0;
-      width: 47px;
-      height: 27px;
-
-      @media (min-width: $tablet-width) {
-        order: 3;
-      }
+  &--popularity-increase {
+    @media #{$tablet} {
+      order: 5;
     }
+  }
 
-    &--popularity-increase {
-      top: 36px;
-      left: 6px;
-      width: 34px;
-      height: 27px;
-
-      @media (min-width: $tablet-width) {
-        order: 5;
-      }
+  &--hand-made {
+    @media #{$tablet} {
+      order: 2;
     }
+  }
 
-    &--hand-made {
-      top: 32px;
-      left: 4px;
-      width: 35px;
-      height: 35px;
-
-      @media (min-width: $tablet-width) {
-        order: 2;
-      }
+  &--domestic-production {
+    @media #{$tablet} {
+      order: 4;
     }
+  }
 
-    &--domestic-production {
-      top: 32px;
-      left: -4px;
-      width: 55px;
-      height: 23px;
-
-      @media (min-width: $tablet-width) {
-        order: 4;
-      }
+  &--gift-wrap {
+    @media #{$tablet} {
+      order: 6;
     }
+  }
+}
 
-    &--gift-wrap {
-      top: 32px;
-      left: 4px;
-      width: 33px;
-      height: 32px;
+.features__icon {
+  position: absolute;
 
-      @media (min-width: $tablet-width) {
-        order: 6;
-      }
-    }
+  fill: $green;
+
+  &--eco-friendly {
+    top: 29px;
+    left: 7px;
+
+    width: 32px;
+    height: 38px;
+  }
+
+  &--scandinavian-style {
+    top: 30px;
+    left: 0;
+
+    width: 47px;
+    height: 27px;
+  }
+
+  &--popularity-increase {
+    top: 35px;
+    left: 7px;
+
+    width: 34px;
+    height: 27px;
+  }
+
+  &--hand-made {
+    top: 32px;
+    left: 4px;
+
+    width: 35px;
+    height: 35px;
+  }
+
+  &--domestic-production {
+    top: 32px;
+    left: -6px;
+
+    width: 55px;
+    height: 23px;
+  }
+
+  &--gift-wrap {
+    top: 31px;
+    left: 4px;
+
+    width: 33px;
+    height: 32px;
   }
 }

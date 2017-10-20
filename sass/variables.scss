@@ -1,12 +1,13 @@
-$gray-dark:       #444444; // основной текст, текст кнопок, никнейм рещензента, цена хита
-$gray-light:      #f1f1f1; // хэжер, футер
-$black:           #000000; // заголовки, ссылки, лэйблы
-$white:           #ffffff; // категории на главной
-$green:           #63d1bb; // основной: товар недели, иконки
-$green-secondary: #56c3b2; // вспомогательный
-$green-link:      #46c1ae; // зеленый в ссылках
-$green-icon:      #149080; // зеленый в больших иконках на главной странице
-
+$gray-dark:         #444444; // основной текст, текст кнопок, никнейм рещензента, цена хита
+$gray-light:        #f1f1f1; // хэжер, футер
+$gray-border:       #ececec;
+$gray-border-dark:  #c7c7c7;
+$black:             #000000; // заголовки, ссылки, лэйблы
+$white:             #ffffff; // категории на главной
+$green:             #63d1bb; // основной: товар недели, иконки
+$green-secondary:   #56c3b2; // вспомогательный
+$green-link:        #46c1ae; // зеленый в ссылках
+$green-icon:        #149080; // зеленый в больших иконках на главной странице
 
 $text-color:              $gray-dark;
 $headings-color:          $black;
@@ -24,16 +25,18 @@ $link-color:              $black;
 $link-color--hover:       rgba($black, 0.6);
 $link-color--active:      rgba($black, 0.3);
 
-$logo-color:              $black;
-$logo-color--hover:       rgba($black, 0.6);
-$logo-color--active:      rgba($black, 0.3);
-
 $font-family:             "Open Sans", "arial", sans-serif;
 $font-size:               15px;
 
 $mobile-width:            320px;
 $tablet-width:            768px;
 $desktop-width:           1150px;
+
+$mobile-only:             "only screen and (max-width: 767px)";
+$tablet-only:             "only screen and (min-width: $tablet-width) and (max-width: $desktop-width - 1px)";
+$tablet:                  "only screen and (min-width: $tablet-width)";
+$desktop-except:          "only screen and (max-width: $desktop-width - 1px)";
+$desktop:                 "only screen and (min-width: $desktop-width)";
 
 $mobile-width-inner:      260px;
 $tablet-width-inner:      668px;

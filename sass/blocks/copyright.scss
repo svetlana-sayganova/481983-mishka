@@ -1,23 +1,24 @@
-.copyright__wrapper {
+.copyright__link {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
 
   width: 182px;
 
   font-size: 1.27rem;
-  line-height: 1;
   font-weight: 700;
+  line-height: 1;
+  color: $black;
 
-  @media (max-width: $tablet-width) {
+  @media #{$mobile-only} {
     min-height: 80px;
     margin: 0 auto;
   }
-}
 
-.copyright__link {
-  order: 1;
+  @media #{$tablet} {
+    //padding-right: 40px;
+  }
 }
 
 .copyright__text {
@@ -30,10 +31,10 @@
   transition: all 0.3s ease;
 }
 
-.copyright__link:active .copyright__icon {
-  fill: rgba($green, 0.3);
+.copyright__link:active {
+  color: rgba($black, 0.3);
 }
 
-.copyright__link:active + .copyright__text {
-  color: rgba($black, 0.3);
+.copyright__link:active .copyright__icon {
+  fill: rgba($green, 0.3);
 }

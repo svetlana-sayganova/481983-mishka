@@ -1,29 +1,31 @@
 .page-header {
   position: relative;
+
   display: flex; // для корректного отображения в IE11, Источник: https://codepen.io/philipwalton/pen/JdvdJE
   flex-direction: column;
+
   font-weight: 700;
   color: $black;
 
   &::after {
-    @media (min-width: $tablet-width) {
+    @media #{$tablet} {
       content: "";
       position: absolute;
-
       bottom: -12px;
 
       width: 100%;
       height: 24px;
 
       background-image: url("../img/bg-zigzag-fill.svg");
+      background-position: center;
       background-repeat: repeat-x;
       background-size: 768px 24px;
-      background-position: center;
     }
 
-    @media (min-width: $desktop-width) {
-      height: 34px;
+    @media #{$desktop} {
       bottom: -17px;
+
+      height: 34px;
 
       background-size: 1150px 34px;
     }
@@ -31,20 +33,18 @@
 }
 
 .page-header__content {
-  min-height: 176px;
   box-sizing: border-box;
+  min-height: 176px;
 
   background-color: $gray-light;
-  border-top: 1px solid #e7e7e7;
+  border-top: 1px solid $gray-border;
 
-  @media (min-width: $tablet-width) {
-    //position: relative;
-
+  @media #{$tablet} {
     min-height: 225px;
     margin-top: -60px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     min-height: 255px;
     margin-top: -60px;
   }
@@ -53,10 +53,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 486px;
 
-    background-image: url("../img/hero-mobile@1x.jpg");
+    min-height: 488px;
+
     background-color: #fafafa;
+    background-image: url("../img/hero-mobile@1x.jpg");
     background-position: center -17px;
     background-repeat: no-repeat;
 
@@ -65,8 +66,9 @@
       background-size: 575px 373px;
     }
 
-    @media (min-width: $tablet-width) {
+    @media #{$tablet} {
       min-height: 746px;
+
       background-image: url("../img/hero-tablet@1x.jpg");
       background-position: center 0;
 
@@ -76,10 +78,9 @@
       }
     }
 
-    @media (min-width: $desktop-width) {
+    @media #{$desktop} {
       background-image: url("../img/hero-desktop@1x.jpg");
-      background-size: 1250px 810px; // высота подсчитана с помощью пропорции для избежания искажения изображения
-      background-position: center -55px;
+      background-size: 1250px 746px; // для избежания искажения пропорций изображения необходимо установить высоту 810px и отступ сверху -55px
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/hero-desktop@2x.jpg");
@@ -92,32 +93,33 @@
   width: 255px;
   margin: 0 auto;
   margin-top: 70px; // отступ для заголовка страницы
+  margin-bottom: 40px;
 
   font-size: 1.8rem;
   line-height: 1.1;
   text-align: center;
 
-  @media (min-width: $tablet-width) {
-    width: $tablet-width-inner;
-    margin-top: 96px;
-
+  @media #{$tablet} {
     @include font(43px, 50px);
+
+    width: $tablet-width-inner;
+    margin-top: 93px;
   }
 
-  @media (min-width: $desktop-width) {
-    width: 700px;
-
+  @media #{$desktop} {
     @include font(53px, 57px);
+
+    width: 700px;
   }
 
   &--main {
-    margin-top: 69px;
+    margin-top: 71px;
 
-    @media (min-width: $tablet-width) {
+    @media #{$tablet} {
       margin-top: 153px;
     }
 
-    @media (min-width: $desktop-width) {
+    @media #{$desktop} {
       margin-top: 155px;
     }
   }
@@ -130,19 +132,21 @@
   width: $mobile-width;
   margin: 0 auto;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     flex-direction: row;
 
-    width: $tablet-width - 100px;
+    width: $tablet-width-inner;
     height: 119px; // для корректной работы при наведении на категории
   }
 
-  @media (min-width: $desktop-width) {
-    width: $desktop-width - 100px;
+  @media #{$desktop} {
+    width: $desktop-width-inner;
   }
 }
 
 .page-header__category {
+  @include link-dynamics($white, rgba($white, 0.3));
+
   position: relative;
 
   padding-top: 25px;
@@ -153,32 +157,27 @@
   line-height: 1.3;
   color: $white;
 
+  cursor: pointer;
+
   background-color: $green;
 
   transition: color 0.3s ease;
 
-  cursor: pointer;
+  @media #{$tablet} {
+    @include font(20px, 30px);
 
-  @include action($white, rgba($white, 0.3));
-
-  @media (min-width: $tablet-width) {
     flex-grow: 1;
 
-    padding-left: 35px;
+    padding-top: 28px;
+    padding-left: 34px;
 
-    padding-top: 30px;
     transition: margin-top 0.3s ease;
-
-    &:hover {
-      margin-top: -5px;
-    }
-
-    @include font(20px, 30px);
   }
 
-  & span {
-    display: block;
-    width: 130px;
+  &:hover {
+    @media #{$tablet} {
+      margin-top: -5px;
+    }
   }
 
   &--interior {
@@ -186,9 +185,14 @@
   }
 }
 
+.page-header__category span {
+  display: block;
+
+  width: 130px;
+}
+
 .page-header__icon {
   position: absolute;
-
   top: 20px;
   right: 26px;
 
@@ -196,15 +200,21 @@
   height: 61px;
 
   fill: $green-icon;
+
   opacity: 0.5;
 
   transition: opacity 0.3s ease;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     top: 30px;
     right: 33px;
+  }
 
-    &--interior {
+  &--interior {
+    top: 23px;
+
+    @media #{$tablet} {
+      top: 30px;
       right: 25px;
     }
   }

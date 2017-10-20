@@ -1,29 +1,36 @@
 .form__wrapper {
   padding-bottom: 10px;
 
-  @media (min-width: $tablet-width) {
-    padding-top: 54px;
-    padding-bottom: 27px;
+  @media #{$tablet} {
+    padding-top: 50px;
+    padding-bottom: 30px;
   }
 
   &--gray {
-    @media (min-width: $tablet-width) {
+    @media #{$tablet} {
       background-color: $gray-light;
+    }
+  }
+
+  &--name {
+    @media #{$tablet} {
+      padding-bottom: 21px;
     }
   }
 }
 
 .form__fieldset {
-  //padding-bottom: 30px;
+  padding: 0;
+  margin: 0;
 
-  @media (min-width: $tablet-width) {
+  border: none;
+
+  @media #{$tablet} {
     width: $tablet-width-inner;
     margin: 0 auto;
-    // padding-top: 50px;
-    // padding-bottom: 50px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     width: $desktop-width-inner;
   }
 }
@@ -32,61 +39,73 @@
   display: flex;
   flex-direction: column;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     flex-direction: row;
   }
 }
 
-legend {
-  display: block;
-}
-
 .form__title {
-  color: $green;
-  font-weight: 700;
-  text-transform: uppercase;
-
   @include font(17px, 17px);
 
-  @media (max-width: $tablet-width - 1) {
+  margin: 0;
+
+  font-weight: 700;
+  color: $green;
+  text-transform: uppercase;
+
+  @media #{$mobile-only} {
     display: flex;
     flex-grow: 0;
 
-    margin-bottom: 25px;
+    margin-bottom: 24px;
+  }
 
-    &::after { // декоративный элемент
+  @media #{$tablet} {
+    display: block;
+    flex-shrink: 0;
+
+    width: 167px;
+    padding-top: 16px;
+  }
+
+  @media #{$desktop} {
+    box-sizing: border-box;
+    width: 175px;
+    padding-left: 60px;
+  }
+
+  &::after { // декоративный элемент
+    @media #{$mobile-only} {
       content: "";
-      flex-grow: 2;
+
       align-self: center;
+      flex-grow: 2;
 
       width: 5px;
       height: 1px;
-      margin-left: 22px;
+      margin-left: 21px;
 
-      background: $green;
+      background-color: $green;
     }
   }
 
-  @media (min-width: $tablet-width) {
-    flex-shrink: 0;
-    display: block;
-
-    width: 167px;
-    padding-top: 17px;
+  &--name {
+    @media #{$mobile-only} {
+      margin-bottom: 30px;
+    }
   }
 
-  @media (min-width: $desktop-width) {
-    width: 175px;
-    box-sizing: border-box;
-    padding-left: 60px;
+  &--phone,
+  &--mail {
+    @media #{$mobile-only} {
+      margin-bottom: 8px;
+    }
   }
 
   &--phone,
   &--mail,
-  &--name {
-    @media (max-width: $tablet-width - 1) {
-      margin-bottom: 10px;
-    }
+  &--textarea {
+    cursor: pointer;
   }
 }
 
@@ -95,7 +114,7 @@ legend {
   flex-direction: column;
 
   &--columns {
-    @media (min-width: $tablet-width) {
+    @media #{$tablet} {
       flex-direction: row;
       flex-wrap: wrap;
     }
@@ -105,12 +124,14 @@ legend {
 .form__label,
 .form__radio-label,
 .form__checkbox-label {
-  color: $black;
-  font-weight: 700;
-
   @include font(17px, 17px);
 
-  @media (min-width: $tablet-width) {
+  font-weight: 700;
+  color: $black;
+
+  cursor: pointer;
+
+  @media #{$tablet} {
     @include font(19px, 19px);
   }
 }
@@ -119,15 +140,22 @@ legend {
 .form__checkbox-label {
   position: relative;
 
-  height: 38px;
-  padding-top: 10px;
-  padding-left: 62px;
-  margin-bottom: 23px;
   box-sizing: border-box;
+  min-height: 38px;
+  padding-top: 12px;
+  padding-left: 62px;
+  margin-bottom: 13px;
 
+  @media #{$tablet} {
+    min-height: 52px;
+    padding-top: 15px;
+    padding-left: 80px;
+    margin-bottom: 22px;
+  }
+
+  // стилизуем кастомные радиобаттоны и чекбоксы
   &::before {
     content: "";
-
     position: absolute;
     top: 0;
     left: 0;
@@ -135,48 +163,62 @@ legend {
     width: 37px;
     height: 37px;
 
-    border: 2px solid $gray-dark;
-
-    transition: border-color 0.3s ease;
-
     cursor: pointer;
 
-    @media (min-width: $tablet-width) {
+    border: 2px solid $gray-dark;
+
+    transition: border-color 0.2s ease;
+
+    @media #{$tablet} {
       width: 50px;
       height: 50px;
     }
   }
 
-  &:hover,
-  &:focus {
-    &::before {
-      border-color: $green;
-    }
+  &:hover::before {
+    border-color: $green;
   }
 
-  &:active {
-    &::before {
-      border-color: #c7c7c7;
-    }
+  &:active::before {
+    border-color: $gray-border-dark;
   }
 
+  // состояние -- не выбрано
   &::after {
     content: "";
-
     position: absolute;
+
+    cursor: pointer;
 
     opacity: 0;
 
     transition: opacity 0.2s ease-in;
+  }
+}
 
-    cursor: pointer;
+.form__checkbox-label {
+  margin-bottom: 23px;
+
+  @media #{$tablet-only} {
+    width: 237px;
+
+    &:nth-of-type(odd) {
+      margin-right: 25px;
+    }
   }
 
-  @media (min-width: $tablet-width) {
-    height: 52px;
-    padding-top: 15px;
-    padding-left: 80px;
+  @media #{$desktop} {
+    width: 262px;
   }
+}
+
+.form__radio-label:last-of-type {
+  margin-bottom: 22px;
+}
+// для доступности
+.form__radio:focus + label::before,
+.form__checkbox:focus + label::before {
+  border-color: $green;
 }
 
 .form__radio-label::before {
@@ -187,13 +229,13 @@ legend {
   top: 12px;
   left: 12px;
 
-  width: 16px;
-  height: 16px;
+  width: 16.5px;
+  height: 16.5px;
 
   background-color: $green;
   border-radius: 50%;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     top: 16px;
     left: 16px;
 
@@ -210,13 +252,13 @@ legend {
   height: 8px;
 
   border: 2px solid $gray-dark;
-  border-radius: 1px;
   border-top-style: none;
   border-right-style: none;
+  border-radius: 1px;
 
   transform: rotate(-45deg);
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     top: 16px;
     left: 13px;
 
@@ -227,6 +269,7 @@ legend {
   }
 }
 
+// состояние -- выбрано
 .form__radio:checked + .form__radio-label,
 .form__radio-label:active {
   &::after {
@@ -241,58 +284,73 @@ legend {
   }
 }
 
-.form__checkbox-label {
-  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-    width: 237px;
-
-    &:nth-of-type(odd) {
-      margin-right: 25px;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 262px;
+.form__checkbox:checked + .form__checkbox-label:active {
+  &::after {
+    opacity: 0;
   }
 }
 
-.form__text-wpapper {
+// --- оформление полей ФИО, ТЕЛ, E-MAIL ---
+.form__text-wrapper {
   display: flex;
   flex-direction: column;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     flex-direction: row;
     justify-content: space-between;
+
     width: 500px;
+    margin-bottom: 3px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     width: 700px;
   }
 }
 
 .form__label {
-  @media (min-width: $tablet-width) {
-    margin-right: 23px;
+  @media #{$mobile-only} {
+    margin-bottom: 2px;
+  }
+
+  @media #{$tablet} {
     padding-top: 13px;
+    margin-right: 25px;
   }
 }
 
 .form__text {
-  height: 50px;
+  @include font(17px, 18px);
+
   box-sizing: border-box;
+  height: 50px;
+  padding-top: 5px;
+  padding-right: 46px;
   padding-bottom: 7px;
   margin-bottom: 24px;
 
   font-family: $font-family;
 
-  outline: none;
-  border: none;
   background-color: transparent;
+  border: none;
   border-bottom: 2px solid $black;
+
+  outline: none;
 
   transition: border-color 0.3s ease;
 
-  @include font(17px, 18px);
+  @media #{$tablet} {
+    @include font(19px, 19px);
+
+    width: 100%;
+    padding-right: 60px;
+    padding-left: 16px;
+  }
+
+  @media #{$desktop} {
+    width: 700px;
+    padding-right: 46px;
+  }
 
   &:hover,
   &:focus,
@@ -304,67 +362,114 @@ legend {
     color: $gray-dark;
   }
 
-  @media (min-width: $tablet-width) {
-    width: 100%;
-    padding-left: 16px;
-
-    @include font(19px, 19px);
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 700px;
-  }
-
   &--phone {
-    @media (max-width: $tablet-width - 1) {
+    @media #{$mobile-only} {
+      width: 100%;
       margin-bottom: 30px;
+    }
+  }
+
+  &--mail {
+    @media #{$mobile-only} {
+      width: 100%;
     }
   }
 }
 
+// --- оформление иконок ---
+.form__input-wrapper {
+  position: relative;
+
+  @media #{$tablet} {
+    width: 500px;
+  }
+
+  @media #{$desktop} {
+    width: 700px;
+  }
+}
+
+.form__icon {
+  position: absolute;
+  top: 8px;
+  right: 5px;
+
+  fill: #c1c1c1;
+
+  transition: fill 0.3s ease;
+
+  @media #{$tablet} {
+    right: 23px;
+  }
+
+  @media #{$desktop} {
+    right: 3px;
+  }
+
+  &--phone {
+    width: 25px;
+    height: 25px;
+  }
+
+  &--mail {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.form__text:hover + .form__icon,
+.form__text:focus + .form__icon,
+.form__text:active + .form__icon {
+  fill: $green;
+}
+
+// --- оформление поля ДОП ---
 .form__textarea {
-  height: 140px;
+  @include font(17px, 18px);
+
   box-sizing: border-box;
-
-  padding: 10px 16px;
-
-  outline: none;
-  border: 2px solid $black;
+  height: 140px;
+  padding: 13px 16px;
 
   font-family: $font-family;
 
+  border: 2px solid $black;
+
+  outline: none;
+
   transition: border-color 0.3s ease;
 
-  @include font(17px, 18px);
+  @media #{$tablet} {
+    @include font(19px, 19px);
+
+    width: 100%;
+  }
+
+  @media #{$desktop} {
+    width: 700px;
+  }
 
   &:hover,
   &:focus,
   &:active {
     border: 2px solid $green;
   }
-
-  @media (min-width: $tablet-width) {
-    width: 100%;
-
-    @include font(19px, 19px);
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 700px;
-  }
 }
 
 .form__footer {
-  @media (min-width: $tablet-width) {
+  margin-top: 8px;
+
+  @media #{$tablet} {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+
     width: $tablet-width-inner;
     margin: 0 auto;
     margin-top: 25px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     width: 700px;
     margin: 0 auto;
     margin-top: 20px;
@@ -374,20 +479,24 @@ legend {
 .form__note {
   @include font(14px, 16px);
 
-  @media (min-width: $tablet-width) {
-    margin: 0;
-
+  @media #{$tablet} {
     @include font(17px, 30px);
+
+    padding-bottom: 5px;
+    margin: 0;
+    margin-left: 40px;
   }
 }
 
 .form__send {
   width: 100%;
-  margin-top: 30px;
+  margin-top: 31px;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
+    flex-shrink: 0;
     order: -1;
-    margin-top: 0;
+
     width: 230px;
+    margin-top: 0;
   }
 }

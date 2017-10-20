@@ -1,66 +1,74 @@
 .user-list {
-  @media (min-width: $tablet-width) {
+  @include list-reset-style();
+
+  @media #{$tablet} {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
     order: 2;
 
-    width: 350px;
+    width: 352px;
     height: 88px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     order: 3;
+
     width: 430px;
   }
 }
 
 .user-list__item {
-  @media (min-width: $tablet-width) {
-    &:first-of-type {
+  &:first-of-type {
+    @media #{$tablet} {
       width: 84px;
 
-      border-left: 1px solid $gray-light;
       border-right: 1px solid $gray-light;
+      border-left: 1px solid $gray-light;
     }
+  }
 
-    &:first-of-type a {
+  &:first-of-type a {
+    @media #{$tablet} {
       font-size: 0;
-    }
-
-    &--basket a {
-      padding-left: 82px;
-    }
-
-    &:nth-of-type(n + 3) a {
-      padding-top: 18px;
-      padding-bottom: 0;
-
-      @include font(15px, 24px);
     }
   }
 
   &:nth-of-type(n + 3) {
-    @media (max-width: $tablet-width - 1px) {
+    @media #{$mobile-only} {
       display: none;
+    }
+  }
+
+  &:nth-of-type(n + 3) a {
+    @media #{$tablet} {
+      @include font(15px, 24px);
+
+      padding-top: 18px;
+      padding-bottom: 0;
+    }
+  }
+
+  &--basket a {
+    @media #{$tablet} {
+      padding-left: 82px;
     }
   }
 }
 
 .user-list__link {
+  @include font(17px, 24px);
+  @include link-dynamics($link-color--hover, $link-color--active);
+
   display: block;
 
   color: $link-color;
 
-  transition: color 0.3s ease;
-
   cursor: pointer;
 
-  @include font(17px, 24px);
-  @include action($link-color--hover, $link-color--active);
-  @include accessibility();
+  transition: color 0.3s ease;
 
-  @media (max-width: $tablet-width - 1) {
+  @media #{$mobile-only} {
     padding-top: 28px;
     padding-bottom: 26px;
     padding-left: 76px;
@@ -69,7 +77,7 @@
     border-top: 1px solid $gray-light;
   }
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     padding-top: 30px;
     padding-bottom: 35px;
 
@@ -78,16 +86,17 @@
   }
 
   &--delivery {
-    font-weight: 400;
-
     @include font(15px, 24px);
+
+    font-weight: 400;
   }
 
   &--active {
-    cursor: default;
+    @include link-dynamics($link-color--active, $link-color--active);
+
     color: $link-color--active;
 
-    @include action($link-color--active, $link-color--active);
+    cursor: default;
   }
 }
 
@@ -108,11 +117,9 @@
   fill: rgba($green, 0.3);
 }
 
-
 .user-list__icon-search,
 .user-list__icon-cart {
   position: absolute;
-
   top: 30px;
   left: 30px;
 
@@ -120,9 +127,9 @@
 
   transition: fill 0.3s ease;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     top: 34px;
-    left: 32px;
+    left: 33px;
   }
 }
 
@@ -134,4 +141,8 @@
 .user-list__icon-cart {
   width: 21px;
   height: 18px;
+
+  @media #{$tablet} {
+    left: 30px;
+  }
 }

@@ -1,5 +1,17 @@
 .video-player {
   position: relative;
+
+  width: 260px;
+  height: 160px;
+
+  @media #{$tablet} {
+    width: 668px;
+    height: 455px;
+  }
+
+  @media #{$desktop} {
+    width: 682px;
+  }
 }
 
 .video-player__image img {
@@ -8,32 +20,36 @@
 
 .video-player__toggle {
   position: absolute;
-
-  left: 50%;
   top: 50%;
+  left: 50%;
+
   width: 102px;
   height: 78px;
-  transform: translate(-50%, -50%);
-
-  background-image: url("../img/icon-play.svg");
-  background-repeat: no-repeat;
-  background-color: transparent;
-  border: 0;
-  transition: transform 0.2s ease;
 
   cursor: pointer;
 
+  background-color: transparent;
+  background-image: url("../img/icon-play.svg");
+  background-repeat: no-repeat;
+  border: 0;
+
+  transform: translate(-50%, -50%);
+
+  transition: transform 0.2s ease;
+
   &:hover,
   &:focus {
-    left: 50%;
     top: 50%;
+    left: 50%;
+
     transform: translate(-50%, -50%) scale(1.2);
   }
 
   &:active {
-    opacity: 0.7; // в макете -- 0,3, но смотрится плохо
-    left: 50%;
     top: 50%;
+    left: 50%;
+
+    opacity: 0.7; // в макете -- 0,3, но смотрится плохо
     transform: translate(-50%, -50%) scale(0.8);
   }
 }

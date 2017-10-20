@@ -1,15 +1,27 @@
 .social__list {
+  @include list-reset-style();
+
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 
-  width: 141px;
+  width: 240px;
 
-  @media (max-width: $tablet-width) {
+  @media #{$mobile-only} {
     min-height: 80px;
     margin: 0 auto;
   }
+
+  @media #{$tablet} {
+    justify-content: flex-start;
+
+    min-height: 80px;
+  }
+}
+
+.social__item {
+  padding: 20px;
 }
 
 .social__link:hover .social__icon,

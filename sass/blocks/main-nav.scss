@@ -1,28 +1,29 @@
 .main-nav {
   width: auto;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     height: 148px;
   }
 }
 
 .main-nav__wrapper {
   position: relative;
+
   width: $mobile-width;
   margin: 0 auto;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
+    z-index: 10;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-    z-index: 10;
 
     width: 668px;
     margin: 0 auto;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop} {
     width: 1050px;
     margin: 0 auto;
   }
@@ -30,18 +31,20 @@
 
 .main-nav__logo {
   display: block;
+
   margin-top: 22px;
   margin-bottom: 22px;
 
   transition: opacity 0.3s ease-in;
 
-  @media (min-width: $tablet-width) {
+  @media #{$tablet} {
     align-self: flex-start;
   }
 
-  @media (min-width: $desktop-width) {
-    margin-top: 9px;
+  @media #{$desktop} {
     order: 2;
+
+    margin-top: 9px;
   }
 
   &[href]:hover,
@@ -56,39 +59,40 @@
 
 .main-nav__logo-image {
   display: block;
+
   margin: 0 auto;
 }
 
 .main-nav__toggle {
   content: "";
-
   position: absolute;
-  right: 28px;
-  top: 6px;
+  top: 7px;
+  right: 29px;
   z-index: 10;
 
   display: block;
+
   width: 24px;
   height: 24px;
 
   cursor: pointer;
 
-  border: 0;
   background-color: transparent;
   background-repeat: no-repeat;
+  border: 0;
+
+  @media #{$tablet} {
+    display: none;
+  }
 
   &:hover,
   &:focus,
   &:active {
     opacity: 0.6;
   }
-
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
 }
 
-@media (max-width: $tablet-width - 1px) {
+@media #{$mobile-only} {
   .main-nav--closed .main-nav__toggle {
     background-image: url("../img/icon-menu-open.svg");
     background-position: 2px 3px;
@@ -101,9 +105,7 @@
 
   .main-nav--closed .site-list,
   .main-nav--closed .user-list {
-    @media (max-width: $tablet-width - 1px) {
-      display: none;
-    }
+    display: none;
   }
 
   .main-nav--nojs .main-nav__toggle {
