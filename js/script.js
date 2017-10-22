@@ -111,3 +111,59 @@ if (interactiveMap) {
     });
   }
 }
+
+// Подсчет цены в форме
+var price = {
+  interior: 50,
+  toy: 30,
+  white: 10,
+  gray: 5,
+  tiffany: 17,
+  black: 8,
+  pink: 12,
+  orange: 14
+};
+
+var inputs = document.querySelectorAll("input");
+var total = document.querySelector(".form__total"); // поле вывода для общей суммы
+var sum1 = 0; // подытог для радио
+var sum2 = 0; // подытог для чекбоксов
+
+inputs = Array.prototype.slice.call(inputs); // делаем массив
+
+function getPrice(elem) {
+  var key;
+  for (key in price) { // ищем цену переданного элемента в объекте price и возвращаем ее значение
+    if (elem == key) {
+      return price[key];
+    }
+  }
+}
+
+var count = function() { // функция суммирования
+  if (this.type == "radio" && this.checked) { // подытог для радио = значеиню "чекнутого" радио
+    sum1 = getPrice(this.id);
+  }
+
+  if (this.type == "checkbox") {
+    if (this.checked) { // если выбираем данный чекбокс, то соотествующее значение цены прибавляем к общей сумме чекбоксов
+      sum2 += getPrice(this.id);
+    } else { // если снимаем выбор с данного чекбокса, то его значение цены вычитаем из общей суммы для чекбоксов
+      sum2 -= getPrice(this.id);
+    }
+  }
+  total.innerText = sum1 + sum2 + " p."; // окончательная цена как сумма подытогов
+};
+
+if(total) {
+  inputs.forEach(function(elem) {
+    if (elem.checked) { // выполняем только для "чекнутых" инпутов, чтобы не зайти в блок else для чекбоксов
+      elem.f = count; // см. http://learn.javascript.ru/object-methods#подробнее-про-this
+      elem.f();
+    }
+  });
+
+  inputs.forEach(function(elem) {
+    elem.addEventListener("click", count);
+  });
+}
