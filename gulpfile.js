@@ -33,7 +33,7 @@ gulp.task("style", function() {
     .pipe(server.stream());
 });
 
-// Минификация js
+// Минификация js-кода
 gulp.task("uglify", function() {
   return gulp.src("js/*.js")
     .pipe(uglify())
